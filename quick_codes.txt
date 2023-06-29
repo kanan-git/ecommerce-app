@@ -1,0 +1,29 @@
+≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈
+npm install react-router-dom
+npx create-react-app name-here --template redux / npm install @reduxjs/toolkit react-redux
+npm install -g json-server (json-server --watch db.json --port 3001)
+npm install axios (install axios library if necessary) && import axios from 'axios'
+
+
+
+cd 04\ ■►\ React/final-app
+npm start
+
+
+
+git add .
+git commit -m "note about changes"
+git push origin master
+git status
+clear
+
+
+// git add README.md after git init
+git init
+git commit -m "first commit"
+git branch -M master
+git remote add origin https://github.com/kanan-git/ecommerce-app.git
+git push -u origin master
+git status
+clear
+≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈

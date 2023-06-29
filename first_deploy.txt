@@ -1,0 +1,51 @@
+————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+----------------------------------------------------------------------- GIT BASH VSCODE TERMINAL CODES -----------------------------------------------------------------------
+————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+► CHANGING ROOT DIRECTORY
+cd .. (go back)
+cd if\ folder\ name\ have\ space (\ )
+————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+► FIRST DEPLOY
+git config --global user.name "Your Git Username"
+git config --global user.email "your@email.com"
+cd autoshop-app (~Desktop/autoshop-app)
+git init .
+ls -a
+git add .
+git status
+git commit -m "first deploy"
+git remote add origin https://github.com/kanan-git/autoshop-app.git
+git status
+————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+// git checkout -b master
+// echo "# repository" >> README.md
+git init
+// git add README.md
+git add .
+git commit -m "first commit"
+git branch -M master
+git remote add origin https://github.com/kanan-git/autoshop-app.git
+git push -u origin master
+// git push origin master
+————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+► DEPLOY FOR CHANGES TO SELECTED GIT REPOSITORY
+git add .
+git commit -m "note here"
+git push origin master
+git status
+clear
+————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+► ?
+echo "# autoshop-app" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/kanan-git/autoshop-app.git
+git push -u origin main
+————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+► ?
+git remote add origin https://github.com/kanan-git/autoshop-app.git
+git branch -M main
+git push -u origin main
+————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————

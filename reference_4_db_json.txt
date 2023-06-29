@@ -1,0 +1,25 @@
+{
+ "text": {
+  "header": {
+   "english": "",
+   "russian": "",
+   "azerbaijani": "",
+   "turkish": ""
+  },
+  "footer": {
+   "english": ["...", "..."]
+  },
+  ...
+ },
+ "status": {
+  "isLogged": "false",
+  "lightMode": "light",
+  "currentUser": "guest"
+ },
+ "product_data": {},
+ "user_data": {
+  "0": {
+   "email": "..."
+  }
+ }
+}
