@@ -1,0 +1,20 @@
+———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+TO DO (0):
+- assign name to project with ChatGPT
+- generate logo with Blender, convert dublicate one into transparent png and ico
+- inspect reference websites, decide for UI for all page and components
+- set up db.json for testing products page, homepage and authentication functions, write fake data
+- create component header with dropdown menu, responsivity, routing (HTML, SCSS, JS, React)
+- create component footer with responsivity, routing (HTML, SCSS, JS, React)
+- create authentication page
+<<(VERCEL HOMEPAGE GRADIENT TEXT COLORS, UNDERLINE GRADIENT COLOR ON HOVER, WHILE DROPDOWN BLUR OVERLAY AND SLIDE EFFECT WITH BORDER)>>
+———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+WORK IN PROGRESS (0):
+~ .
+———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+SUCCESSFULLY COMPLETED (0):
++ .
+———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+UNEXPECTED ISSUES (0):
+► .
+———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————

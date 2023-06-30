@@ -6,7 +6,8 @@ npm install axios (install axios library if necessary) && import axios from 'axi
 
 
 
-cd 04\ ■►\ React/final-app
+// cd ?
+json-server --watch db.json --port 3001
 npm start
 
 
