@@ -7,7 +7,10 @@ npm install axios (install axios library if necessary) && import axios from 'axi
 
 
 // cd ?
-json-server --watch db.json --port 3001
+json-server --watch current_status.json --port 3001
+json-server --watch product_data.json --port 3002
+json-server --watch text_database.json --port 3003
+json-server --watch users_info.json --port 3004
 npm start
 
 

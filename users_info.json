@@ -1,0 +1,38 @@
+{
+    "user_data": {
+        "0": {
+            "name": "Kanan",
+            "lastname": "Bakhshaliyev",
+            "email": "kb.coders@mail.ru",
+            "password": "seriouslyTooDifficultPass2Guess123",
+            "dateofbirth": "12.15.1997",
+            "country": "Azerbaijan",
+            "city": "Baku",
+            "addressLine": "Hell street, apt A5",
+            "creditCard_digits": "0123_4567_8901_2345",
+            "creditCard_expire": "7/23",
+            "creditCard_CVC": "123",
+            "temporary_property_creditCard_amount_usd": "1000000",
+            "favorites": [],
+            "basket": [],
+            "orders": []
+        },
+        "1": {
+            "name": "",
+            "lastname": "",
+            "email": "",
+            "password": "",
+            "dateofbirth": "mm.dd.yyyy",
+            "country": "",
+            "city": "",
+            "addressLine": "",
+            "creditCard_digits": "0123_4567_8901_2345",
+            "creditCard_expire": "mm/yy",
+            "creditCard_CVC": "123",
+            "temporary_property_creditCard_amount_usd": "1000000",
+            "favorites": [],
+            "basket": [],
+            "orders": []
+        }
+    }
+}

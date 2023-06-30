@@ -1,0 +1,7 @@
+{
+    "status": {
+        "isLogged": "true-or-false",
+        "lightMode": "light-use-localStorage-cancel-from-here",
+        "currentUser": "guest-or-user-id-here"
+    }
+}
