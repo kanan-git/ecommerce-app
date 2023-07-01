@@ -1,59 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
-// import 'global.css'
+import React, {useState, useEffect, useRef} from 'react'
+import './global.css'
+import {BrowserRouter as Router, Routes, Route, Link, Navigate} from 'react-router-dom'
+// import Header from './component and pages/Header/Header.jsx'
+// import Footer from './component and pages/Footer/Footer.jsx'
+import Home from './component and pages/Home/Home.jsx'
+import Market from './component and pages/Market/Market.jsx'
+import Login from './component and pages/Login/Login.jsx'
 
 function App() {
+  // const [pathCondition, setPathCondition] = useState(true)
+  // const currentPath = window.location.pathname
+  // useEffect(
+  //   () => {
+  //     currentPath=="/login" ? setPathCondition(false) : setPathCondition(true)
+  //   }, []
+  // )
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
+      {/* {window.location.pathname!="/login" && <Header />} */}
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/products" element={<Market />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
+
+      {/* {pathCondition && <Footer />} */}
+      {/* {!pathCondition && <Footer />} */}
     </div>
-  );
+  )    
 }
 
-export default App;
+export default App

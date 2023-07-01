@@ -1,1 +1,38 @@
-/*# sourceMappingURL=global.css.map */
+:root {
+  --default-text-color: rgb(0,0,0);
+  --white-color: rgb(255,255,255);
+  --selected-text-color: rgb(128,0,0);
+  --default-bg-color: rgb(255,255,255);
+  --undifined-temporary-gradient-1: linear-gradient(to right, rgb(255,0,255), rgb(0,255,255))
+  // custom transition speeds
+  --slow-fx: ease-in-out 0.35s;
+  --instant-fx: linear 0s;
+  --quick-fx: ease-in 0.15s;
+  --window-border-radius: 10px;
+  --default-font-size: 14px;
+  --button-height: 20px;
+  --button-border-radius: 4px;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: "Josefin Sans", sans-serif;
+  color: var(--default-text-color);
+}
+*::-moz-selection {
+  background: var(--selected-text-color);
+  color: var(--white-color);
+}
+*::selection {
+  background: var(--selected-text-color);
+  color: var(--white-color);
+}
+
+button {
+  cursor: pointer;
+}/*# sourceMappingURL=global.css.map */
