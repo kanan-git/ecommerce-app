@@ -1,5 +1,72 @@
 .header {
   width: 100%;
+  height: auto;
+}
+.header__topside {
+  height: 20px;
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 1199px) {
+  .header__topside {
+    gap: 40px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .header__topside {
+    gap: 40px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .header__topside {
+    gap: 35px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .header__topside {
+    gap: 20px;
+  }
+}
+.header__main {
+  width: auto;
+  height: 50px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__main--logoplace {
+  width: auto;
+  height: 100%;
+  border: 1px solid red;
+}
+.header__main--logoplace_logo {
+  width: auto;
+  height: 50px;
+}
+.header__main--search {
+  width: 20%;
+  height: 100%;
+  border: 1px solid red;
+}
+.header__main--userpanel {
+  width: 20%;
+  height: 100%;
+  border: 1px solid red;
+}
+.header__main--userpanel_dropdown {
+  display: none;
+}
+.header__main--pref {
+  width: 5%;
+  height: 100%;
+  border: 1px solid red;
+}
+.header__navbar {
   height: 30px;
-  background-color: red;
+  background-color: whitesmoke;
 }/*# sourceMappingURL=Header.css.map */

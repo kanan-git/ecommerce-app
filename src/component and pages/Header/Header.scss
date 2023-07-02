@@ -1,5 +1,73 @@
 .header {
     width: 100%;
-    height: 30px;
-    background-color: red;
+    height: auto;
+    &__topside {
+        height: 20px;
+        background-color: gray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        text-transform: uppercase;
+        @media only screen and (max-width: 1199px) { // desktop
+            gap: 40px;
+        }
+        @media only screen and (max-width: 991px) { // tablet
+            gap: 40px;
+        }
+        @media only screen and (max-width: 767px) { // mobile
+            gap: 35px;
+        }
+        @media only screen and (max-width: 575px) { // extra small device
+            gap: 20px;
+        }
+    }
+    &__main {
+        width: auto;
+        height: 50px;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // gap: 20px;
+        &--logoplace {
+            width: auto;
+            height: 100%;
+            border: 1px solid red;
+            &_logo {
+                width: auto;
+                height: 50px;
+            }
+        }
+        &--search {
+            width: 20%;
+            height: 100%;
+            border: 1px solid red;
+            &_bar {}
+            &_button {}
+        }
+        &--userpanel {
+            width: 20%;
+            height: 100%;
+            border: 1px solid red;
+            &_guest {}
+            &_profile {}
+            &_dropdown {
+                display: none;
+            }
+        }
+        &--pref {
+            width: 5%;
+            height: 100%;
+            border: 1px solid red;
+            &_lightmode {}
+            &_langbar {
+                &-options {}
+            }
+        }
+    }
+    &__navbar {
+        height: 30px;
+        background-color: whitesmoke;
+    }
 }

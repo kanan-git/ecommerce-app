@@ -1,12 +1,15 @@
 .market {
     display: block;
-    @media only screen and (max-width: 769px) { // desktop
+    @media only screen and (max-width: 1199px) { // desktop
         display: none;
     }
-    @media only screen and (min-width: 481px) and (max-width: 768px) { // tablet
+    @media only screen and (max-width: 991px) { // tablet
         display: none;
     }
-    @media only screen and (max-width: 480px) { // mobile phone
+    @media only screen and (max-width: 767px) { // mobile
+        display: none;
+    }
+    @media only screen and (max-width: 575px) { // extra small device
         display: none;
     }
 }

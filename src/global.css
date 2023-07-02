@@ -10,6 +10,7 @@
   --quick-fx: ease-in 0.15s;
   --window-border-radius: 10px;
   --default-font-size: 14px;
+  --default-font-weight: 500;
   --button-height: 20px;
   --button-border-radius: 4px;
 }
@@ -20,7 +21,8 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
-  font-weight: 500;
+  font-size: var(--default-font-size);
+  font-weight: var(--default-font-weight);
   font-family: "Ysabeau Infant", sans-serif;
   color: var(--default-text-color);
 }
