@@ -6,6 +6,7 @@ import './Header.css'
 function Header() {
     // const root = document.documentElement
     // root.style.setProperty('--default-text-color', 'rgb(255,255,255)')
+    
     return (
         <div className="header">
             <div className="header__topside">
@@ -28,19 +29,23 @@ function Header() {
                 </div>
 
                 <div className="header__main--userpanel">
-                    <div className="header__main--userpanel_guest">
-                        <Link className="header__main--userpanel_guest" to="/login"> Daxil ol </Link>
-                        <button className="header__main--userpanel_guest"> ■ Səbət </button>
-                        <button className="header__main--userpanel_guest"> ♥ Favorilər </button>
-                    </div>
-                    <div className="header__main--userpanel_profile">
-                        <div className="header__main--userpanel_guest">
-                            <img src="#" alt="user-name-here" />
-                            <p> Name Lastname </p>
-                        </div>
-                        <button className="header__main--userpanel_guest"> ■ Səbət </button>
-                        <button className="header__main--userpanel_guest"> ♥ Favorilər </button>
-                    </div>
+                    {/* if authStatus == "guest" */}
+                    {/* <Link to="/login" className="header__main--userpanel_profile">
+                        <img src={require("../../asset_library/user_profile_images/profile_guest.png")} 
+                        alt="guest" 
+                        className="header__main--userpanel_profile-img" />
+                        <p className="header__main--userpanel_profile-login"> Daxil ol </p>
+                    </Link> */}
+                    {/* if authStatus == "userIdHere" */}
+                    <Link to="/settings" className="header__main--userpanel_profile">
+                        <img src={require("../../asset_library/user_profile_images/profile_guest.png")} 
+                        alt="username-here" 
+                        className="header__main--userpanel_profile-img" />
+                        <p className="header__main--userpanel_profile-name"> Name <br /> Lastname </p>
+                    </Link>
+
+                    <button className="header__main--userpanel_buttons"> ■ Səbət </button>
+                    <button className="header__main--userpanel_buttons"> ♥ Favorilər </button>
                 </div>
 
                 <div className="header__main--userpanel_dropdown">
