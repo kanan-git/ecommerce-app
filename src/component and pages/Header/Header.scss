@@ -1,9 +1,10 @@
 .header {
     width: 100%;
     height: auto;
+    transition: var(--quick-fx);
     &__topside {
         height: 20px;
-        background-color: gray;
+        background: var(--dark-bg-color);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -20,6 +21,13 @@
         }
         @media only screen and (max-width: 575px) { // extra small device
             gap: 10px;
+        }
+        &--links {
+            color: var(--smoke-color);
+            transition: var(--quick-fx);
+            &:hover {
+                color: var(--smoke-hover-color);
+            }
         }
     }
     &__main {
@@ -39,32 +47,53 @@
             }
         }
         &--search {
-            width: 20%;
+            width: 25%;
             height: 100%;
-            border: 1px solid red;
+            // border: 1px solid red;
             display: flex;
             justify-content: center;
             align-items: center;
-            &_bar {}
-            &_button {}
+            position: relative;
+            &_bar {
+                width: 90%;
+                height: 30px;
+                border-radius: 15px;
+                outline: none;
+                padding: 0px 50px 0px 20px; // top right bottom left
+            }
+            &_button {
+                position: absolute;
+                top: 10px;
+                right: 30px;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                // opacity: 0.5;
+                border: none;
+                background-color: transparent;
+                font-weight: var(--bold-font-weight);
+            }
         }
         &--userpanel {
             width: 15%;
             height: 100%;
-            border: 1px solid red;
+            // border: 1px solid red;
             display: flex;
             justify-content: center;
             align-items: center;
+            gap: 10px;
             &_profile {
                 width: auto;
                 height: 100%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                gap: 5px;
+                margin-right: 20px;
                 &-img {
                     width: auto;
                     height: 100%;
-                    border: 1px solid red;
+                    border: 1px solid var(--border-color);
                     border-radius: 100%;
                 }
                 &-login {}
@@ -85,17 +114,25 @@
         &--pref {
             width: 5%;
             height: 100%;
-            border: 1px solid red;
+            // border: 1px solid red;
             display: flex;
             justify-content: center;
             align-items: center;
-            &_lightmode {}
+            gap: 10px;
+            &_lightmode {
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+            }
             &_langbar {
                 &-options {}
             }
         }
     }
     &__navbar {
+        border: none;
+        border-top: 1px solid var(--soft-border-color);
+        border-bottom: 1px solid var(--soft-border-color);
         height: 30px;
         background-color: whitesmoke;
     }

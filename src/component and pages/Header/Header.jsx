@@ -10,13 +10,13 @@ function Header() {
     return (
         <div className="header">
             <div className="header__topside">
-                <Link to="/"> Ana Səhifə </Link>
-                <Link to="/products"> Mağaza </Link>
-                <Link to="/blog"> Bloq </Link>
-                <Link to="/aboutus"> Haqqımızda </Link>
-                <Link to="/contact"> Əlaqə </Link>
-                <Link to="/faq"> FAQ </Link>
-                <Link to="/help"> Yardım və Dəstək </Link>
+                <Link className="header__topside--links" to="/"> Ana Səhifə </Link>
+                <Link className="header__topside--links" to="/products"> Mağaza </Link>
+                <Link className="header__topside--links" to="/blog"> Bloq </Link>
+                <Link className="header__topside--links" to="/aboutus"> Haqqımızda </Link>
+                <Link className="header__topside--links" to="/contact"> Əlaqə </Link>
+                <Link className="header__topside--links" to="/faq"> FAQ </Link>
+                <Link className="header__topside--links" to="/help"> Yardım və Dəstək </Link>
             </div>
             <div className="header__main">
                 <img src={require("../../asset_library/logo_and_icon/RetroQalereya_transparent_bg_logo.png")} 
@@ -25,7 +25,7 @@ function Header() {
                 
                 <div className="header__main--search">
                     <input className="header__main--search_bar" type="search" />
-                    <button className="header__main--search_button"> ○ </button>
+                    <button className="header__main--search_button"> S </button>
                 </div>
 
                 <div className="header__main--userpanel">
@@ -44,8 +44,8 @@ function Header() {
                         <p className="header__main--userpanel_profile-name"> Name <br /> Lastname </p>
                     </Link>
 
-                    <button className="header__main--userpanel_buttons"> ■ Səbət </button>
-                    <button className="header__main--userpanel_buttons"> ♥ Favorilər </button>
+                    <button className="header__main--userpanel_buttons"> ■ </button>
+                    <button className="header__main--userpanel_buttons"> ♥ </button>
                 </div>
 
                 <div className="header__main--userpanel_dropdown">
@@ -60,17 +60,19 @@ function Header() {
                 </div>
 
                 <div className="header__main--pref">
-                    <button className="header__main--prev_lightmode"> ☼ </button>
-                    <select name="language" id="language" className="header__main--prev_langbar">
-                        <option value="AZ" className="header__main--prev_langbar-options"> AZ </option>
-                        <option value="EN" className="header__main--prev_langbar-options"> EN </option>
-                        <option value="TR" className="header__main--prev_langbar-options"> TR </option>
-                        <option value="RU" className="header__main--prev_langbar-options"> RU </option>
+                    <button className="header__main--pref_lightmode"> ☼ </button>
+                    <select name="language" id="language" className="header__main--pref_langbar">
+                        <option value="AZ" className="header__main--pref_langbar-options"> AZ </option>
+                        <option value="EN" className="header__main--pref_langbar-options"> EN </option>
+                        <option value="TR" className="header__main--pref_langbar-options"> TR </option>
+                        <option value="RU" className="header__main--pref_langbar-options"> RU </option>
                     </select>
                 </div>
             </div>
             <div className="header__navbar">
-                ...
+                // userpanel and navbar dropdowns and their branches
+                <br />
+                // list of categories and products to navbar
             </div>
         </div>
     )

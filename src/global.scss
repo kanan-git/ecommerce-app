@@ -1,10 +1,14 @@
 :root {
     // custom color picks
     --default-text-color: rgb(0,0,0);
-    --white-color: rgb(255,255,255);
-    --selected-text-color: rgb(128,0,0);
+    --smoke-color: rgb(230,230,230);
+    --smoke-hover-color: rgb(255,255,255);
+    --selected-text-color: rgb(190, 130, 100);
     --default-bg-color: rgb(255,255,255);
-    --undifined-temporary-gradient-1: linear-gradient(to right, rgb(255,0,255), rgb(0,255,255))
+    --dark-bg-color: rgb(48,48,48);
+    --border-color: rgb(16,16,16);
+    --soft-border-color: rgb(200,200,200);
+    --undifined-temporary-gradient-1: linear-gradient(to right, rgb(0,64,255), rgb(0,255,255));
     // custom transition speeds
     --slow-fx: ease-in-out 0.35s;
     --instant-fx: linear 0s;
@@ -12,9 +16,16 @@
     // custom sizes
     --window-border-radius: 10px;
     --default-font-size: 14px;
+    --header-font-size: 20px;
+    --title-font-size: 28px;
+    --small-btn-font: 10px;
+    --regular-btn-font: 16px;
     --default-font-weight: 500;
+    --bold-font-weight: 600;
     --button-height: 20px;
     --button-border-radius: 4px;
+    // spaces
+    --default-gap-size: 10px;
 }
 
 * {
