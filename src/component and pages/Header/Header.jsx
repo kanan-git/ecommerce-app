@@ -70,6 +70,23 @@ function Header() {
                 </div>
             </div>
             <div className="header__navbar">
+                <button> listItem </button>
+                <div> itsDropDown </div>
+                <button> listItem </button>
+                <div> itsDropDown </div>
+                <button> listItem </button>
+                <div> itsDropDown </div>
+                <button> listItem </button>
+                <div> itsDropDown </div>
+                <button> listItem </button>
+                <div> itsDropDown </div>
+                <button> listItem </button>
+                <div> itsDropDown </div>
+                <button> listItem </button>
+                <div> itsDropDown </div>
+                <button> listItem </button>
+                <div> itsDropDown </div>
+
                 // userpanel and navbar dropdowns and their branches
                 <br />
                 // list of categories and products to navbar
