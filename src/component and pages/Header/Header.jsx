@@ -28,6 +28,16 @@ function Header() {
                     <button className="header__main--search_button"> S </button>
                 </div>
 
+                <div className="header__main--pref">
+                    <button className="header__main--pref_lightmode"> ☼ </button>
+                    <select name="language" id="language" className="header__main--pref_langbar">
+                        <option value="AZ" className="header__main--pref_langbar-options"> AZ </option>
+                        <option value="EN" className="header__main--pref_langbar-options"> EN </option>
+                        <option value="TR" className="header__main--pref_langbar-options"> TR </option>
+                        <option value="RU" className="header__main--pref_langbar-options"> RU </option>
+                    </select>
+                </div>
+
                 <div className="header__main--userpanel">
                     {/* if authStatus == "guest" */}
                     {/* <Link to="/login" className="header__main--userpanel_profile">
@@ -58,38 +68,33 @@ function Header() {
                     <button className="header__main--signin_dropdown-buttons"> ☼ Parametrlər </button>
                     <button className="header__main--signin_dropdown-buttons"> → Çıxış et </button>
                 </div>
-
-                <div className="header__main--pref">
-                    <button className="header__main--pref_lightmode"> ☼ </button>
-                    <select name="language" id="language" className="header__main--pref_langbar">
-                        <option value="AZ" className="header__main--pref_langbar-options"> AZ </option>
-                        <option value="EN" className="header__main--pref_langbar-options"> EN </option>
-                        <option value="TR" className="header__main--pref_langbar-options"> TR </option>
-                        <option value="RU" className="header__main--pref_langbar-options"> RU </option>
-                    </select>
-                </div>
             </div>
             <div className="header__navbar">
-                <button> listItem </button>
-                <div> itsDropDown </div>
-                <button> listItem </button>
-                <div> itsDropDown </div>
-                <button> listItem </button>
-                <div> itsDropDown </div>
-                <button> listItem </button>
-                <div> itsDropDown </div>
-                <button> listItem </button>
-                <div> itsDropDown </div>
-                <button> listItem </button>
-                <div> itsDropDown </div>
-                <button> listItem </button>
-                <div> itsDropDown </div>
-                <button> listItem </button>
-                <div> itsDropDown </div>
+                <button> SON EKLENEN ÜRÜNLER </button>
+                <div style={{display: "none"}}> itsDropDown </div>
+                <button> CAM & KRİSTAL ÜRÜNLER </button>
+                <div style={{display: "none"}}> itsDropDown </div>
+                <button> ESKİ MAKİNELER </button>
+                <div style={{display: "none"}}> itsDropDown </div>
+                <button> EV DEKORASYON </button>
+                <div style={{display: "none"}}> itsDropDown </div>
+                <button> EV TEKSTİLİ </button>
+                <div style={{display: "none"}}> itsDropDown </div>
+                <button> KOLEKSİYON </button>
+                <div style={{display: "none"}}> itsDropDown </div>
+                <button> METAL & PİRİNÇ ÜRÜNLER </button>
+                <div style={{display: "none"}}> itsDropDown </div>
+                <button> OYUNCAK </button>
+                <div style={{display: "none"}}> itsDropDown </div>
+                <button> PORSELEN </button>
+                <div style={{display: "none"}}> itsDropDown </div>
+                <button> SERAMİK </button>
+                <div style={{display: "none"}}> itsDropDown </div>
+                <button> TASARIM ÜRÜNLER </button>
+                <div style={{display: "none"}}> itsDropDown </div>
 
-                // userpanel and navbar dropdowns and their branches
-                <br />
-                // list of categories and products to navbar
+                {/* // userpanel and navbar dropdowns and their branches */}
+                {/* // list of categories and products to navbar */}
             </div>
         </div>
     )

@@ -74,43 +74,6 @@
                 font-weight: var(--bold-font-weight);
             }
         }
-        &--userpanel {
-            width: 15%;
-            height: 100%;
-            // border: 1px solid red;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            &_profile {
-                width: auto;
-                height: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 5px;
-                margin-right: 20px;
-                &-img {
-                    width: auto;
-                    height: 100%;
-                    border: 1px solid var(--border-color);
-                    border-radius: 100%;
-                }
-                &-login {}
-                &-name {}
-            }
-            &_buttons {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-            &_dropdown {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                display: none;
-            }
-        }
         &--pref {
             width: 5%;
             height: 100%;
@@ -128,12 +91,64 @@
                 &-options {}
             }
         }
+        &--userpanel {
+            width: 15%;
+            height: 100%;
+            // border: 1px solid red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 20px;
+            gap: 10px;
+            &_profile {
+                width: auto;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 5px;
+                margin-right: 10px;
+                &-img {
+                    width: 50px;
+                    height: 50px;
+                    border: 1px solid var(--border-color);
+                    border-radius: 100%;
+                }
+                &-login {}
+                &-name {
+                    width: 120px;
+                    // border: 1px solid red;
+                }
+            }
+            &_buttons {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 40px;
+            }
+            &_dropdown {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                display: none;
+            }
+        }
     }
     &__navbar {
         border: none;
         border-top: 1px solid var(--soft-border-color);
         border-bottom: 1px solid var(--soft-border-color);
-        height: 30px;
+        height: 40px;
         background-color: whitesmoke;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        button {
+            width: 120px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     }
 }
