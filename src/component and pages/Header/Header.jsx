@@ -10,26 +10,62 @@ function Header() {
     return (
         <div className="header">
             <div className="header__topside">
-                <Link className="header__topside--links" to="/"> Ana Səhifə </Link>
-                <Link className="header__topside--links" to="/products"> Mağaza </Link>
-                <Link className="header__topside--links" to="/blog"> Bloq </Link>
-                <Link className="header__topside--links" to="/aboutus"> Haqqımızda </Link>
-                <Link className="header__topside--links" to="/contact"> Əlaqə </Link>
-                <Link className="header__topside--links" to="/faq"> FAQ </Link>
-                <Link className="header__topside--links" to="/help"> Yardım və Dəstək </Link>
+                <Link className="header__topside--links" to="/">
+                    {/* <img src="/asset_library/symbols_svg/icons8-home.svg" alt="home" 
+                    className="header__topside--links_icons" /> */}
+                    Ana Səhifə
+                </Link>
+                <Link className="header__topside--links" to="/products">
+                    {/* <img src="/asset_library/symbols_svg/store-sign-svgrepo-com.svg" alt="market" 
+                    className="header__topside--links_icons" /> */}
+                    Mağaza
+                </Link>
+                <Link className="header__topside--links" to="/blog">
+                    {/* <img src="/asset_library/symbols_svg/blog-website-svgrepo-com.svg" alt="blog" 
+                    className="header__topside--links_icons" /> */}
+                    Bloq
+                </Link>
+                <Link className="header__topside--links" to="/aboutus">
+                    {/* <img src="/asset_library/symbols_svg/icons8-about.svg" alt="about" 
+                    className="header__topside--links_icons" /> */}
+                    Haqqımızda
+                </Link>
+                <Link className="header__topside--links" to="/contact">
+                    {/* <img src="/asset_library/symbols_svg/icons8-contacts.svg" alt="contact" 
+                    className="header__topside--links_icons" /> */}
+                    Əlaqə
+                </Link>
+                <Link className="header__topside--links" to="/faq">
+                    {/* <img src="/asset_library/symbols_svg/icons8-speech-bubble.svg" alt="faq" 
+                    className="header__topside--links_icons" /> */}
+                    FAQ
+                </Link>
+                <Link className="header__topside--links" to="/help">
+                    {/* <img src="/asset_library/symbols_svg/icons8-support.svg" alt="support" 
+                    className="header__topside--links_icons" /> */}
+                    Yardım və Dəstək
+                </Link>
             </div>
             <div className="header__main">
-                <img src={require("../../asset_library/logo_and_icon/RetroQalereya_transparent_bg_logo.png")} 
-                alt="logo" 
-                className="header__main--logoplace_logo" />
+                <Link to="/" className="header__main--link">
+                    <img src="/asset_library/logo_and_icon/RetroQalereya_transparent_bg_logo.png" 
+                    alt="logo" 
+                    className="header__main--link_logo" />
+                </Link>
                 
                 <div className="header__main--search">
                     <input className="header__main--search_bar" type="search" />
-                    <button className="header__main--search_button"> S </button>
+                    <img src="/asset_library/symbols_svg/icons8-search.svg" alt="magnifier" 
+                    className="header__main--search_button" />
                 </div>
 
                 <div className="header__main--pref">
-                    <button className="header__main--pref_lightmode"> ☼ </button>
+                    <button className="header__main--pref_lightmode">
+                        {/* <img src="/asset_library/symbols_svg/icons8-sun.svg" alt="lightmode" 
+                        className="header__main--pref_lightmode-icon" /> */}
+                        <img src="/asset_library/symbols_svg/icons8-idea.svg" alt="lightmode" 
+                        className="header__main--pref_lightmode-icon" />
+                    </button>
                     <select name="language" id="language" className="header__main--pref_langbar">
                         <option value="AZ" className="header__main--pref_langbar-options"> AZ </option>
                         <option value="EN" className="header__main--pref_langbar-options"> EN </option>
@@ -48,14 +84,22 @@ function Header() {
                     </Link> */}
                     {/* if authStatus == "userIdHere" */}
                     <Link to="/settings" className="header__main--userpanel_profile">
-                        <img src={require("../../asset_library/user_profile_images/profile_guest.png")} 
+                        <img src="/asset_library/user_profile_images/profile_guest.png" 
                         alt="username-here" 
                         className="header__main--userpanel_profile-img" />
                         <p className="header__main--userpanel_profile-name"> Name <br /> Lastname </p>
                     </Link>
 
-                    <button className="header__main--userpanel_buttons"> ■ </button>
-                    <button className="header__main--userpanel_buttons"> ♥ </button>
+                    <button className="header__main--userpanel_buttons">
+                        <img src="/asset_library/symbols_svg/favorite-svgrepo-com.svg" alt="fav" 
+                        className="header__main--userpanel_buttons-icon" />
+                        {/* <p> positionAbsolute redCounter bottomRightCorner </p> */}
+                    </button>
+                    <button className="header__main--userpanel_buttons">
+                        <img src="/asset_library/symbols_svg/cart-svgrepo-com.svg" alt="cart" 
+                        className="header__main--userpanel_buttons-icon" />
+                        {/* <p> positionAbsolute redCounter bottomRightCorner </p> */}
+                    </button>
                 </div>
 
                 <div className="header__main--userpanel_dropdown">
