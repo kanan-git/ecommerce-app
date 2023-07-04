@@ -51,7 +51,7 @@
     &__main {
         width: auto;
         height: 60px;
-        background: var(--default-bg-color);
+        background: var(--smoke-color);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -118,16 +118,20 @@
                 border-radius: 50%;
                 position: relative;
                 border: 1px solid var(--border-color);
+                filter: drop-shadow(0 0 5px yellowgreen);
+                background-color: yellowgreen;
                 &-icon {
-                    width: 70%;
+                    width: 60%;
                     position: absolute;
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
+                    filter: invert(1);
                 }
             }
             &_langbar {
                 border: none;
+                outline: none;
                 border-bottom: 1px solid var(--border-color);
                 &-options {
                     background-color: var(--default-bg-color);
@@ -188,7 +192,7 @@
         border-top: 1px solid var(--soft-border-color);
         border-bottom: 1px solid var(--soft-border-color);
         height: 40px;
-        background-color: whitesmoke;
+        background-color: var(--smoke-color);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -198,6 +202,17 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            border: none;
+            border-left: 1px solid var(--soft-border-color);
+            border-right: 1px solid var(--soft-border-color);
+            background-color: transparent;
+            cursor: pointer;
+            transition: var(--quick-fx);
+            &:hover {
+                filter: brightness(1.5);
+                background-color: var(--default-bg-color);
+                color: red;
+            }
         }
     }
 }
