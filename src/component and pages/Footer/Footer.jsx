@@ -39,12 +39,22 @@ function Footer() {
                     <li className="footer__main--columns_list"> YouTube </li>
                     <li className="footer__main--columns_list"> Facebook </li>
                     <li className="footer__main--columns_list"> Twitter </li>
+                    {/* <Link to="https://instagram.com" className="footer__main--columns_info">
+                        <img src="#" alt="instagram" className="footer__main--columns_info-content" />
+                    </Link> */}
+
                 </ul>
             </div>
             <div className="footer__bottom">
                 <p className="footer__bottom--rights">
                     © Müəllif hüququ 2023 CODERS.EDU.AZ | Bütün Hüquqları Qorunur.
                 </p>
+                {/* <span className="footer__bottom--icons">
+                    <img src="#" alt="paypal" className="footer__bottom--icons_content" />
+                    <img src="#" alt="visa" className="footer__bottom--icons_content" />
+                    <img src="#" alt="mastercard" className="footer__bottom--icons_content" />
+                    <img src="#" alt="american-express" className="footer__bottom--icons_content" />
+                </span> */}
             </div>
         </div>
     )

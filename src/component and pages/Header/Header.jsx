@@ -6,7 +6,16 @@ import './Header.css'
 function Header() {
     // const root = document.documentElement
     // root.style.setProperty('--default-text-color', 'rgb(255,255,255)')
+
+    const [tempUserStatus, setTempUserStatus] = useState("guest") // "0 or any user ID" / "guest"
+    const [tempLightMode, setTempLightMode] = useState("light") // "light" / "dark"
     
+    // if(window.innerWidth < "1920") {
+    //     alert("MOBILE RESPONSIBILITY WILL BE WORKING SOON")
+    // }
+
+    // document.getElementsByClassName("header__main--userpanel")
+
     return (
         <div className="header">
             <div className="header__topside">
@@ -61,10 +70,8 @@ function Header() {
 
                 <div className="header__main--pref">
                     <button className="header__main--pref_lightmode">
-                        {/* <img src="/asset_library/symbols_svg/icons8-sun.svg" alt="lightmode" 
-                        className="header__main--pref_lightmode-icon" /> */}
-                        <img src="/asset_library/symbols_svg/icons8-idea.svg" alt="lightmode" 
-                        className="header__main--pref_lightmode-icon" />
+                        {tempLightMode == "light" && <img src="/asset_library/symbols_svg/icons8-sun.svg" alt="lightmode" className="header__main--pref_lightmode-icon" />}
+                        {tempLightMode == "dark" && <img src="/asset_library/symbols_svg/icons8-idea.svg" alt="lightmode" className="header__main--pref_lightmode-icon" />}
                     </button>
                     <select name="language" id="language" className="header__main--pref_langbar">
                         <option value="AZ" className="header__main--pref_langbar-options"> AZ </option>
@@ -74,21 +81,35 @@ function Header() {
                     </select>
                 </div>
 
-                <div className="header__main--userpanel">
+                <div className="header__main--userpanel" onMouseEnter={
+                    () => {
+                        var UPDropdown = document.getElementById("user_dropdown")
+                        UPDropdown.style.display = `flex`
+                    }
+                } onMouseLeave={
+                    () => {
+                        var UPDropdown = document.getElementById("user_dropdown")
+                        UPDropdown.style.display = `none`
+                    }
+                }>
                     {/* if authStatus == "guest" */}
-                    {/* <Link to="/login" className="header__main--userpanel_profile">
-                        <img src={require("../../asset_library/user_profile_images/profile_guest.png")} 
-                        alt="guest" 
-                        className="header__main--userpanel_profile-img" />
-                        <p className="header__main--userpanel_profile-login"> Daxil ol </p>
-                    </Link> */}
+                    {tempUserStatus == "guest" && (
+                        <Link to="/login" className="header__main--userpanel_profile">
+                            <img src="/asset_library/user_profile_images/profile_guest.png" 
+                            alt="guest" 
+                            className="header__main--userpanel_profile-img" />
+                            <p className="header__main--userpanel_profile-login"> Daxil ol </p>
+                        </Link>
+                    )}
                     {/* if authStatus == "userIdHere" */}
-                    <Link to="/settings" className="header__main--userpanel_profile">
-                        <img src="/asset_library/user_profile_images/profile_guest.png" 
-                        alt="username-here" 
-                        className="header__main--userpanel_profile-img" />
-                        <p className="header__main--userpanel_profile-name"> Name <br /> Lastname </p>
-                    </Link>
+                    {tempUserStatus == "0" && (
+                        <Link to="/settings" className="header__main--userpanel_profile">
+                            <img src="/asset_library/user_profile_images/profile_guest.png" 
+                            alt="username-here" 
+                            className="header__main--userpanel_profile-img" />
+                            <p className="header__main--userpanel_profile-name"> Name <br /> Lastname </p>
+                        </Link>
+                    )}
 
                     <button className="header__main--userpanel_buttons">
                         <img src="/asset_library/symbols_svg/favorite-svgrepo-com.svg" alt="fav" 
@@ -100,17 +121,20 @@ function Header() {
                         className="header__main--userpanel_buttons-icon" />
                         {/* <p> positionAbsolute redCounter bottomRightCorner </p> */}
                     </button>
-                </div>
 
-                <div className="header__main--userpanel_dropdown">
-                    <button className="header__main--userpanel_dropdown-buttons"> ♪ Daxil ol </button>
-                    <button className="header__main--signin_dropdown-buttons"> ↓ Qeydiyyat </button>
-
-                    <button className="header__main--signin_dropdown-buttons"> ▼ Sifarişlərim </button>
-                    <button className="header__main--signin_dropdown-buttons"> ■ Səbətim </button>
-                    <button className="header__main--signin_dropdown-buttons"> ♥ Favorilərim </button>
-                    <button className="header__main--signin_dropdown-buttons"> ☼ Parametrlər </button>
-                    <button className="header__main--signin_dropdown-buttons"> → Çıxış et </button>
+                    <div className="header__main--userpanel_dropdown" id="user_dropdown">
+                        {tempUserStatus == "guest" && (<>
+                            <button className="header__main--userpanel_dropdown-buttons"> ♪ Daxil ol </button>
+                            <button className="header__main--signin_dropdown-buttons"> ↓ Qeydiyyat </button>
+                        </>)}
+                        {tempUserStatus == "0" && (<>
+                            <button className="header__main--signin_dropdown-buttons"> ▼ Sifarişlərim </button>
+                            <button className="header__main--signin_dropdown-buttons"> ■ Səbətim </button>
+                            <button className="header__main--signin_dropdown-buttons"> ♥ Favorilərim </button>
+                            <button className="header__main--signin_dropdown-buttons"> ☼ Parametrlər </button>
+                            <button className="header__main--signin_dropdown-buttons"> → Çıxış et </button>
+                        </>)}
+                    </div>
                 </div>
             </div>
             <div className="header__navbar">

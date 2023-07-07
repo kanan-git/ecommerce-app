@@ -23,6 +23,20 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Market />} />
         <Route path="/login" element={<Login />} />
+        
+        {/* path="/myfav" */}
+        {/* path="/mycart" */}
+        {/* path="/myorders" */}
+        {/* path="/settings" */}
+        {/* path="/about" */}
+        {/* path="/contact" */}
+        {/* path="/blog" */}
+        {/* path="/faq" */}
+        {/* path="/support" */}
+        {/* path="/products/details" */}
+        {/* path="/terms_and_condition" */}
+        {/* path="/privacy_policy" */}
+        {/* path="/account_recovery" */}
       </Routes>
 
       {/* {pathCondition && <Footer />} */}
