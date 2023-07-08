@@ -5,9 +5,14 @@ import './Header.css'
 
 function Header() {
     const root = document.documentElement
-    
     const [tempUserStatus, setTempUserStatus] = useState("guest") // "0 or any user ID" / "guest"
-    const [tempLightMode, setTempLightMode] = useState("light") // "light" / "dark"
+
+    useEffect(
+        () => {
+            const tempValue = prompt("guest | 0")
+            setTempUserStatus(tempValue)
+        }, []
+    )
 
     // console.log(window.location.pathname)
 
@@ -71,21 +76,6 @@ function Header() {
                 </div>
 
                 <div className="header__main--pref">
-                    <button className="header__main--pref_lightmode" onClick={
-                        () => {
-                            root.style.setProperty('--default-text-color', 'rgb(255,255,255)')
-                            root.style.setProperty('--light-text-color', 'rgb(48,48,48)')
-                            root.style.setProperty('--default-bg-color', 'rgb(32,32,32)')
-                            root.style.setProperty('--dark-color', 'rgb(16,16,16)')
-                            root.style.setProperty('--border-color', 'rgb(200,200,200)')
-                            root.style.setProperty('--soft-border-color', 'rgb(64,64,64)')
-                            root.style.setProperty('--selected-text-color', 'rgb(0,100,100)')
-                            root.style.setProperty('--header-background', 'linear-gradient(to bottom, rgb(0,50,100), rgb(0,64,128))')
-                        }
-                    }>
-                        {tempLightMode == "light" && <img src="/asset_library/symbols_svg/icons8-sun.svg" alt="lightmode" className="header__main--pref_lightmode-icon" />}
-                        {tempLightMode == "dark" && <img src="/asset_library/symbols_svg/icons8-idea.svg" alt="lightmode" className="header__main--pref_lightmode-icon" />}
-                    </button>
                     <select name="language" id="language" className="header__main--pref_langbar">
                         <option value="AZ" className="header__main--pref_langbar-options"> AZ </option>
                         <option value="EN" className="header__main--pref_langbar-options"> EN </option>
@@ -97,12 +87,16 @@ function Header() {
                 <div className="header__main--userpanel" onMouseEnter={
                             () => {
                                 var UPDropdown = document.getElementById("user_dropdown")
-                                UPDropdown.style.display = `flex`
+                                // UPDropdown.style.display = `flex`
+                                UPDropdown.style.visibility = `visible`
+                                UPDropdown.style.opacity = `1.0`
                             }
                         } onMouseLeave={
                             () => {
                                 var UPDropdown = document.getElementById("user_dropdown")
-                                UPDropdown.style.display = `none`
+                                // UPDropdown.style.display = `none`
+                                UPDropdown.style.visibility = `hidden`
+                                UPDropdown.style.opacity = `0.0`
                             }
                         }>
                     {/* if authStatus == "guest" */}
@@ -125,27 +119,52 @@ function Header() {
                     )}
                     <div className="header__main--userpanel_dropdown" id="user_dropdown">
                         {tempUserStatus == "guest" && (<>
-                            <button className="header__main--userpanel_dropdown-buttons"> ♪ Daxil ol </button>
-                            <button className="header__main--userpanel_dropdown-buttons"> ↓ Qeydiyyat </button>
+                            <button className="header__main--userpanel_dropdown-buttons">
+                                <img src="/asset_library/symbols_svg/sign-in-svgrepo-com.svg" className="header__main--userpanel_dropdown-buttons__symbols" />
+                                Daxil ol
+                            </button>
+                            <button className="header__main--userpanel_dropdown-buttons">
+                                <img src="/asset_library/symbols_svg/register-svgrepo-com.svg" className="header__main--userpanel_dropdown-buttons__symbols" />
+                                Qeydiyyat
+                            </button>
                         </>)}
                         {tempUserStatus == "0" && (<>
-                            <button className="header__main--userpanel_dropdown-buttons"> ▼ Sifarişlərim </button>
-                            <button className="header__main--userpanel_dropdown-buttons"> ■ Səbətim </button>
-                            <button className="header__main--userpanel_dropdown-buttons"> ♥ Favorilərim </button>
-                            <button className="header__main--userpanel_dropdown-buttons"> ☼ Parametrlər </button>
-                            <button className="header__main--userpanel_dropdown-buttons"> → Çıxış et </button>
+                            <button className="header__main--userpanel_dropdown-buttons">
+                                <img src="/asset_library/symbols_svg/dollar-svgrepo-com.svg" className="header__main--userpanel_dropdown-buttons__symbols" />
+                                Sifarişlərim
+                            </button>
+                            <button className="header__main--userpanel_dropdown-buttons">
+                                <img src="/asset_library/symbols_svg/cart-svgrepo-com.svg" className="header__main--userpanel_dropdown-buttons__symbols" />
+                                Səbətim
+                            </button>
+                            <button className="header__main--userpanel_dropdown-buttons">
+                                <img src="/asset_library/symbols_svg/favorite-svgrepo-com.svg" className="header__main--userpanel_dropdown-buttons__symbols" />
+                                Favorilərim
+                            </button>
+                            <button className="header__main--userpanel_dropdown-buttons">
+                                <img src="/asset_library/symbols_svg/icons8-settings.svg" className="header__main--userpanel_dropdown-buttons__symbols" />
+                                Parametrlər
+                            </button>
+                            <button className="header__main--userpanel_dropdown-buttons">
+                                <img src="/asset_library/symbols_svg/out-profile-ui-user-group-people-svgrepo-com.svg" className="header__main--userpanel_dropdown-buttons__symbols" />
+                                Çıxış et
+                            </button>
                         </>)}
                     </div>
                 </div>
                 <button className="header__main--buttons">
                     <img src="/asset_library/symbols_svg/favorite-svgrepo-com.svg" alt="fav" 
                     className="header__main--buttons_icon" />
-                    {/* <p> positionAbsolute redCounter bottomRightCorner </p> */}
+                    {tempUserStatus != "guest" && (
+                        <p className="header__main--buttons_counter"> 100 </p>
+                    )}
                 </button>
                 <button className="header__main--buttons">
                     <img src="/asset_library/symbols_svg/cart-svgrepo-com.svg" alt="cart" 
                     className="header__main--buttons_icon" />
-                    {/* <p> positionAbsolute redCounter bottomRightCorner </p> */}
+                    {tempUserStatus != "guest" && (
+                        <p className="header__main--buttons_counter"> 0 </p>
+                    )}
                 </button>
             </div>
         </div>

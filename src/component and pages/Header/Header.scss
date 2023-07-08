@@ -19,7 +19,7 @@
         width: 100%;
         // width: 1200px;
         // border: 1px solid red;
-        height: 20px;
+        height: 30px;
         background: var(--dark-color);
         display: flex;
         justify-content: center;
@@ -54,7 +54,7 @@
         width: 100%;
         // width: 1200px;
         // border: 1px solid red;
-        height: 60px;
+        height: 80px;
         background: var(--header-background);
         // background: var(--blur-glass-bg);
         backdrop-filter: blur(50px);
@@ -96,8 +96,9 @@
             }
             &_button {
                 position: absolute;
-                top: 18px;
+                top: 50%;
                 right: 10px;
+                transform: translateY(-50%);
                 width: 25px;
                 height: 25px;
                 border-radius: 50%;
@@ -109,6 +110,7 @@
                 transition: var(--quick-fx);
                 filter: opacity(0.5);
                 &:hover {
+                    transform: translateY(-45%);
                     scale: 1.1;
                     filter: invert(1) drop-shadow(0px 0px 5px var(--selected-text-color)) opacity(1.0);
                 }
@@ -119,29 +121,11 @@
             height: 70%;
             // border: 1px solid red;
             border: none;
-            border-right: 1px solid grey;
+            border-right: 1px solid var(--only-light-color);
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 15px;
             padding-right: 20px;
-            &_lightmode {
-                width: 25px;
-                height: 25px;
-                border-radius: 50%;
-                position: relative;
-                border: 1px solid var(--border-color);
-                filter: drop-shadow(0 0 5px var(--default-bg-color));
-                background-color: var(--only-light-color);
-                &-icon {
-                    width: 60%;
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    // filter: invert(1);
-                }
-            }
             &_langbar {
                 border: none;
                 outline: none;
@@ -182,15 +166,16 @@
                 }
                 &-name {
                     width: 120px;
+                    color: var(--only-negative-color);
                     // border: 1px solid red;
                 }
             }
             &_dropdown {
-                display: none; // flex / none
+                display: flex; // flex | none
                 justify-content: center;
                 align-items: flex-start;
                 flex-direction: column;
-                padding: 15px 0px 15px 40px; // top right bottom left
+                padding: 15px 0px 15px 30px; // top right bottom left
                 gap: 15px;
                 position: absolute;
                 top: 100%;
@@ -201,12 +186,26 @@
                 border: 1px solid var(--border-color);
                 // background-color: var(--default-bg-color);
                 background-color: var(--default-bg-color);
-                backdrop-filter: blur(100px);
+                // backdrop-filter: blur(100px);
+                visibility: hidden; // hidden | visible
+                opacity: 0.0; // 0.0 | 1.0
+                transition: var(--quick-fx);
+                border-bottom-left-radius: 8px;
+                border-bottom-right-radius: 8px;
                 &-buttons {
                     color: var(--default-text-color);
                     background-color: transparent;
                     border: none;
                     font-weight: 600;
+                    display: flex;
+                    &__symbols {
+                        margin-right: 10px;
+                        width: 20px;
+                        height: 20px;
+                    }
+                    &:hover {
+                        filter: invert(1.0) sepia(75) saturate(25) hue-rotate(150deg) brightness(0.8);
+                    }
                 }
             }
         }
@@ -214,12 +213,25 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 40px;
-            height: 40px;
+            width: 36px;
+            height: 36px;
             border: 1px solid var(--border-color);
             border-radius: var(--button-border-radius);
+            position: relative;
+            &:not(:last-of-type) {
+                margin-right: 10px;
+            }
             &_icon {
+                width: 90%;
                 height: 90%;
+            }
+            &_counter {
+                position: absolute;
+                top: 75%;
+                left: 110%;
+                font-weight: 600;
+                color: var(--default-bg-color);
+                filter: drop-shadow(0 0 3px var(--default-text-color));
             }
         }
     }

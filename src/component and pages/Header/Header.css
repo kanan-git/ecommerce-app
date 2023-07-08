@@ -9,7 +9,7 @@
 }
 .header__topside {
   width: 100%;
-  height: 20px;
+  height: 30px;
   background: var(--dark-color);
   display: flex;
   justify-content: center;
@@ -38,7 +38,7 @@
 }
 .header__main {
   width: 100%;
-  height: 60px;
+  height: 80px;
   background: var(--header-background);
   -webkit-backdrop-filter: blur(50px);
           backdrop-filter: blur(50px);
@@ -80,8 +80,9 @@
 }
 .header__main--search_button {
   position: absolute;
-  top: 18px;
+  top: 50%;
   right: 10px;
+  transform: translateY(-50%);
   width: 25px;
   height: 25px;
   border-radius: 50%;
@@ -93,6 +94,7 @@
   filter: opacity(0.5);
 }
 .header__main--search_button:hover {
+  transform: translateY(-45%);
   scale: 1.1;
   filter: invert(1) drop-shadow(0px 0px 5px var(--selected-text-color)) opacity(1);
 }
@@ -100,28 +102,11 @@
   width: 120px;
   height: 70%;
   border: none;
-  border-right: 1px solid grey;
+  border-right: 1px solid var(--only-light-color);
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 15px;
   padding-right: 20px;
-}
-.header__main--pref_lightmode {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  position: relative;
-  border: 1px solid var(--border-color);
-  filter: drop-shadow(0 0 5px var(--default-bg-color));
-  background-color: var(--only-light-color);
-}
-.header__main--pref_lightmode-icon {
-  width: 60%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 .header__main--pref_langbar {
   border: none;
@@ -161,13 +146,14 @@
 }
 .header__main--userpanel_profile-name {
   width: 120px;
+  color: var(--only-negative-color);
 }
 .header__main--userpanel_dropdown {
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  padding: 15px 0px 15px 40px;
+  padding: 15px 0px 15px 30px;
   gap: 15px;
   position: absolute;
   top: 100%;
@@ -176,24 +162,49 @@
   height: auto;
   border: 1px solid var(--border-color);
   background-color: var(--default-bg-color);
-  -webkit-backdrop-filter: blur(100px);
-          backdrop-filter: blur(100px);
+  visibility: hidden;
+  opacity: 0;
+  transition: var(--quick-fx);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 .header__main--userpanel_dropdown-buttons {
   color: var(--default-text-color);
   background-color: transparent;
   border: none;
   font-weight: 600;
+  display: flex;
+}
+.header__main--userpanel_dropdown-buttons__symbols {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+}
+.header__main--userpanel_dropdown-buttons:hover {
+  filter: invert(1) sepia(75) saturate(25) hue-rotate(150deg) brightness(0.8);
 }
 .header__main--buttons {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   border: 1px solid var(--border-color);
   border-radius: var(--button-border-radius);
+  position: relative;
+}
+.header__main--buttons:not(:last-of-type) {
+  margin-right: 10px;
 }
 .header__main--buttons_icon {
+  width: 90%;
   height: 90%;
+}
+.header__main--buttons_counter {
+  position: absolute;
+  top: 75%;
+  left: 110%;
+  font-weight: 600;
+  color: var(--default-bg-color);
+  filter: drop-shadow(0 0 3px var(--default-text-color));
 }/*# sourceMappingURL=Header.css.map */

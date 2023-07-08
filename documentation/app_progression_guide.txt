@@ -1,9 +1,6 @@
 ———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
-TO DO (34):
+TO DO (31):
 
-- header | change light mode design (cancel, remote it and function)
-- header | global scss and components scss fix colors
-- header | svg of dropdown menus
 - header | fav/cart counters if logged
 - header | responsivity and mobile version
 

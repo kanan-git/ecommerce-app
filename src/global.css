@@ -2,7 +2,7 @@
   --default-text-color: rgb(0,0,0);
   --light-text-color: rgb(220,220,220);
   --default-bg-color: rgb(255,255,255);
-  --dark-color: rgb(48,48,48);
+  --dark-color: rgb(25,25,25);
   --border-color: rgb(16,16,16);
   --soft-border-color: rgb(200,200,200);
   --selected-text-color: rgb(0,200,200);
@@ -12,6 +12,7 @@
   --only-light-color: rgb(220,220,220);
   --blur-glass-bg: rgb(255,255,255,0.1);
   --only-dark: rgb(0,0,0);
+  --counter-color: rgb(255,0,0);
   --undifined-temporary-gradient-1: linear-gradient(to right, rgb(0,64,255), rgb(0,255,255));
   --slow-fx: ease-in-out 0.35s;
   --instant-fx: linear 0s;

@@ -44,26 +44,30 @@ function Footer() {
                 </ul>
                 <ul className="footer__main--columns">
                     <h6 className="footer__main--columns_header"> Sosial Media </h6>
-                    <li className="footer__main--columns_list"> Instagram </li>
-                    <li className="footer__main--columns_list"> YouTube </li>
-                    <li className="footer__main--columns_list"> Facebook </li>
-                    <li className="footer__main--columns_list"> Twitter </li>
-                    {/* <Link to="https://instagram.com" className="footer__main--columns_info">
-                        <img src="#" alt="instagram" className="footer__main--columns_info-content" />
-                    </Link> */}
-
+                    <Link to="https://instagram.com" className="footer__main--columns_info">
+                        <img src="/asset_library/symbols_svg/icons8-instagram.svg" alt="instagram" className="footer__main--columns_info-content" />
+                    </Link>
+                    <Link to="https://youtube.com" className="footer__main--columns_info">
+                        <img src="/asset_library/symbols_svg/icons8-youtube.svg" alt="youtube" className="footer__main--columns_info-content" />
+                    </Link>
+                    <Link to="https://facebook.com" className="footer__main--columns_info">
+                        <img src="/asset_library/symbols_svg/icons8-facebook.svg" alt="facebook" className="footer__main--columns_info-content" />
+                    </Link>
+                    <Link to="https://twitter.com" className="footer__main--columns_info">
+                        <img src="/asset_library/symbols_svg/icons8-twitter.svg" alt="twitter" className="footer__main--columns_info-content" />
+                    </Link>
                 </ul>
             </div>
             <div className="footer__bottom">
                 <p className="footer__bottom--rights">
                     © Müəllif hüququ 2023 CODERS.EDU.AZ | Bütün Hüquqları Qorunur.
                 </p>
-                {/* <span className="footer__bottom--icons">
-                    <img src="#" alt="paypal" className="footer__bottom--icons_content" />
-                    <img src="#" alt="visa" className="footer__bottom--icons_content" />
-                    <img src="#" alt="mastercard" className="footer__bottom--icons_content" />
-                    <img src="#" alt="american-express" className="footer__bottom--icons_content" />
-                </span> */}
+                <span className="footer__bottom--icons">
+                    <img src="/asset_library/symbols_svg/paypal-svgrepo-com.svg" alt="paypal" className="footer__bottom--icons_content" />
+                    <img src="/asset_library/symbols_svg/visa-svgrepo-com.svg" alt="visa" className="footer__bottom--icons_content" />
+                    <img src="/asset_library/symbols_svg/mastercard-svgrepo-com.svg" alt="mastercard" className="footer__bottom--icons_content" />
+                    <img src="/asset_library/symbols_svg/american-express-svgrepo-com.svg" alt="american-express" className="footer__bottom--icons_content" />
+                </span>
             </div>
         </div>
     )
