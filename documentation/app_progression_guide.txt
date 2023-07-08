@@ -1,19 +1,16 @@
 ———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
-WORK IN PROGRESS (5):
-~ header | decrease size of search button
-~ header | change light mode design
-~ header | fix userpanel dropdown area
-~ header | svg of dropdown menus
-~ header | move navbar from header to homepage
-———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
-TO DO (33):
-- header | bg color blue & position static
+TO DO (34):
+
+- header | change light mode design (cancel, remote it and function)
+- header | global scss and components scss fix colors
+- header | svg of dropdown menus
 - header | fav/cart counters if logged
 - header | responsivity and mobile version
-- footer | columns and content
-- footer | css fix space and size
+
+- footer | columns and content, replace social media conents with image buttons with route
 - footer | translation and set up language changing inside components not json
 - footer | responsivity
+
 - html&scss | create home page with responsivity
 - html&scss | create blog page with responsivity
 - html&scss | create about page with responsivity
@@ -29,7 +26,9 @@ TO DO (33):
 - html&scss | create profile and settings page with responsivity
 - html&scss | create myfav page with responsivity
 - html&scss | create mycart page with responsivity
+
 - popups | create purchasement details and apply popup page, svg and responsivity
+
 - notes | breadcrumb when you in another page not home
 - notes | page urls with id or user info for routing
 - notes | keep footer and header on login page
@@ -38,12 +37,8 @@ TO DO (33):
 - notes | use localStorage for selectedLang, lightMode and cureentUser (guest or user id)
 - notes | use ChatGPT to generate blog, aboutus, contact, support, faq, settings, recovery, help pages text content
 - notes | swipe effect javascript learn and apply for homepage carousel, infinite loop
+
 - database | collect product images & info from hepsiantika, antikkutu, antikasatis create json for testing pages
+
 - authentication | edit user json properties
-———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
-SUCCESSFULLY COMPLETED (1):
-+ install json server and routing, set up app
-———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
-UNEXPECTED ISSUES (0):
-► —
 ———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
