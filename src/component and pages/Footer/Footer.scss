@@ -7,16 +7,16 @@
 .footer {
     width: 100%;
     height: auto;
-    background-color: var(--dark-bg-color);
+    background-color: var(--dark-color);
     &__main {
-        padding: 20px 0 20px 0;
+        padding: 30px 0 30px 0;
         display: flex;
         align-items: flex-start;
         justify-content: center;
         width: auto;
         height: auto;
         &--columns {
-            width: 250px;
+            width: 210px;
             // border: 1px solid red;
             padding-left: 50px;
             &:first-of-type {
@@ -25,13 +25,13 @@
             &_logo {
                 width: 80%;
                 height: auto;
-                filter: invert(1);
+                filter: invert(1) drop-shadow(0 0 5px var(--retrogallery-custom-colorpick));
             }
             &_description {
-                color: var(--smoke-color);
+                color: var(--only-light-color);
             }
             &_info {
-                color: var(--smoke-color);
+                color: var(--only-light-color);
                 margin-left: 5px;
                 &:not(:last-of-type) {
                     margin-bottom: 5px;
@@ -40,11 +40,11 @@
             &_header {
                 margin: 0px 0px 10px 0px; // top right bottom left
                 font-size: 20px;
-                color: var(--smoke-color);
+                color: var(--only-light-color);
                 text-transform: uppercase;
             }
             &_list {
-                color: var(--smoke-color);
+                color: var(--only-light-color);
                 margin-left: 5px;
                 width: fit-content;
                 cursor: pointer;
@@ -53,18 +53,21 @@
                     margin-bottom: 5px;
                 }
                 &:hover {
-                    filter: drop-shadow(0 0 4px var(--selected-text-color));
+                    color: var(--only-negative-color);
+                    filter: drop-shadow(0 0 4px var(--retrogallery-custom-colorpick));
                     transform: translateX(10px);
                 }
             }
         }
     }
     &__bottom {
+        width: 100%;
+        background-color: var(--only-dark);
         @include df-center;
         height: 30px;
-        margin: 0 900px 0 0;
+        // margin: 0 700px 0 0;
         &--rights {
-            color: var(--smoke-color);
+            color: var(--light-text-color);
         }
     }
 }

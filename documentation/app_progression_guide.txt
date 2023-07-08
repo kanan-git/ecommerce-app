@@ -1,20 +1,49 @@
 ———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
-TO DO (0):
-- assign name to project with ChatGPT
-- generate logo with Blender, convert dublicate one into transparent png and ico
-- inspect reference websites, decide for UI for all page and components
-- set up db.json for testing products page, homepage and authentication functions, write fake data
-- create component header with dropdown menu, responsivity, routing (HTML, SCSS, JS, React)
-- create component footer with responsivity, routing (HTML, SCSS, JS, React)
-- create authentication page
-<<(VERCEL HOMEPAGE GRADIENT TEXT COLORS, UNDERLINE GRADIENT COLOR ON HOVER, WHILE DROPDOWN BLUR OVERLAY AND SLIDE EFFECT WITH BORDER)>>
+WORK IN PROGRESS (5):
+~ header | decrease size of search button
+~ header | change light mode design
+~ header | fix userpanel dropdown area
+~ header | svg of dropdown menus
+~ header | move navbar from header to homepage
 ———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
-WORK IN PROGRESS (0):
-~ .
+TO DO (33):
+- header | bg color blue & position static
+- header | fav/cart counters if logged
+- header | responsivity and mobile version
+- footer | columns and content
+- footer | css fix space and size
+- footer | translation and set up language changing inside components not json
+- footer | responsivity
+- html&scss | create home page with responsivity
+- html&scss | create blog page with responsivity
+- html&scss | create about page with responsivity
+- html&scss | create contact page with responsivity
+- html&scss | create faq page with responsivity
+- html&scss | create support page with responsivity
+- html&scss | create market page with responsivity
+- html&scss | create details page with responsivity
+- html&scss | create terms page with responsivity
+- html&scss | create policy page with responsivity
+- html&scss | create login page with responsivity
+- html&scss | create recovery page with responsivity
+- html&scss | create profile and settings page with responsivity
+- html&scss | create myfav page with responsivity
+- html&scss | create mycart page with responsivity
+- popups | create purchasement details and apply popup page, svg and responsivity
+- notes | breadcrumb when you in another page not home
+- notes | page urls with id or user info for routing
+- notes | keep footer and header on login page
+- notes | use localStorage for token (logged user's temporary string on its property)
+- notes | when token logout or expire delete and replace userdata without token empty property
+- notes | use localStorage for selectedLang, lightMode and cureentUser (guest or user id)
+- notes | use ChatGPT to generate blog, aboutus, contact, support, faq, settings, recovery, help pages text content
+- notes | swipe effect javascript learn and apply for homepage carousel, infinite loop
+- database | collect product images & info from hepsiantika, antikkutu, antikasatis create json for testing pages
+- authentication | edit user json properties
 ———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
-SUCCESSFULLY COMPLETED (0):
-+ .
+SUCCESSFULLY COMPLETED (1):
++ install json server and routing, set up app
 ———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
 UNEXPECTED ISSUES (0):
-► .
+► —
 ———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————

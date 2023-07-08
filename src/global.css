@@ -1,12 +1,17 @@
 :root {
   --default-text-color: rgb(0,0,0);
-  --smoke-color: rgb(230,230,230);
-  --smoke-hover-color: rgb(255,255,255);
-  --selected-text-color: rgb(190,130,100);
+  --light-text-color: rgb(220,220,220);
   --default-bg-color: rgb(255,255,255);
-  --dark-bg-color: rgb(48,48,48);
+  --dark-color: rgb(48,48,48);
   --border-color: rgb(16,16,16);
   --soft-border-color: rgb(200,200,200);
+  --selected-text-color: rgb(0,200,200);
+  --header-background: linear-gradient(to bottom, rgb(0,100,200), rgb(0,128,255));
+  --retrogallery-custom-colorpick: rgb(0,100,200);
+  --only-negative-color: rgb(255,255,255);
+  --only-light-color: rgb(220,220,220);
+  --blur-glass-bg: rgb(255,255,255,0.1);
+  --only-dark: rgb(0,0,0);
   --undifined-temporary-gradient-1: linear-gradient(to right, rgb(0,64,255), rgb(0,255,255));
   --slow-fx: ease-in-out 0.35s;
   --instant-fx: linear 0s;

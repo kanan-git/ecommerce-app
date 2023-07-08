@@ -10,20 +10,29 @@ function Footer() {
                 <ul className="footer__main--columns">
                     <img src="/asset_library/logo_and_icon/RetroQalereya_transparent_bg_logo.png" 
                     alt="RetroQalereya" className="footer__main--columns_logo" />
-                    <p className="footer__main--columns_description"> Lorem ipsum dolor sit amet. </p>
-                    <li className="footer__main--columns_info"> content </li>
-                    <li className="footer__main--columns_info"> content </li>
-                    <li className="footer__main--columns_info"> content </li>
+                    <p className="footer__main--columns_description"> Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. </p>
+                    <br />
+                    <li className="footer__main--columns_info"> Unvan: lorem ipsum dolor sit amet. </li>
+                    <li className="footer__main--columns_info"> Telefon: +994 50 123 45 67 </li>
+                    <li className="footer__main--columns_info"> E-poct: info@retrogallery.com </li>
                 </ul>
                 <ul className="footer__main--columns">
                     <h6 className="footer__main--columns_header"> Mağaza </h6>
-                    <li className="footer__main--columns_list"> content </li>
-                    <li className="footer__main--columns_list"> content </li>
+                    <li className="footer__main--columns_list"> ANTİKA SANAT </li>
+                    <li className="footer__main--columns_list"> ANTİKA FOTOĞRAFÇILIK </li>
+                    <li className="footer__main--columns_list"> ANTİKA MAKİNELER </li>
+                    <li className="footer__main--columns_list"> ANTİKA OBJELER </li>
+                    <li className="footer__main--columns_list"> EV DEKORASYON VE TEKSTİL </li>
+                    <li className="footer__main--columns_list"> KOLEKSİYON </li>
+                    <li className="footer__main--columns_list"> EFEMERA </li>
+                    <li className="footer__main--columns_list"> KLASİK ARAÇLAR </li>
                 </ul>
                 <ul className="footer__main--columns">
                     <h6 className="footer__main--columns_header"> Profil </h6>
-                    <li className="footer__main--columns_list"> content </li>
-                    <li className="footer__main--columns_list"> content </li>
+                    <li className="footer__main--columns_list"> Sifarişlər </li>
+                    <li className="footer__main--columns_list"> Favorilər </li>
+                    <li className="footer__main--columns_list"> Səbət </li>
+                    <li className="footer__main--columns_list"> Parametrlər </li>
                 </ul>
                 <ul className="footer__main--columns">
                     <h6 className="footer__main--columns_header"> Dəstək </h6>

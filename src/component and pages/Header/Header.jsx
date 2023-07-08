@@ -4,12 +4,13 @@ import {BrowserRouter as Router, Routes, Route, Link, Navigate} from 'react-rout
 import './Header.css'
 
 function Header() {
-    // const root = document.documentElement
-    // root.style.setProperty('--default-text-color', 'rgb(255,255,255)')
-
+    const root = document.documentElement
+    
     const [tempUserStatus, setTempUserStatus] = useState("guest") // "0 or any user ID" / "guest"
     const [tempLightMode, setTempLightMode] = useState("light") // "light" / "dark"
-    
+
+    // console.log(window.location.pathname)
+
     // if(window.innerWidth < "1920") {
     //     alert("MOBILE RESPONSIBILITY WILL BE WORKING SOON")
     // }
@@ -63,13 +64,25 @@ function Header() {
                 </Link>
                 
                 <div className="header__main--search">
-                    <input className="header__main--search_bar" type="search" />
+                    <input className="header__main--search_bar" type="search" 
+                    placeholder="Lorem ipsum dolor sit amet consectetur." />
                     <img src="/asset_library/symbols_svg/icons8-search.svg" alt="magnifier" 
                     className="header__main--search_button" />
                 </div>
 
                 <div className="header__main--pref">
-                    <button className="header__main--pref_lightmode">
+                    <button className="header__main--pref_lightmode" onClick={
+                        () => {
+                            root.style.setProperty('--default-text-color', 'rgb(255,255,255)')
+                            root.style.setProperty('--light-text-color', 'rgb(48,48,48)')
+                            root.style.setProperty('--default-bg-color', 'rgb(32,32,32)')
+                            root.style.setProperty('--dark-color', 'rgb(16,16,16)')
+                            root.style.setProperty('--border-color', 'rgb(200,200,200)')
+                            root.style.setProperty('--soft-border-color', 'rgb(64,64,64)')
+                            root.style.setProperty('--selected-text-color', 'rgb(0,100,100)')
+                            root.style.setProperty('--header-background', 'linear-gradient(to bottom, rgb(0,50,100), rgb(0,64,128))')
+                        }
+                    }>
                         {tempLightMode == "light" && <img src="/asset_library/symbols_svg/icons8-sun.svg" alt="lightmode" className="header__main--pref_lightmode-icon" />}
                         {tempLightMode == "dark" && <img src="/asset_library/symbols_svg/icons8-idea.svg" alt="lightmode" className="header__main--pref_lightmode-icon" />}
                     </button>
@@ -82,16 +95,16 @@ function Header() {
                 </div>
 
                 <div className="header__main--userpanel" onMouseEnter={
-                    () => {
-                        var UPDropdown = document.getElementById("user_dropdown")
-                        UPDropdown.style.display = `flex`
-                    }
-                } onMouseLeave={
-                    () => {
-                        var UPDropdown = document.getElementById("user_dropdown")
-                        UPDropdown.style.display = `none`
-                    }
-                }>
+                            () => {
+                                var UPDropdown = document.getElementById("user_dropdown")
+                                UPDropdown.style.display = `flex`
+                            }
+                        } onMouseLeave={
+                            () => {
+                                var UPDropdown = document.getElementById("user_dropdown")
+                                UPDropdown.style.display = `none`
+                            }
+                        }>
                     {/* if authStatus == "guest" */}
                     {tempUserStatus == "guest" && (
                         <Link to="/login" className="header__main--userpanel_profile">
@@ -110,59 +123,30 @@ function Header() {
                             <p className="header__main--userpanel_profile-name"> Name <br /> Lastname </p>
                         </Link>
                     )}
-
-                    <button className="header__main--userpanel_buttons">
-                        <img src="/asset_library/symbols_svg/favorite-svgrepo-com.svg" alt="fav" 
-                        className="header__main--userpanel_buttons-icon" />
-                        {/* <p> positionAbsolute redCounter bottomRightCorner </p> */}
-                    </button>
-                    <button className="header__main--userpanel_buttons">
-                        <img src="/asset_library/symbols_svg/cart-svgrepo-com.svg" alt="cart" 
-                        className="header__main--userpanel_buttons-icon" />
-                        {/* <p> positionAbsolute redCounter bottomRightCorner </p> */}
-                    </button>
-
                     <div className="header__main--userpanel_dropdown" id="user_dropdown">
                         {tempUserStatus == "guest" && (<>
                             <button className="header__main--userpanel_dropdown-buttons"> ♪ Daxil ol </button>
-                            <button className="header__main--signin_dropdown-buttons"> ↓ Qeydiyyat </button>
+                            <button className="header__main--userpanel_dropdown-buttons"> ↓ Qeydiyyat </button>
                         </>)}
                         {tempUserStatus == "0" && (<>
-                            <button className="header__main--signin_dropdown-buttons"> ▼ Sifarişlərim </button>
-                            <button className="header__main--signin_dropdown-buttons"> ■ Səbətim </button>
-                            <button className="header__main--signin_dropdown-buttons"> ♥ Favorilərim </button>
-                            <button className="header__main--signin_dropdown-buttons"> ☼ Parametrlər </button>
-                            <button className="header__main--signin_dropdown-buttons"> → Çıxış et </button>
+                            <button className="header__main--userpanel_dropdown-buttons"> ▼ Sifarişlərim </button>
+                            <button className="header__main--userpanel_dropdown-buttons"> ■ Səbətim </button>
+                            <button className="header__main--userpanel_dropdown-buttons"> ♥ Favorilərim </button>
+                            <button className="header__main--userpanel_dropdown-buttons"> ☼ Parametrlər </button>
+                            <button className="header__main--userpanel_dropdown-buttons"> → Çıxış et </button>
                         </>)}
                     </div>
                 </div>
-            </div>
-            <div className="header__navbar">
-                <button> SON EKLENEN ÜRÜNLER </button>
-                <div style={{display: "none"}}> itsDropDown </div>
-                <button> CAM & KRİSTAL ÜRÜNLER </button>
-                <div style={{display: "none"}}> itsDropDown </div>
-                <button> ESKİ MAKİNELER </button>
-                <div style={{display: "none"}}> itsDropDown </div>
-                <button> EV DEKORASYON </button>
-                <div style={{display: "none"}}> itsDropDown </div>
-                <button> EV TEKSTİLİ </button>
-                <div style={{display: "none"}}> itsDropDown </div>
-                <button> KOLEKSİYON </button>
-                <div style={{display: "none"}}> itsDropDown </div>
-                <button> METAL & PİRİNÇ ÜRÜNLER </button>
-                <div style={{display: "none"}}> itsDropDown </div>
-                <button> OYUNCAK </button>
-                <div style={{display: "none"}}> itsDropDown </div>
-                <button> PORSELEN </button>
-                <div style={{display: "none"}}> itsDropDown </div>
-                <button> SERAMİK </button>
-                <div style={{display: "none"}}> itsDropDown </div>
-                <button> TASARIM ÜRÜNLER </button>
-                <div style={{display: "none"}}> itsDropDown </div>
-
-                {/* // userpanel and navbar dropdowns and their branches */}
-                {/* // list of categories and products to navbar */}
+                <button className="header__main--buttons">
+                    <img src="/asset_library/symbols_svg/favorite-svgrepo-com.svg" alt="fav" 
+                    className="header__main--buttons_icon" />
+                    {/* <p> positionAbsolute redCounter bottomRightCorner </p> */}
+                </button>
+                <button className="header__main--buttons">
+                    <img src="/asset_library/symbols_svg/cart-svgrepo-com.svg" alt="cart" 
+                    className="header__main--buttons_icon" />
+                    {/* <p> positionAbsolute redCounter bottomRightCorner </p> */}
+                </button>
             </div>
         </div>
     )
