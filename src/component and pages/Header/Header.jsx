@@ -29,7 +29,8 @@ function Header() {
                 "Favorilərim", // 4
                 "Parametrlər", // 5
                 "Çıxış et" // 6
-            ]
+            ],
+            mobmenu: "dili dəyiş"
         },
         EN: {
             topside: [
@@ -53,7 +54,8 @@ function Header() {
                 "my favorites", // 4
                 "settings", // 5
                 "log out" // 6
-            ]
+            ],
+            mobmenu: "change language"
         },
         TR: {
             topside: [
@@ -77,7 +79,8 @@ function Header() {
                 "favorilerim", // 4
                 "ayarlar", // 5
                 "çıkış yap" // 6
-            ]
+            ],
+            mobmenu: "dili değiştir"
         },
         RU: {
             topside: [
@@ -101,7 +104,8 @@ function Header() {
                 "мои любимые", // 4
                 "настройки", // 5
                 "выйти" // 6
-            ]
+            ],
+            mobmenu: "изменение языка"
         }
     }
 
@@ -125,40 +129,213 @@ function Header() {
 
     return (
         <div className="header">
+            {/* mobile button */}
+            <button className="header__mobilebtn" onClick={
+                () => {
+                    var btn_bars = document.getElementById("menubtn_bars")
+                    var btn_xmark = document.getElementById("menubtn_xmark")
+                    var mobile_menu = document.getElementById("mobmenu")
+                    if(mobile_menu.style.display == `none`) {
+                        btn_bars.style.display = `none`
+                        btn_xmark.style.display = `flex`
+                        mobile_menu.style.display = `flex`
+                    } else {
+                        btn_bars.style.display = `flex`
+                        btn_xmark.style.display = `none`
+                        mobile_menu.style.display = `none`
+                    }
+                }
+            }>
+                <img src="/asset_library/symbols_svg/icons8-menu.svg" className="header__mobilebtn--symbol" 
+                id="menubtn_bars" />
+                <img src="/asset_library/symbols_svg/icons8-close.svg" className="header__mobilebtn--symbol" 
+                id="menubtn_xmark" />
+            </button>
+
+            {/* mobile only (700), tablet (1000) - display flex, default display none */}
+            <div className="header__mobilestatic">
+                <Link to="/" className="header__main--link">
+                    <img src="/asset_library/logo_and_icon/RetroQalereya_transparent_bg_logo.png" 
+                    alt="logo" 
+                    className="header__main--link_logo" />
+                </Link>
+                <div className="header__main--userpanel" onMouseEnter={
+                    () => {
+                        var UPDropdown = document.getElementById("user_dropdown")
+                        // UPDropdown.style.display = `flex`
+                        UPDropdown.style.visibility = `visible`
+                        UPDropdown.style.opacity = `1.0`
+                    }
+                } onMouseLeave={
+                    () => {
+                        var UPDropdown = document.getElementById("user_dropdown")
+                        // UPDropdown.style.display = `none`
+                        UPDropdown.style.visibility = `hidden`
+                        UPDropdown.style.opacity = `0.0`
+                    }
+                }>
+                    {/* if authStatus == "guest" */}
+                    {tempUserStatus == "guest" && (
+                        <Link to="/login" className="header__main--userpanel_profile">
+                            <img src="/asset_library/user_profile_images/profile_guest.png" 
+                            alt="guest" 
+                            className="header__main--userpanel_profile-img" />
+                            <p className="header__main--userpanel_profile-login">
+                                {textDataBasaSTATE.main[1]}
+                            </p>
+                        </Link>
+                    )}
+                    {/* if authStatus == "userIdHere" */}
+                    {tempUserStatus == "0" && (
+                        <Link to="/settings" className="header__main--userpanel_profile">
+                            <img src="/asset_library/user_profile_images/profile_guest.png" 
+                            alt="username-here" 
+                            className="header__main--userpanel_profile-img" />
+                            <p className="header__main--userpanel_profile-name"> Name <br /> Lastname </p>
+                        </Link>
+                    )}
+                    <div className="header__main--userpanel_dropdown" id="user_dropdown">
+                        {tempUserStatus == "guest" && (<>
+                            <button className="header__main--userpanel_dropdown-buttons">
+                                <img src="/asset_library/symbols_svg/sign-in-svgrepo-com.svg" className="header__main--userpanel_dropdown-buttons__symbols" />
+                                {textDataBasaSTATE.dropdown[0]}
+                            </button>
+                            <button className="header__main--userpanel_dropdown-buttons">
+                                <img src="/asset_library/symbols_svg/register-svgrepo-com.svg" className="header__main--userpanel_dropdown-buttons__symbols" />
+                                {textDataBasaSTATE.dropdown[1]}
+                            </button>
+                        </>)}
+                        {tempUserStatus == "0" && (<>
+                            <button className="header__main--userpanel_dropdown-buttons">
+                                <img src="/asset_library/symbols_svg/dollar-svgrepo-com.svg" className="header__main--userpanel_dropdown-buttons__symbols" />
+                                {textDataBasaSTATE.dropdown[2]}
+                            </button>
+                            <button className="header__main--userpanel_dropdown-buttons">
+                                <img src="/asset_library/symbols_svg/cart-svgrepo-com.svg" className="header__main--userpanel_dropdown-buttons__symbols" />
+                                {textDataBasaSTATE.dropdown[3]}
+                            </button>
+                            <button className="header__main--userpanel_dropdown-buttons">
+                                <img src="/asset_library/symbols_svg/favorite-svgrepo-com.svg" className="header__main--userpanel_dropdown-buttons__symbols" />
+                                {textDataBasaSTATE.dropdown[4]}
+                            </button>
+                            <button className="header__main--userpanel_dropdown-buttons">
+                                <img src="/asset_library/symbols_svg/icons8-settings.svg" className="header__main--userpanel_dropdown-buttons__symbols" />
+                                {textDataBasaSTATE.dropdown[5]}
+                            </button>
+                            <button className="header__main--userpanel_dropdown-buttons">
+                                <img src="/asset_library/symbols_svg/out-profile-ui-user-group-people-svgrepo-com.svg" className="header__main--userpanel_dropdown-buttons__symbols" />
+                                {textDataBasaSTATE.dropdown[6]}
+                            </button>
+                        </>)}
+                    </div>
+                </div>
+                <button className="header__main--buttons">
+                    <img src="/asset_library/symbols_svg/favorite-svgrepo-com.svg" alt="fav" 
+                    className="header__main--buttons_icon" />
+                    {tempUserStatus != "guest" && (
+                        <p className="header__main--buttons_counter"> 100 </p>
+                    )}
+                </button>
+                <button className="header__main--buttons">
+                    <img src="/asset_library/symbols_svg/cart-svgrepo-com.svg" alt="cart" 
+                    className="header__main--buttons_icon" />
+                    {tempUserStatus != "guest" && (
+                        <p className="header__main--buttons_counter"> 0 </p>
+                    )}
+                </button>
+            </div>
+            <div className="header__mobilemenu" id="mobmenu">
+                <div className="header__mobilemenu--search">
+                    <input type="search" className="header__mobilemenu--search_bar" 
+                    placeholder={textDataBasaSTATE.main[0]} />
+                    <button className="header__mobilemenu--search_btn">
+                        <img src="/asset_library/symbols_svg/icons8-search.svg" 
+                        className="header__mobilemenu--search_btn-content" />
+                    </button>
+                </div>
+                <div className="header__mobilemenu--links">
+                    <Link className="header__mobilemenu--links_items" to="/">
+                        <img src="/asset_library/symbols_svg/icons8-home.svg" alt="home" 
+                        className="header__mobilemenu--links_items-icons" />
+                        {textDataBasaSTATE.topside[0]}
+                    </Link>
+                    <Link className="header__mobilemenu--links_items" to="/products">
+                        <img src="/asset_library/symbols_svg/store-sign-svgrepo-com.svg" alt="market" 
+                        className="header__mobilemenu--links_items-icons" />
+                        {textDataBasaSTATE.topside[1]}
+                    </Link>
+                    <Link className="header__mobilemenu--links_items" to="/blog">
+                        <img src="/asset_library/symbols_svg/blog-website-svgrepo-com.svg" alt="blog" 
+                        className="header__mobilemenu--links_items-icons" />
+                        {textDataBasaSTATE.topside[2]}
+                    </Link>
+                    <Link className="header__mobilemenu--links_items" to="/aboutus">
+                        <img src="/asset_library/symbols_svg/icons8-about.svg" alt="about" 
+                        className="header__mobilemenu--links_items-icons" />
+                        {textDataBasaSTATE.topside[3]}
+                    </Link>
+                    <Link className="header__mobilemenu--links_items" to="/contact">
+                        <img src="/asset_library/symbols_svg/icons8-contacts.svg" alt="contact" 
+                        className="header__mobilemenu--links_items-icons" />
+                        {textDataBasaSTATE.topside[4]}
+                    </Link>
+                    <Link className="header__mobilemenu--links_items" to="/faq">
+                        <img src="/asset_library/symbols_svg/icons8-speech-bubble.svg" alt="faq" 
+                        className="header__mobilemenu--links_items-icons" />
+                        {textDataBasaSTATE.topside[5]}
+                    </Link>
+                    <Link className="header__mobilemenu--links_items" to="/help">
+                        <img src="/asset_library/symbols_svg/icons8-support.svg" alt="support" 
+                        className="header__mobilemenu--links_items-icons" />
+                        {textDataBasaSTATE.topside[6]}
+                    </Link>
+                </div>
+                <div className="header__mobilemenu--language">
+                    <p className="header__mobilemenu--language_info">
+                        {textDataBasaSTATE.mobmenu}
+                    </p>
+                    <select name="language" id="language" className="header__mobilemenu--language_langbar" onChange={
+                        (e) => {
+                            if(e.target.value == "AZ") {
+                                setTextDataBaseSTATE(textDataBasa.AZ)
+                            } else if(e.target.value == "EN") {
+                                setTextDataBaseSTATE(textDataBasa.EN)
+                            } else if(e.target.value == "TR") {
+                                setTextDataBaseSTATE(textDataBasa.TR)
+                            } else if(e.target.value == "RU") {
+                                setTextDataBaseSTATE(textDataBasa.RU)
+                            }
+                        }
+                    }>
+                        <option value="AZ" className="header__mobilemenu--language_langbar-options"> AZ </option>
+                        <option value="EN" className="header__mobilemenu--language_langbar-options"> EN </option>
+                        <option value="TR" className="header__mobilemenu--language_langbar-options"> TR </option>
+                        <option value="RU" className="header__mobilemenu--language_langbar-options"> RU </option>
+                    </select>
+                </div>
+            </div>
+
+            {/* default (1920), laptop (1300) - display flex, mobile display none */}
             <div className="header__topside">
                 <Link className="header__topside--links" to="/">
-                    {/* <img src="/asset_library/symbols_svg/icons8-home.svg" alt="home" 
-                    className="header__topside--links_icons" /> */}
                     {textDataBasaSTATE.topside[0]}
                 </Link>
                 <Link className="header__topside--links" to="/products">
-                    {/* <img src="/asset_library/symbols_svg/store-sign-svgrepo-com.svg" alt="market" 
-                    className="header__topside--links_icons" /> */}
                     {textDataBasaSTATE.topside[1]}
                 </Link>
                 <Link className="header__topside--links" to="/blog">
-                    {/* <img src="/asset_library/symbols_svg/blog-website-svgrepo-com.svg" alt="blog" 
-                    className="header__topside--links_icons" /> */}
                     {textDataBasaSTATE.topside[2]}
                 </Link>
                 <Link className="header__topside--links" to="/aboutus">
-                    {/* <img src="/asset_library/symbols_svg/icons8-about.svg" alt="about" 
-                    className="header__topside--links_icons" /> */}
                     {textDataBasaSTATE.topside[3]}
                 </Link>
                 <Link className="header__topside--links" to="/contact">
-                    {/* <img src="/asset_library/symbols_svg/icons8-contacts.svg" alt="contact" 
-                    className="header__topside--links_icons" /> */}
                     {textDataBasaSTATE.topside[4]}
                 </Link>
                 <Link className="header__topside--links" to="/faq">
-                    {/* <img src="/asset_library/symbols_svg/icons8-speech-bubble.svg" alt="faq" 
-                    className="header__topside--links_icons" /> */}
                     {textDataBasaSTATE.topside[5]}
                 </Link>
                 <Link className="header__topside--links" to="/help">
-                    {/* <img src="/asset_library/symbols_svg/icons8-support.svg" alt="support" 
-                    className="header__topside--links_icons" /> */}
                     {textDataBasaSTATE.topside[6]}
                 </Link>
             </div>
