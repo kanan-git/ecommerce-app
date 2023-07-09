@@ -5,14 +5,115 @@ import './Header.css'
 
 function Header() {
     const root = document.documentElement
-    const [tempUserStatus, setTempUserStatus] = useState("guest") // "0 or any user ID" / "guest"
 
-    useEffect(
-        () => {
-            const tempValue = prompt("guest | 0")
-            setTempUserStatus(tempValue)
-        }, []
-    )
+    const textDataBasa = {
+        AZ: {
+            topside: [
+                "ana səhifə", // 0
+                "mağaza", // 1
+                "bloq", // 2
+                "haqqımızda", // 3
+                "əlaqə", // 4
+                "faq", // 5
+                "yardım və dəstək" // 6
+            ],
+            main: [
+                "axtarış...", // 0
+                "daxil ol" // 1
+            ],
+            dropdown: [
+                "daxil ol", // 0
+                "qeydiyyat", // 1
+                "Sifarişlərim", // 2
+                "Səbətim", // 3
+                "Favorilərim", // 4
+                "Parametrlər", // 5
+                "Çıxış et" // 6
+            ]
+        },
+        EN: {
+            topside: [
+                "homepage", // 0
+                "shop", // 1
+                "blog", // 2
+                "about us", // 3
+                "contact", // 4
+                "faq", // 5
+                "help & support" // 6
+            ],
+            main: [
+                "search...", // 0
+                "sign in" // 1
+            ],
+            dropdown: [
+                "sign in", // 0
+                "register", // 1
+                "my orders", // 2
+                "my cart", // 3
+                "my favorites", // 4
+                "settings", // 5
+                "log out" // 6
+            ]
+        },
+        TR: {
+            topside: [
+                "ana sayfa", // 0
+                "mağaza", // 1
+                "blog", // 2
+                "hakkımızda", // 3
+                "iletişim", // 4
+                "sss", // 5
+                "yardım ve destek" // 6
+            ],
+            main: [
+                "arama...", // 0
+                "giriş" // 1
+            ],
+            dropdown: [
+                "giriş", // 0
+                "kayıt ol", // 1
+                "siparişlerim", // 2
+                "sepetim", // 3
+                "favorilerim", // 4
+                "ayarlar", // 5
+                "çıkış yap" // 6
+            ]
+        },
+        RU: {
+            topside: [
+                "домашняя", // 0
+                "магазин", // 1
+                "блог", // 2
+                "о нас", // 3
+                "контакт", // 4
+                "чзв", // 5
+                "помощь и поддержка" // 6
+            ],
+            main: [
+                "поиск...", // 0
+                "войти" // 1
+            ],
+            dropdown: [
+                "войти", // 0
+                "регистр", // 1
+                "мои заказы", // 2
+                "моя тележка", // 3
+                "мои любимые", // 4
+                "настройки", // 5
+                "выйти" // 6
+            ]
+        }
+    }
+
+    const [tempUserStatus, setTempUserStatus] = useState("guest") // "0 or any user ID" / "guest"
+    const [textDataBasaSTATE, setTextDataBaseSTATE] = useState(textDataBasa.AZ)
+
+    // useEffect(
+    //     () => {
+    //         const tempValue = prompt("guest | 0")
+    //         setTempUserStatus(tempValue)
+    //     }, []
+    // )
 
     // console.log(window.location.pathname)
 
@@ -28,37 +129,37 @@ function Header() {
                 <Link className="header__topside--links" to="/">
                     {/* <img src="/asset_library/symbols_svg/icons8-home.svg" alt="home" 
                     className="header__topside--links_icons" /> */}
-                    Ana Səhifə
+                    {textDataBasaSTATE.topside[0]}
                 </Link>
                 <Link className="header__topside--links" to="/products">
                     {/* <img src="/asset_library/symbols_svg/store-sign-svgrepo-com.svg" alt="market" 
                     className="header__topside--links_icons" /> */}
-                    Mağaza
+                    {textDataBasaSTATE.topside[1]}
                 </Link>
                 <Link className="header__topside--links" to="/blog">
                     {/* <img src="/asset_library/symbols_svg/blog-website-svgrepo-com.svg" alt="blog" 
                     className="header__topside--links_icons" /> */}
-                    Bloq
+                    {textDataBasaSTATE.topside[2]}
                 </Link>
                 <Link className="header__topside--links" to="/aboutus">
                     {/* <img src="/asset_library/symbols_svg/icons8-about.svg" alt="about" 
                     className="header__topside--links_icons" /> */}
-                    Haqqımızda
+                    {textDataBasaSTATE.topside[3]}
                 </Link>
                 <Link className="header__topside--links" to="/contact">
                     {/* <img src="/asset_library/symbols_svg/icons8-contacts.svg" alt="contact" 
                     className="header__topside--links_icons" /> */}
-                    Əlaqə
+                    {textDataBasaSTATE.topside[4]}
                 </Link>
                 <Link className="header__topside--links" to="/faq">
                     {/* <img src="/asset_library/symbols_svg/icons8-speech-bubble.svg" alt="faq" 
                     className="header__topside--links_icons" /> */}
-                    FAQ
+                    {textDataBasaSTATE.topside[5]}
                 </Link>
                 <Link className="header__topside--links" to="/help">
                     {/* <img src="/asset_library/symbols_svg/icons8-support.svg" alt="support" 
                     className="header__topside--links_icons" /> */}
-                    Yardım və Dəstək
+                    {textDataBasaSTATE.topside[6]}
                 </Link>
             </div>
             <div className="header__main">
@@ -70,13 +171,25 @@ function Header() {
                 
                 <div className="header__main--search">
                     <input className="header__main--search_bar" type="search" 
-                    placeholder="Lorem ipsum dolor sit amet consectetur." />
+                    placeholder={textDataBasaSTATE.main[0]} />
                     <img src="/asset_library/symbols_svg/icons8-search.svg" alt="magnifier" 
                     className="header__main--search_button" />
                 </div>
 
                 <div className="header__main--pref">
-                    <select name="language" id="language" className="header__main--pref_langbar">
+                    <select name="language" id="language" className="header__main--pref_langbar" onChange={
+                        (e) => {
+                            if(e.target.value == "AZ") {
+                                setTextDataBaseSTATE(textDataBasa.AZ)
+                            } else if(e.target.value == "EN") {
+                                setTextDataBaseSTATE(textDataBasa.EN)
+                            } else if(e.target.value == "TR") {
+                                setTextDataBaseSTATE(textDataBasa.TR)
+                            } else if(e.target.value == "RU") {
+                                setTextDataBaseSTATE(textDataBasa.RU)
+                            }
+                        }
+                    }>
                         <option value="AZ" className="header__main--pref_langbar-options"> AZ </option>
                         <option value="EN" className="header__main--pref_langbar-options"> EN </option>
                         <option value="TR" className="header__main--pref_langbar-options"> TR </option>
@@ -105,7 +218,9 @@ function Header() {
                             <img src="/asset_library/user_profile_images/profile_guest.png" 
                             alt="guest" 
                             className="header__main--userpanel_profile-img" />
-                            <p className="header__main--userpanel_profile-login"> Daxil ol </p>
+                            <p className="header__main--userpanel_profile-login">
+                                {textDataBasaSTATE.main[1]}
+                            </p>
                         </Link>
                     )}
                     {/* if authStatus == "userIdHere" */}
@@ -121,33 +236,33 @@ function Header() {
                         {tempUserStatus == "guest" && (<>
                             <button className="header__main--userpanel_dropdown-buttons">
                                 <img src="/asset_library/symbols_svg/sign-in-svgrepo-com.svg" className="header__main--userpanel_dropdown-buttons__symbols" />
-                                Daxil ol
+                                {textDataBasaSTATE.dropdown[0]}
                             </button>
                             <button className="header__main--userpanel_dropdown-buttons">
                                 <img src="/asset_library/symbols_svg/register-svgrepo-com.svg" className="header__main--userpanel_dropdown-buttons__symbols" />
-                                Qeydiyyat
+                                {textDataBasaSTATE.dropdown[1]}
                             </button>
                         </>)}
                         {tempUserStatus == "0" && (<>
                             <button className="header__main--userpanel_dropdown-buttons">
                                 <img src="/asset_library/symbols_svg/dollar-svgrepo-com.svg" className="header__main--userpanel_dropdown-buttons__symbols" />
-                                Sifarişlərim
+                                {textDataBasaSTATE.dropdown[2]}
                             </button>
                             <button className="header__main--userpanel_dropdown-buttons">
                                 <img src="/asset_library/symbols_svg/cart-svgrepo-com.svg" className="header__main--userpanel_dropdown-buttons__symbols" />
-                                Səbətim
+                                {textDataBasaSTATE.dropdown[3]}
                             </button>
                             <button className="header__main--userpanel_dropdown-buttons">
                                 <img src="/asset_library/symbols_svg/favorite-svgrepo-com.svg" className="header__main--userpanel_dropdown-buttons__symbols" />
-                                Favorilərim
+                                {textDataBasaSTATE.dropdown[4]}
                             </button>
                             <button className="header__main--userpanel_dropdown-buttons">
                                 <img src="/asset_library/symbols_svg/icons8-settings.svg" className="header__main--userpanel_dropdown-buttons__symbols" />
-                                Parametrlər
+                                {textDataBasaSTATE.dropdown[5]}
                             </button>
                             <button className="header__main--userpanel_dropdown-buttons">
                                 <img src="/asset_library/symbols_svg/out-profile-ui-user-group-people-svgrepo-com.svg" className="header__main--userpanel_dropdown-buttons__symbols" />
-                                Çıxış et
+                                {textDataBasaSTATE.dropdown[6]}
                             </button>
                         </>)}
                     </div>

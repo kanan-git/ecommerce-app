@@ -17,7 +17,7 @@
         height: auto;
         &--columns {
             width: 210px;
-            border: 1px solid red;
+            // border: 1px solid red;
             // padding-left: 50px;
             &:first-of-type {
                 width: 450px;
@@ -76,7 +76,7 @@
         background-color: var(--only-dark);
         @include df-center;
         height: 30px;
-        gap: 600px;
+        gap: 700px;
         // margin: 0 700px 0 0;
         &--rights {
             color: var(--light-text-color);

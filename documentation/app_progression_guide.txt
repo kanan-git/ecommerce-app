@@ -1,11 +1,9 @@
 ———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
-TO DO (31):
+TO DO (29):
 
-- header | fav/cart counters if logged
 - header | responsivity and mobile version
 
-- footer | columns and content, replace social media conents with image buttons with route
-- footer | translation and set up language changing inside components not json
+- footer | translation and set up language changing inside components not json, about + contact info ChatGPT
 - footer | responsivity
 
 - html&scss | create home page with responsivity
