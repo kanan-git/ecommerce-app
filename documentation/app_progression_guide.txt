@@ -1,21 +1,27 @@
 ———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
-TO DO (27):
+TO DO (28):
 
-~ html&scss | create home page with responsivity
-~ html&scss | create blog page with responsivity
 ~ html&scss | create about page with responsivity
 ~ html&scss | create contact page with responsivity
-~ html&scss | create faq page with responsivity
-~ html&scss | create support page with responsivity
-~ html&scss | create market page with responsivity
-~ html&scss | create details page with responsivity
 ~ html&scss | create terms page with responsivity
 ~ html&scss | create policy page with responsivity
+
+~ html&scss | create faq page with responsivity
+~ html&scss | create support page with responsivity
+
 ~ html&scss | create login page with responsivity
 ~ html&scss | create recovery page with responsivity
 ~ html&scss | create profile and settings page with responsivity
+
+~ html&scss | create blog page with responsivity
+
+~ html&scss | create myorders page with responsivity
 ~ html&scss | create myfav page with responsivity
 ~ html&scss | create mycart page with responsivity
+
+~ html&scss | create home page with responsivity
+~ html&scss | create market page with responsivity
+~ html&scss | create details page with responsivity
 
 - popups | create purchasement details and apply popup page, svg and responsivity
 - general | with localStorage, both mobile & default, add language change, onload check & input changing
