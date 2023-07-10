@@ -1,3 +1,9 @@
+// @media only screen and (max-width: 1300px) {}
+// @media only screen and (max-width: 1000px) {}
+// @media only screen and (max-width: 700px) {}
+// @media only screen and (max-width: 550px) {}
+// @media only screen and (max-width: 450px) {}
+
 @mixin df-center {
     display: flex;
     justify-content: center;
@@ -8,7 +14,7 @@
     width: 100%;
     height: auto;
     background-color: var(--dark-color);
-    display: none;
+    // display: none;
     &__main {
         padding: 30px 0 30px 0;
         display: flex;
@@ -16,13 +22,57 @@
         justify-content: center;
         width: auto;
         height: auto;
+        @media only screen and (max-width: 1300px) {
+            padding: 20px 0 20px 0;
+        }
+        @media only screen and (max-width: 1000px) {
+            flex-wrap: wrap;
+            // flex-direction: column;
+            justify-content: flex-start;
+            padding: 20px 2%;
+            row-gap: 40px;
+            column-gap: 50px;
+        }
+        @media only screen and (max-width: 700px) {
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 20px 2%;
+            row-gap: 40px;
+            column-gap: 50px;
+        }
+        @media only screen and (max-width: 550px) {}
+        @media only screen and (max-width: 450px) {}
         &--columns {
             width: 210px;
             // border: 1px solid red;
             // padding-left: 50px;
+            @media only screen and (max-width: 1300px) {
+                width: 150px;
+            }
+            @media only screen and (max-width: 1000px) {}
+            @media only screen and (max-width: 700px) {
+                width: 90%;
+            }
+            @media only screen and (max-width: 550px) {}
+            @media only screen and (max-width: 450px) {}
             &:first-of-type {
                 width: 450px;
                 padding-right: 50px;
+                @media only screen and (max-width: 1300px) {
+                    width: 300px;
+                }
+                @media only screen and (max-width: 1000px) {}
+                @media only screen and (max-width: 700px) {
+                    width: 90%;
+                }
+                @media only screen and (max-width: 550px) {}
+                @media only screen and (max-width: 450px) {}
+            }
+            &:last-of-type {
+                @media only screen and (max-width: 1300px) {
+                    width: 170px;
+                }
             }
             &_logo {
                 width: 80%;
@@ -31,10 +81,16 @@
             }
             &_description {
                 color: var(--only-light-color);
+                @media only screen and (max-width: 700px) {
+                    font-size: 20px;
+                }
             }
             &_info {
                 color: var(--only-light-color);
                 margin-left: 5px;
+                @media only screen and (max-width: 700px) {
+                    font-size: 20px;
+                }
                 &:not(:last-of-type) {
                     margin-bottom: 5px;
                 }
@@ -43,6 +99,9 @@
                     height: 35px;
                     filter: invert(1);
                     transition: var(--quick-fx);
+                    @media only screen and (max-width: 700px) {
+                        font-size: 20px;
+                    }
                     &:hover {
                         scale: 1.05;
                         filter: invert(1) sepia(80) saturate(50) hue-rotate(150deg);
@@ -54,6 +113,11 @@
                 font-size: 20px;
                 color: var(--only-light-color);
                 text-transform: uppercase;
+                @media only screen and (max-width: 700px) {
+                    font-size: 34px;
+                    // border: 1px solid red;
+                    width: 300px;
+                }
             }
             &_list {
                 color: var(--only-light-color);
@@ -61,6 +125,9 @@
                 width: fit-content;
                 cursor: pointer;
                 transition: var(--quick-fx);
+                @media only screen and (max-width: 700px) {
+                    font-size: 20px;
+                }
                 &:not(:last-of-type) {
                     margin-bottom: 5px;
                 }
@@ -79,13 +146,35 @@
         height: 30px;
         gap: 700px;
         // margin: 0 700px 0 0;
+        @media only screen and (max-width: 1300px) {
+            gap: 350px;
+        }
+        @media only screen and (max-width: 1000px) {
+            gap: 100px;
+        }
+        @media only screen and (max-width: 700px) {
+            gap: 50px;
+        }
+        @media only screen and (max-width: 570px) {
+            height: 40px;
+        }
+        @media only screen and (max-width: 450px) {
+            height: 46px;
+        }
         &--rights {
             color: var(--light-text-color);
+            @media only screen and (max-width: 570px) {
+                font-size: smaller;
+            }
         }
         &--icons {
             display: flex;
             gap: 5px;
             height: 100%;
+            @media only screen and (max-width: 700px) {
+                gap: 2px;
+                height: 70%;
+            }
             &_content {
                 height: 100%;
                 filter: invert(1);

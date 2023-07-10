@@ -326,6 +326,8 @@
   border: none;
   border-bottom: 1px solid var(--border-color);
   background: var(--header-background);
+  align-items: center;
+  gap: 5%;
 }
 @media only screen and (max-width: 1300px) {
   .header__mobilestatic {
@@ -341,6 +343,108 @@
   .header__mobilestatic {
     display: flex;
   }
+}
+@media only screen and (max-width: 550px) {
+  .header__mobilestatic {
+    gap: 10%;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .header__mobilestatic {
+    gap: 5%;
+  }
+}
+.header__mobilestatic--link {
+  width: auto;
+  height: 40%;
+}
+.header__mobilestatic--link_logo {
+  width: auto;
+  height: 100%;
+  filter: invert(1);
+}
+.header__mobilestatic--userpanel {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.header__mobilestatic--userpanel_profile {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+}
+.header__mobilestatic--userpanel_profile-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+.header__mobilestatic--userpanel_profile-login {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  width: 50%;
+  height: 100%;
+  color: var(--only-negative-color);
+  font-size: 16px;
+  text-transform: capitalize;
+  overflow: auto;
+}
+@media only screen and (max-width: 450px) {
+  .header__mobilestatic--userpanel_profile-login {
+    display: none;
+  }
+}
+.header__mobilestatic--userpanel_profile-name {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  width: 50%;
+  height: 100%;
+  color: var(--only-negative-color);
+  font-size: 16px;
+  text-transform: capitalize;
+  overflow: auto;
+}
+@media only screen and (max-width: 450px) {
+  .header__mobilestatic--userpanel_profile-name {
+    display: none;
+  }
+}
+.header__mobilestatic--userpanel_dropdown {
+  display: none;
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  background-color: var(--default-bg-color);
+  visibility: hidden;
+  opacity: 0;
+}
+.header__mobilestatic--userpanel_dropdown-buttons {
+  width: 100%;
+  height: auto;
+}
+.header__mobilestatic--userpanel_dropdown-buttons__symbols {
+  width: 20px;
+  height: 20px;
+}
+.header__mobilestatic--buttons {
+  width: auto;
+  height: 40%;
+  background-color: var(--default-bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+}
+@media only screen and (max-width: 550px) {
+  .header__mobilestatic--buttons {
+    display: none;
+  }
+}
+.header__mobilestatic--buttons_icon {
+  height: 100%;
 }
 .header__mobilemenu {
   z-index: 10;

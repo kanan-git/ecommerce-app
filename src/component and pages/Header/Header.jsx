@@ -154,12 +154,12 @@ function Header() {
 
             {/* mobile only (700), tablet (1000) - display flex, default display none */}
             <div className="header__mobilestatic">
-                <Link to="/" className="header__main--link">
+                <Link to="/" className="header__mobilestatic--link">
                     <img src="/asset_library/logo_and_icon/RetroQalereya_transparent_bg_logo.png" 
                     alt="logo" 
-                    className="header__main--link_logo" />
+                    className="header__mobilestatic--link_logo" />
                 </Link>
-                <div className="header__main--userpanel" onMouseEnter={
+                <div className="header__mobilestatic--userpanel" onMouseEnter={
                     () => {
                         var UPDropdown = document.getElementById("user_dropdown")
                         // UPDropdown.style.display = `flex`
@@ -176,71 +176,71 @@ function Header() {
                 }>
                     {/* if authStatus == "guest" */}
                     {tempUserStatus == "guest" && (
-                        <Link to="/login" className="header__main--userpanel_profile">
+                        <Link to="/login" className="header__mobilestatic--userpanel_profile">
                             <img src="/asset_library/user_profile_images/profile_guest.png" 
                             alt="guest" 
-                            className="header__main--userpanel_profile-img" />
-                            <p className="header__main--userpanel_profile-login">
+                            className="header__mobilestatic--userpanel_profile-img" />
+                            <p className="header__mobilestatic--userpanel_profile-login">
                                 {textDataBasaSTATE.main[1]}
                             </p>
                         </Link>
                     )}
                     {/* if authStatus == "userIdHere" */}
                     {tempUserStatus == "0" && (
-                        <Link to="/settings" className="header__main--userpanel_profile">
+                        <Link to="/settings" className="header__mobilestatic--userpanel_profile">
                             <img src="/asset_library/user_profile_images/profile_guest.png" 
                             alt="username-here" 
-                            className="header__main--userpanel_profile-img" />
-                            <p className="header__main--userpanel_profile-name"> Name <br /> Lastname </p>
+                            className="header__mobilestatic--userpanel_profile-img" />
+                            <p className="header__mobilestatic--userpanel_profile-name"> Name <br /> Lastname </p>
                         </Link>
                     )}
-                    <div className="header__main--userpanel_dropdown" id="user_dropdown">
+                    <div className="header__mobilestatic--userpanel_dropdown" id="user_dropdown">
                         {tempUserStatus == "guest" && (<>
-                            <button className="header__main--userpanel_dropdown-buttons">
-                                <img src="/asset_library/symbols_svg/sign-in-svgrepo-com.svg" className="header__main--userpanel_dropdown-buttons__symbols" />
+                            <button className="header__mobilestatic--userpanel_dropdown-buttons">
+                                <img src="/asset_library/symbols_svg/sign-in-svgrepo-com.svg" className="header__mobilestatic--userpanel_dropdown-buttons__symbols" />
                                 {textDataBasaSTATE.dropdown[0]}
                             </button>
-                            <button className="header__main--userpanel_dropdown-buttons">
-                                <img src="/asset_library/symbols_svg/register-svgrepo-com.svg" className="header__main--userpanel_dropdown-buttons__symbols" />
+                            <button className="header__mobilestatic--userpanel_dropdown-buttons">
+                                <img src="/asset_library/symbols_svg/register-svgrepo-com.svg" className="header__mobilestatic--userpanel_dropdown-buttons__symbols" />
                                 {textDataBasaSTATE.dropdown[1]}
                             </button>
                         </>)}
                         {tempUserStatus == "0" && (<>
-                            <button className="header__main--userpanel_dropdown-buttons">
-                                <img src="/asset_library/symbols_svg/dollar-svgrepo-com.svg" className="header__main--userpanel_dropdown-buttons__symbols" />
+                            <button className="header__mobilestatic--userpanel_dropdown-buttons">
+                                <img src="/asset_library/symbols_svg/dollar-svgrepo-com.svg" className="header__mobilestatic--userpanel_dropdown-buttons__symbols" />
                                 {textDataBasaSTATE.dropdown[2]}
                             </button>
-                            <button className="header__main--userpanel_dropdown-buttons">
-                                <img src="/asset_library/symbols_svg/cart-svgrepo-com.svg" className="header__main--userpanel_dropdown-buttons__symbols" />
+                            <button className="header__mobilestatic--userpanel_dropdown-buttons">
+                                <img src="/asset_library/symbols_svg/cart-svgrepo-com.svg" className="header__mobilestatic--userpanel_dropdown-buttons__symbols" />
                                 {textDataBasaSTATE.dropdown[3]}
                             </button>
-                            <button className="header__main--userpanel_dropdown-buttons">
-                                <img src="/asset_library/symbols_svg/favorite-svgrepo-com.svg" className="header__main--userpanel_dropdown-buttons__symbols" />
+                            <button className="header__mobilestatic--userpanel_dropdown-buttons">
+                                <img src="/asset_library/symbols_svg/favorite-svgrepo-com.svg" className="header__mobilestatic--userpanel_dropdown-buttons__symbols" />
                                 {textDataBasaSTATE.dropdown[4]}
                             </button>
-                            <button className="header__main--userpanel_dropdown-buttons">
-                                <img src="/asset_library/symbols_svg/icons8-settings.svg" className="header__main--userpanel_dropdown-buttons__symbols" />
+                            <button className="header__mobilestatic--userpanel_dropdown-buttons">
+                                <img src="/asset_library/symbols_svg/icons8-settings.svg" className="header__mobilestatic--userpanel_dropdown-buttons__symbols" />
                                 {textDataBasaSTATE.dropdown[5]}
                             </button>
-                            <button className="header__main--userpanel_dropdown-buttons">
-                                <img src="/asset_library/symbols_svg/out-profile-ui-user-group-people-svgrepo-com.svg" className="header__main--userpanel_dropdown-buttons__symbols" />
+                            <button className="header__mobilestatic--userpanel_dropdown-buttons">
+                                <img src="/asset_library/symbols_svg/out-profile-ui-user-group-people-svgrepo-com.svg" className="header__mobilestatic--userpanel_dropdown-buttons__symbols" />
                                 {textDataBasaSTATE.dropdown[6]}
                             </button>
                         </>)}
                     </div>
                 </div>
-                <button className="header__main--buttons">
+                <button className="header__mobilestatic--buttons">
                     <img src="/asset_library/symbols_svg/favorite-svgrepo-com.svg" alt="fav" 
-                    className="header__main--buttons_icon" />
+                    className="header__mobilestatic--buttons_icon" />
                     {tempUserStatus != "guest" && (
-                        <p className="header__main--buttons_counter"> 100 </p>
+                        <p className="header__mobilestatic--buttons_counter"> 100 </p>
                     )}
                 </button>
-                <button className="header__main--buttons">
+                <button className="header__mobilestatic--buttons">
                     <img src="/asset_library/symbols_svg/cart-svgrepo-com.svg" alt="cart" 
-                    className="header__main--buttons_icon" />
+                    className="header__mobilestatic--buttons_icon" />
                     {tempUserStatus != "guest" && (
-                        <p className="header__main--buttons_counter"> 0 </p>
+                        <p className="header__mobilestatic--buttons_counter"> 0 </p>
                     )}
                 </button>
             </div>
