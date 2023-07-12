@@ -6,7 +6,7 @@ import './Header.css'
 function Header() {
     const root = document.documentElement
 
-    const textDataBasa = {
+    const textDataBase = {
         AZ: {
             topside: [
                 "ana səhifə", // 0
@@ -108,9 +108,9 @@ function Header() {
             mobmenu: "изменение языка"
         }
     }
-
+    
     const [tempUserStatus, setTempUserStatus] = useState("guest") // "0 or any user ID" / "guest"
-    const [textDataBasaSTATE, setTextDataBaseSTATE] = useState(textDataBasa.AZ)
+    const [textDataBaseSTATE, setTextDataBaseSTATE] = useState(textDataBase.AZ)
 
     // useEffect(
     //     () => {
@@ -181,7 +181,7 @@ function Header() {
                             alt="guest" 
                             className="header__mobilestatic--userpanel_profile-img" />
                             <p className="header__mobilestatic--userpanel_profile-login">
-                                {textDataBasaSTATE.main[1]}
+                                {textDataBaseSTATE.main[1]}
                             </p>
                         </Link>
                     )}
@@ -198,33 +198,33 @@ function Header() {
                         {tempUserStatus == "guest" && (<>
                             <button className="header__mobilestatic--userpanel_dropdown-buttons">
                                 <img src="/asset_library/symbols_svg/sign-in-svgrepo-com.svg" className="header__mobilestatic--userpanel_dropdown-buttons__symbols" />
-                                {textDataBasaSTATE.dropdown[0]}
+                                {textDataBaseSTATE.dropdown[0]}
                             </button>
                             <button className="header__mobilestatic--userpanel_dropdown-buttons">
                                 <img src="/asset_library/symbols_svg/register-svgrepo-com.svg" className="header__mobilestatic--userpanel_dropdown-buttons__symbols" />
-                                {textDataBasaSTATE.dropdown[1]}
+                                {textDataBaseSTATE.dropdown[1]}
                             </button>
                         </>)}
                         {tempUserStatus == "0" && (<>
                             <button className="header__mobilestatic--userpanel_dropdown-buttons">
                                 <img src="/asset_library/symbols_svg/dollar-svgrepo-com.svg" className="header__mobilestatic--userpanel_dropdown-buttons__symbols" />
-                                {textDataBasaSTATE.dropdown[2]}
+                                {textDataBaseSTATE.dropdown[2]}
                             </button>
                             <button className="header__mobilestatic--userpanel_dropdown-buttons">
                                 <img src="/asset_library/symbols_svg/cart-svgrepo-com.svg" className="header__mobilestatic--userpanel_dropdown-buttons__symbols" />
-                                {textDataBasaSTATE.dropdown[3]}
+                                {textDataBaseSTATE.dropdown[3]}
                             </button>
                             <button className="header__mobilestatic--userpanel_dropdown-buttons">
                                 <img src="/asset_library/symbols_svg/favorite-svgrepo-com.svg" className="header__mobilestatic--userpanel_dropdown-buttons__symbols" />
-                                {textDataBasaSTATE.dropdown[4]}
+                                {textDataBaseSTATE.dropdown[4]}
                             </button>
                             <button className="header__mobilestatic--userpanel_dropdown-buttons">
                                 <img src="/asset_library/symbols_svg/icons8-settings.svg" className="header__mobilestatic--userpanel_dropdown-buttons__symbols" />
-                                {textDataBasaSTATE.dropdown[5]}
+                                {textDataBaseSTATE.dropdown[5]}
                             </button>
                             <button className="header__mobilestatic--userpanel_dropdown-buttons">
                                 <img src="/asset_library/symbols_svg/out-profile-ui-user-group-people-svgrepo-com.svg" className="header__mobilestatic--userpanel_dropdown-buttons__symbols" />
-                                {textDataBasaSTATE.dropdown[6]}
+                                {textDataBaseSTATE.dropdown[6]}
                             </button>
                         </>)}
                     </div>
@@ -247,7 +247,7 @@ function Header() {
             <div className="header__mobilemenu" id="mobmenu">
                 <div className="header__mobilemenu--search">
                     <input type="search" className="header__mobilemenu--search_bar" 
-                    placeholder={textDataBasaSTATE.main[0]} />
+                    placeholder={textDataBaseSTATE.main[0]} />
                     <button className="header__mobilemenu--search_btn">
                         <img src="/asset_library/symbols_svg/icons8-search.svg" 
                         className="header__mobilemenu--search_btn-content" />
@@ -257,53 +257,53 @@ function Header() {
                     <Link className="header__mobilemenu--links_items" to="/">
                         <img src="/asset_library/symbols_svg/icons8-home.svg" alt="home" 
                         className="header__mobilemenu--links_items-icons" />
-                        {textDataBasaSTATE.topside[0]}
+                        {textDataBaseSTATE.topside[0]}
                     </Link>
                     <Link className="header__mobilemenu--links_items" to="/products">
                         <img src="/asset_library/symbols_svg/store-sign-svgrepo-com.svg" alt="market" 
                         className="header__mobilemenu--links_items-icons" />
-                        {textDataBasaSTATE.topside[1]}
+                        {textDataBaseSTATE.topside[1]}
                     </Link>
                     <Link className="header__mobilemenu--links_items" to="/blog">
                         <img src="/asset_library/symbols_svg/blog-website-svgrepo-com.svg" alt="blog" 
                         className="header__mobilemenu--links_items-icons" />
-                        {textDataBasaSTATE.topside[2]}
+                        {textDataBaseSTATE.topside[2]}
                     </Link>
                     <Link className="header__mobilemenu--links_items" to="/aboutus">
                         <img src="/asset_library/symbols_svg/icons8-about.svg" alt="about" 
                         className="header__mobilemenu--links_items-icons" />
-                        {textDataBasaSTATE.topside[3]}
+                        {textDataBaseSTATE.topside[3]}
                     </Link>
                     <Link className="header__mobilemenu--links_items" to="/contact">
                         <img src="/asset_library/symbols_svg/icons8-contacts.svg" alt="contact" 
                         className="header__mobilemenu--links_items-icons" />
-                        {textDataBasaSTATE.topside[4]}
+                        {textDataBaseSTATE.topside[4]}
                     </Link>
                     <Link className="header__mobilemenu--links_items" to="/faq">
                         <img src="/asset_library/symbols_svg/icons8-speech-bubble.svg" alt="faq" 
                         className="header__mobilemenu--links_items-icons" />
-                        {textDataBasaSTATE.topside[5]}
+                        {textDataBaseSTATE.topside[5]}
                     </Link>
                     <Link className="header__mobilemenu--links_items" to="/help">
                         <img src="/asset_library/symbols_svg/icons8-support.svg" alt="support" 
                         className="header__mobilemenu--links_items-icons" />
-                        {textDataBasaSTATE.topside[6]}
+                        {textDataBaseSTATE.topside[6]}
                     </Link>
                 </div>
                 <div className="header__mobilemenu--language">
                     <p className="header__mobilemenu--language_info">
-                        {textDataBasaSTATE.mobmenu}
+                        {textDataBaseSTATE.mobmenu}
                     </p>
                     <select name="language" id="language" className="header__mobilemenu--language_langbar" onChange={
                         (e) => {
                             if(e.target.value == "AZ") {
-                                setTextDataBaseSTATE(textDataBasa.AZ)
+                                setTextDataBaseSTATE(textDataBase.AZ)
                             } else if(e.target.value == "EN") {
-                                setTextDataBaseSTATE(textDataBasa.EN)
+                                setTextDataBaseSTATE(textDataBase.EN)
                             } else if(e.target.value == "TR") {
-                                setTextDataBaseSTATE(textDataBasa.TR)
+                                setTextDataBaseSTATE(textDataBase.TR)
                             } else if(e.target.value == "RU") {
-                                setTextDataBaseSTATE(textDataBasa.RU)
+                                setTextDataBaseSTATE(textDataBase.RU)
                             }
                         }
                     }>
@@ -318,25 +318,25 @@ function Header() {
             {/* default (1920), laptop (1300) - display flex, mobile display none */}
             <div className="header__topside">
                 <Link className="header__topside--links" to="/">
-                    {textDataBasaSTATE.topside[0]}
+                    {textDataBaseSTATE.topside[0]}
                 </Link>
                 <Link className="header__topside--links" to="/products">
-                    {textDataBasaSTATE.topside[1]}
+                    {textDataBaseSTATE.topside[1]}
                 </Link>
                 <Link className="header__topside--links" to="/blog">
-                    {textDataBasaSTATE.topside[2]}
+                    {textDataBaseSTATE.topside[2]}
                 </Link>
                 <Link className="header__topside--links" to="/aboutus">
-                    {textDataBasaSTATE.topside[3]}
+                    {textDataBaseSTATE.topside[3]}
                 </Link>
                 <Link className="header__topside--links" to="/contact">
-                    {textDataBasaSTATE.topside[4]}
+                    {textDataBaseSTATE.topside[4]}
                 </Link>
                 <Link className="header__topside--links" to="/faq">
-                    {textDataBasaSTATE.topside[5]}
+                    {textDataBaseSTATE.topside[5]}
                 </Link>
                 <Link className="header__topside--links" to="/help">
-                    {textDataBasaSTATE.topside[6]}
+                    {textDataBaseSTATE.topside[6]}
                 </Link>
             </div>
             <div className="header__main">
@@ -348,7 +348,7 @@ function Header() {
                 
                 <div className="header__main--search">
                     <input className="header__main--search_bar" type="search" 
-                    placeholder={textDataBasaSTATE.main[0]} />
+                    placeholder={textDataBaseSTATE.main[0]} />
                     <img src="/asset_library/symbols_svg/icons8-search.svg" alt="magnifier" 
                     className="header__main--search_button" />
                 </div>
@@ -357,13 +357,13 @@ function Header() {
                     <select name="language" id="language" className="header__main--pref_langbar" onChange={
                         (e) => {
                             if(e.target.value == "AZ") {
-                                setTextDataBaseSTATE(textDataBasa.AZ)
+                                setTextDataBaseSTATE(textDataBase.AZ)
                             } else if(e.target.value == "EN") {
-                                setTextDataBaseSTATE(textDataBasa.EN)
+                                setTextDataBaseSTATE(textDataBase.EN)
                             } else if(e.target.value == "TR") {
-                                setTextDataBaseSTATE(textDataBasa.TR)
+                                setTextDataBaseSTATE(textDataBase.TR)
                             } else if(e.target.value == "RU") {
-                                setTextDataBaseSTATE(textDataBasa.RU)
+                                setTextDataBaseSTATE(textDataBase.RU)
                             }
                         }
                     }>
@@ -396,7 +396,7 @@ function Header() {
                             alt="guest" 
                             className="header__main--userpanel_profile-img" />
                             <p className="header__main--userpanel_profile-login">
-                                {textDataBasaSTATE.main[1]}
+                                {textDataBaseSTATE.main[1]}
                             </p>
                         </Link>
                     )}
@@ -413,33 +413,33 @@ function Header() {
                         {tempUserStatus == "guest" && (<>
                             <button className="header__main--userpanel_dropdown-buttons">
                                 <img src="/asset_library/symbols_svg/sign-in-svgrepo-com.svg" className="header__main--userpanel_dropdown-buttons__symbols" />
-                                {textDataBasaSTATE.dropdown[0]}
+                                {textDataBaseSTATE.dropdown[0]}
                             </button>
                             <button className="header__main--userpanel_dropdown-buttons">
                                 <img src="/asset_library/symbols_svg/register-svgrepo-com.svg" className="header__main--userpanel_dropdown-buttons__symbols" />
-                                {textDataBasaSTATE.dropdown[1]}
+                                {textDataBaseSTATE.dropdown[1]}
                             </button>
                         </>)}
                         {tempUserStatus == "0" && (<>
                             <button className="header__main--userpanel_dropdown-buttons">
                                 <img src="/asset_library/symbols_svg/dollar-svgrepo-com.svg" className="header__main--userpanel_dropdown-buttons__symbols" />
-                                {textDataBasaSTATE.dropdown[2]}
+                                {textDataBaseSTATE.dropdown[2]}
                             </button>
                             <button className="header__main--userpanel_dropdown-buttons">
                                 <img src="/asset_library/symbols_svg/cart-svgrepo-com.svg" className="header__main--userpanel_dropdown-buttons__symbols" />
-                                {textDataBasaSTATE.dropdown[3]}
+                                {textDataBaseSTATE.dropdown[3]}
                             </button>
                             <button className="header__main--userpanel_dropdown-buttons">
                                 <img src="/asset_library/symbols_svg/favorite-svgrepo-com.svg" className="header__main--userpanel_dropdown-buttons__symbols" />
-                                {textDataBasaSTATE.dropdown[4]}
+                                {textDataBaseSTATE.dropdown[4]}
                             </button>
                             <button className="header__main--userpanel_dropdown-buttons">
                                 <img src="/asset_library/symbols_svg/icons8-settings.svg" className="header__main--userpanel_dropdown-buttons__symbols" />
-                                {textDataBasaSTATE.dropdown[5]}
+                                {textDataBaseSTATE.dropdown[5]}
                             </button>
                             <button className="header__main--userpanel_dropdown-buttons">
                                 <img src="/asset_library/symbols_svg/out-profile-ui-user-group-people-svgrepo-com.svg" className="header__main--userpanel_dropdown-buttons__symbols" />
-                                {textDataBasaSTATE.dropdown[6]}
+                                {textDataBaseSTATE.dropdown[6]}
                             </button>
                         </>)}
                     </div>

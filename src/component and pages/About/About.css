@@ -1,1 +1,47 @@
-/*# sourceMappingURL=About.css.map */
+.about {
+  width: 100%;
+  height: auto;
+  background-color: var(--default-bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about__container {
+  width: 1280px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  padding: 50px 0 50px 0;
+}
+.about__container--groups {
+  width: 100%;
+  height: auto;
+}
+.about__container--groups_header {
+  font-size: 30px;
+  text-transform: uppercase;
+  width: 90%;
+  color: var(--only-negative-color);
+  background: linear-gradient(to right, var(--retrogallery-custom-colorpick), var(--retrogallery-custom-colorpick), var(--only-negative-color));
+  margin: 0 0 20px 30px;
+  padding: 0 0 0 10px;
+}
+.about__container--groups_content {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+.about__container--groups_content-text {
+  color: var(--default-text-color);
+  font-size: 20px;
+  padding: 0 20px 0 20px;
+}
+.about__container--groups_content-img {
+  width: 720px;
+  height: 360px;
+  margin: 0 50px 0 50px;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  filter: drop-shadow(0 0 3px var(--default-text-color));
+}/*# sourceMappingURL=About.css.map */

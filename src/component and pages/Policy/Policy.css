@@ -1,1 +1,53 @@
-/*# sourceMappingURL=Policy.css.map */
+.policy {
+  width: 100%;
+  height: auto;
+  background-color: var(--default-bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.policy__container {
+  width: 1280px;
+  height: auto;
+  padding: 50px 0 50px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.policy__container--title {
+  font-size: 30px;
+  text-transform: uppercase;
+  width: 90%;
+  color: var(--only-negative-color);
+  background: linear-gradient(to right, var(--retrogallery-custom-colorpick), var(--retrogallery-custom-colorpick), var(--only-negative-color));
+  margin: 0 0 20px 30px;
+  padding: 0 0 0 10px;
+}
+.policy__container--paragraph {
+  color: var(--default-text-color);
+  font-size: 20px;
+  padding: 0 20px 0 20px;
+  margin: 5px 0;
+}
+.policy__container--headers {
+  color: var(--retrogallery-custom-colorpick);
+  font-size: 24px;
+  padding: 0 20px 0 20px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  margin: 20px 0 10px 0;
+}
+.policy__container--headers_order {
+  font-size: 24px;
+  border: 1px solid var(--retrogallery-custom-colorpick);
+  width: 40px;
+  height: 40px;
+  background-color: var(--only-negative-color);
+  margin-right: 10px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--retrogallery-custom-colorpick);
+}/*# sourceMappingURL=Policy.css.map */

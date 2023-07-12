@@ -89,3 +89,111 @@ Privacy Settings:
 Data privacy: Explain your website's privacy policy and provide controls for users to manage their data sharing preferences.
 Data deletion: Offer users the ability to request the deletion of their personal data from your system, if applicable.
 ————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+Terms & Condition:
+
+Welcome to [Your Website Name]! Please read these Terms and Conditions carefully before using our website.
+
+Acceptance of Terms
+By accessing or using [Your Website Name], you agree to be bound by these Terms and Conditions, including all applicable laws and regulations. If you do not agree with any of these terms, please do not use our website.
+
+Products and Services
+2.1 Product Listings: We make every effort to accurately display the products available on our website. However, we do not guarantee the accuracy, completeness, or reliability of any product descriptions, images, or prices.
+
+2.2 Product Availability: All products are subject to availability. We reserve the right to limit the quantities of any products or services we offer. We may also discontinue or modify any product at any time without prior notice.
+
+2.3 Pricing: The prices listed on our website are in [currency] and are exclusive of any applicable taxes, duties, or shipping charges. We reserve the right to change the prices of our products at any time without prior notice.
+
+Ordering and Payment
+3.1 Order Placement: By placing an order through our website, you are making an offer to purchase the selected products. All orders are subject to acceptance and availability.
+3.2 Payment: We accept [list accepted payment methods]. Payment must be made in full at the time of placing an order. We use secure payment gateways to protect your personal and financial information.
+
+Shipping and Delivery
+4.1 Shipping: We strive to process and ship all orders in a timely manner. However, we do not guarantee shipping or delivery times. Any delivery dates provided are estimates and should not be considered as guaranteed delivery dates.
+4.2 Shipping Charges: Shipping charges will be added to your order during the checkout process. The exact shipping cost will depend on the destination and the weight and dimensions of the package.
+
+4.3 International Orders: For international orders, please note that you are responsible for any customs duties, taxes, or other fees that may be imposed by your country's customs authorities.
+
+Returns and Refunds
+5.1 Return Policy: We accept returns within [number of days] days from the date of delivery, subject to certain conditions. Please refer to our separate Return Policy for detailed instructions on how to return a product.
+5.2 Refunds: Refunds will be issued in the original form of payment, excluding any shipping charges. Please allow [number of days] for the refund to be processed after we have received the returned product.
+
+Intellectual Property
+All content on our website, including but not limited to text, graphics, logos, images, and software, is the property of [Your Company Name] and is protected by copyright laws. You may not reproduce, distribute, modify, or sell any of the content without our prior written consent.
+
+Limitation of Liability
+To the maximum extent permitted by law, [Your Company Name] and its affiliates shall not be liable for any direct, indirect, incidental, consequential, or special damages arising out of or in connection with the use of our website, products, or services.
+
+Governing Law and Jurisdiction
+These Terms and Conditions shall be governed by and construed in accordance with the laws of [Your Country]. Any disputes arising from or related to these terms shall be subject to the exclusive jurisdiction of the courts in [Your Jurisdiction].
+
+Changes to the Terms and Conditions
+We reserve the right to modify or update these Terms and Conditions at any time without prior notice. It is your responsibility to review these terms periodically for any changes.
+
+If you have any questions or concerns regarding these Terms and Conditions, please contact us at [Your Contact Information].
+————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+Privacy Policiy:
+
+This Privacy Policy explains how [Your Website Name] collects, uses, and protects the personal information you provide when using our website. We are committed to safeguarding your privacy and ensuring that your personal information is protected.
+
+Information We Collect
+1.1 Personal Information: When you use our website, we may collect certain personal information, such as your name, email address, shipping address, and phone number. We only collect personal information that you voluntarily provide to us.
+1.2 Usage Data: We may also collect non-personal information about your interaction with our website, including your IP address, browser type, referring/exit pages, and the dates/times of your visits. This information is used to analyze trends, administer the website, and gather demographic information.
+
+Use of Information
+2.1 Personal Information: We may use your personal information to process your orders, communicate with you about your purchases, and provide customer support. We may also use your information to send you promotional emails or newsletters, but you will always have the option to opt-out of such communications.
+2.2 Usage Data: We use usage data to improve our website and enhance your experience. This may include analyzing trends, monitoring the effectiveness of marketing campaigns, and personalizing the content and features of our website.
+
+Information Sharing
+3.1 Third-Party Service Providers: We may share your personal information with trusted third-party service providers who assist us in operating our website, conducting business activities, or providing services to you. These service providers are contractually obligated to protect your information and use it solely for the purposes of providing the requested services.
+3.2 Legal Requirements: We may disclose your personal information if required to do so by law or in response to a valid legal request, such as a court order or government investigation.
+
+Data Security
+We take the security of your personal information seriously and have implemented appropriate measures to protect it against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet or electronic storage is 100% secure, and we cannot guarantee its absolute security.
+
+Cookies and Tracking Technologies
+We use cookies and similar tracking technologies to enhance your browsing experience, analyze website traffic, and personalize content. You have the option to disable cookies through your browser settings, but please note that doing so may limit certain features and functionality of our website.
+
+Children's Privacy
+Our website is not intended for children under the age of 13. We do not knowingly collect personal information from children. If you believe that we have inadvertently collected personal information from a child, please contact us immediately, and we will take appropriate steps to remove the information from our records.
+
+Links to Third-Party Websites
+Our website may contain links to third-party websites. We are not responsible for the privacy practices or the content of those websites. We encourage you to review the privacy policies of those third-party websites before providing any personal information.
+
+Changes to the Privacy Policy
+We reserve the right to update or modify this Privacy Policy at any time without prior notice. Any changes will be effective immediately upon posting the revised Privacy Policy on our website. It is your responsibility to review this Privacy Policy periodically for any updates.
+
+Contact Us
+If you have any questions or concerns regarding this Privacy Policy or the handling of your personal information, please contact us at [Your Contact Information].
+————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+Frequently Asked Questions (FAQ):
+
+How can I place an order?
+To place an order, simply browse our website and add the desired products to your cart. Once you have finished shopping, proceed to the checkout page, where you can review your order and provide the necessary information for shipping and payment. Finally, click on the "Place Order" button to complete your purchase.
+
+What payment methods do you accept?
+We accept [list accepted payment methods], including credit cards, debit cards, and PayPal. Choose the payment method that is most convenient for you during the checkout process.
+
+How long will it take to receive my order?
+The delivery time depends on various factors, such as the shipping destination and the availability of the product. We strive to process and ship all orders as quickly as possible. Once your order has been shipped, you will receive a confirmation email with tracking information to monitor the progress of your package.
+
+Do you ship internationally?
+Yes, we offer international shipping. However, please note that international orders may be subject to customs duties, taxes, or other fees imposed by your country's customs authorities. These additional charges are the responsibility of the buyer.
+
+What is your return policy?
+We want you to be completely satisfied with your purchase. If for any reason you are not satisfied, you may return the item within [number of days] days from the date of delivery. Please refer to our Return Policy for detailed instructions on how to initiate a return and the eligibility criteria.
+
+How do I track my order?
+Once your order has been shipped, we will provide you with a tracking number via email. You can use this tracking number to monitor the delivery status of your package. Simply visit the designated courier's website and enter the tracking number in the appropriate field to track your order.
+
+Are the products on your website authentic?
+Yes, we guarantee the authenticity of all the products listed on our website. We specialize in offering genuine antique items, and we carefully curate our inventory to ensure their authenticity.
+
+Can I cancel or modify my order?
+If you need to cancel or modify your order, please contact our customer support team as soon as possible. While we cannot guarantee that we will be able to accommodate all requests, we will do our best to assist you.
+
+How can I contact your customer support?
+You can reach our customer support team by [list contact methods, such as email or phone]. We are available [mention hours of operation or response time] to assist you with any questions, concerns, or inquiries you may have.
+
+Do you offer gift wrapping or personalized messages?
+Yes, we offer gift wrapping services for an additional fee. During the checkout process, you will have the option to select gift wrapping and add a personalized message to your order. Simply follow the instructions provided to customize your gift.
+————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
