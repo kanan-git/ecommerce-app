@@ -5,7 +5,7 @@ import './Footer.css'
 
 function Footer() {
 
-    const textDataBasa = {
+    const textDataBase = {
         AZ: {
             description: "Retro Qalereya keçmiş dövrlərin mahiyyətini əks etdirən incə antik məhsullar üçün əsas məkandır. Bizim diqqətlə seçilmiş üzüm xəzinələri kolleksiyamızı araşdırarkən özünüzü əbədi gözəllik dünyasına qərq edin. Nadir mebel parçalarından tutmuş bəzəkli dekor əşyalarına qədər hər bir artefakt tarixin və sənətkarlığın valehedici hekayəsindən bəhs edir. Keçmişin cazibəsini kəşf edin və Retro Qalereya ilə yaşayış məkanınıza nostalji toxunuşu gətirin.",
             titles: [
@@ -168,7 +168,7 @@ function Footer() {
         }
     }
 
-    const [textDataBasaSTATE, setTextDataBaseSTATE] = useState(textDataBasa.AZ)
+    const [textDataBaseSTATE, setTextDataBaseSTATE] = useState(textDataBase.AZ)
 
     return (
         <div className="footer">
@@ -176,40 +176,40 @@ function Footer() {
                 <ul className="footer__main--columns">
                     <img src="/asset_library/logo_and_icon/RetroQalereya_transparent_bg_logo.png" 
                     alt="RetroQalereya" className="footer__main--columns_logo" />
-                    <p className="footer__main--columns_description"> {textDataBasaSTATE.description} </p>
+                    <p className="footer__main--columns_description"> {textDataBaseSTATE.description} </p>
                     <br />
-                    <li className="footer__main--columns_info"> {textDataBasaSTATE.titles[1]}: {textDataBasaSTATE.location} </li>
-                    <li className="footer__main--columns_info"> {textDataBasaSTATE.titles[2]}: +994 50 123 45 67 </li>
-                    <li className="footer__main--columns_info"> {textDataBasaSTATE.titles[3]}: info@retrogallery.com </li>
+                    <li className="footer__main--columns_info"> {textDataBaseSTATE.titles[1]}: {textDataBaseSTATE.location} </li>
+                    <li className="footer__main--columns_info"> {textDataBaseSTATE.titles[2]}: +994 50 123 45 67 </li>
+                    <li className="footer__main--columns_info"> {textDataBaseSTATE.titles[3]}: info@retrogallery.com </li>
                 </ul>
                 <ul className="footer__main--columns">
-                    <h6 className="footer__main--columns_header"> {textDataBasaSTATE.headers[0]} </h6>
-                    <li className="footer__main--columns_list"> {textDataBasaSTATE.shop[0]} </li>
-                    <li className="footer__main--columns_list"> {textDataBasaSTATE.shop[1]} </li>
-                    <li className="footer__main--columns_list"> {textDataBasaSTATE.shop[2]} </li>
-                    <li className="footer__main--columns_list"> {textDataBasaSTATE.shop[3]} </li>
-                    <li className="footer__main--columns_list"> {textDataBasaSTATE.shop[4]} </li>
-                    <li className="footer__main--columns_list"> {textDataBasaSTATE.shop[5]} </li>
-                    <li className="footer__main--columns_list"> {textDataBasaSTATE.shop[6]} </li>
-                    <li className="footer__main--columns_list"> {textDataBasaSTATE.shop[7]} </li>
+                    <h6 className="footer__main--columns_header"> {textDataBaseSTATE.headers[0]} </h6>
+                    <li className="footer__main--columns_list"> {textDataBaseSTATE.shop[0]} </li>
+                    <li className="footer__main--columns_list"> {textDataBaseSTATE.shop[1]} </li>
+                    <li className="footer__main--columns_list"> {textDataBaseSTATE.shop[2]} </li>
+                    <li className="footer__main--columns_list"> {textDataBaseSTATE.shop[3]} </li>
+                    <li className="footer__main--columns_list"> {textDataBaseSTATE.shop[4]} </li>
+                    <li className="footer__main--columns_list"> {textDataBaseSTATE.shop[5]} </li>
+                    <li className="footer__main--columns_list"> {textDataBaseSTATE.shop[6]} </li>
+                    <li className="footer__main--columns_list"> {textDataBaseSTATE.shop[7]} </li>
                 </ul>
                 <ul className="footer__main--columns">
-                    <h6 className="footer__main--columns_header"> {textDataBasaSTATE.headers[1]} </h6>
-                    <li className="footer__main--columns_list"> {textDataBasaSTATE.profile[0]} </li>
-                    <li className="footer__main--columns_list"> {textDataBasaSTATE.profile[1]} </li>
-                    <li className="footer__main--columns_list"> {textDataBasaSTATE.profile[2]} </li>
-                    <li className="footer__main--columns_list"> {textDataBasaSTATE.profile[3]} </li>
+                    <h6 className="footer__main--columns_header"> {textDataBaseSTATE.headers[1]} </h6>
+                    <li className="footer__main--columns_list"> {textDataBaseSTATE.profile[0]} </li>
+                    <li className="footer__main--columns_list"> {textDataBaseSTATE.profile[1]} </li>
+                    <li className="footer__main--columns_list"> {textDataBaseSTATE.profile[2]} </li>
+                    <li className="footer__main--columns_list"> {textDataBaseSTATE.profile[3]} </li>
                 </ul>
                 <ul className="footer__main--columns">
-                    <h6 className="footer__main--columns_header"> {textDataBasaSTATE.headers[2]} </h6>
-                    <li className="footer__main--columns_list"> {textDataBasaSTATE.support[0]} </li>
-                    <li className="footer__main--columns_list"> {textDataBasaSTATE.support[1]} </li>
-                    <li className="footer__main--columns_list"> {textDataBasaSTATE.support[2]} </li>
-                    <li className="footer__main--columns_list"> {textDataBasaSTATE.support[3]} </li>
-                    <li className="footer__main--columns_list"> {textDataBasaSTATE.support[4]} </li>
+                    <h6 className="footer__main--columns_header"> {textDataBaseSTATE.headers[2]} </h6>
+                    <li className="footer__main--columns_list"> {textDataBaseSTATE.support[0]} </li>
+                    <li className="footer__main--columns_list"> {textDataBaseSTATE.support[1]} </li>
+                    <li className="footer__main--columns_list"> {textDataBaseSTATE.support[2]} </li>
+                    <li className="footer__main--columns_list"> {textDataBaseSTATE.support[3]} </li>
+                    <li className="footer__main--columns_list"> {textDataBaseSTATE.support[4]} </li>
                 </ul>
                 <ul className="footer__main--columns">
-                    <h6 className="footer__main--columns_header"> {textDataBasaSTATE.headers[3]} </h6>
+                    <h6 className="footer__main--columns_header"> {textDataBaseSTATE.headers[3]} </h6>
                     <Link to="https://instagram.com" className="footer__main--columns_info">
                         <img src="/asset_library/symbols_svg/icons8-instagram.svg" alt="instagram" className="footer__main--columns_info-content" />
                     </Link>
@@ -226,7 +226,7 @@ function Footer() {
             </div>
             <div className="footer__bottom">
                 <p className="footer__bottom--rights">
-                    {textDataBasaSTATE.rights}
+                    {textDataBaseSTATE.rights}
                 </p>
                 <span className="footer__bottom--icons">
                     <img src="/asset_library/symbols_svg/paypal-svgrepo-com.svg" alt="paypal" className="footer__bottom--icons_content" />

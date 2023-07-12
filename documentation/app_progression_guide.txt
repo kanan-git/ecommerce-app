@@ -1,29 +1,30 @@
 ———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
-TO DO (29):
+TO DO (26):
 
-+ html&scss | create about page
-+ html&scss | create contact page
-~ html&scss | create terms page
-~ html&scss | create policy page
 ~ html&scss | create faq page
 ~ html&scss | create support page
 ~ html&scss | create login page
 ~ html&scss | create recovery page
-~ html&scss | create profile and settings page
-~ html&scss | create blog page
-~ html&scss | create myorders page
-~ html&scss | create myfav page
-~ html&scss | create mycart page
-~ html&scss | create home page
-~ html&scss | create market page
-~ html&scss | create details page
-~ popups | create purchasement details and apply popup page, svg
-~ scss | fix responsivity of all of pages and popup
-~ html&scss | create header again, mobile, dropdowns + check footer's responsivity
+
+- html&scss | create profile and settings page
+- html&scss | create blog page
+
+- html&scss | create myorders page
+- html&scss | create myfav page
+- html&scss | create mycart page
+
+- html&scss | create home page
+- html&scss | create market page
+- html&scss | create details page
+
+- popups | create purchasement details and apply popup page, svg
+- scss | fix responsivity of all of pages and popup
+
+- html&scss | create header again, mobile, dropdowns + check footer's responsivity
 
 - general | with localStorage, both mobile & default, add language change, onload check & input changing
-
 - notes | breadcrumb when you in another page not home
+
 - notes | page urls with id or user info for routing
 - notes | keep footer and header on login page
 - notes | use localStorage for token (logged user's temporary string on its property)
