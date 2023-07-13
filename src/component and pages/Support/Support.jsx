@@ -10,7 +10,9 @@ function Support() {
         <>
             <Header />
 
-            <div className="support"> Support </div>
+            <div className="support">
+                <div className="support__container"></div>
+            </div>
 
             <Footer />
         </>

@@ -50,7 +50,7 @@ function FAQ() {
                 "Do you offer gift wrapping or personalized messages?"
             ],
             answers: [
-                "To place an order, simply browse our website and add the desired products to your cart. Once you have finished shopping, proceed to the checkout page, where you can review your order and provide the necessary information for shipping and payment. Finally, click on the 'Place Order' button to complete your purchase.", 
+                "To place an order, simply browse our website and add the desired products to your cart. Once you have finished shopping, proceed to the checkout page, where you can review your order and provide the necessary information for shipping and payment. Finally, click on the 'Place Order' p to complete your purchase.", 
                 "We accept [list accepted payment methods], including credit cards, debit cards, and PayPal. Choose the payment method that is most convenient for you during the checkout process.", 
                 "The delivery time depends on various factors, such as the shipping destination and the availability of the product. We strive to process and ship all orders as quickly as possible. Once your order has been shipped, you will receive a confirmation email with tracking information to monitor the progress of your package.", 
                 "Yes, we offer international shipping. However, please note that international orders may be subject to customs duties, taxes, or other fees imposed by your country's customs authorities. These additional charges are the responsibility of the buyer.", 
@@ -126,7 +126,33 @@ function FAQ() {
 
             <div className="faq">
                 <div className="faq__container">
-                    .
+                    <h3 className="faq__container--title"> {textDataBaseSTATE.title} </h3>
+
+                    <div className="faq__container--group">
+                        {
+                            textDataBaseSTATE.questions.map(
+                                (element, index) => {
+                                    return (
+                                        <p className="faq__container--group_questions" id={`q_${index}`} key={index} onClick={
+                                            (e) => {
+                                                var answer = document.getElementById(index)
+                                                if(answer.style.height == "1px") {
+                                                    answer.style.height = `100px`
+                                                } else {
+                                                    answer.style.height = `1px`
+                                                }
+                                            }
+                                        }>
+                                            {element}
+                                            <div className="faq__container--group_questions-answers" id={index}>
+                                                {textDataBaseSTATE.answers[index]}
+                                            </div>
+                                        </p>
+                                    )
+                                }
+                            )
+                        }
+                    </div>
                 </div>
             </div>
 

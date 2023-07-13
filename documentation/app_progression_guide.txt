@@ -21,6 +21,7 @@ TO DO (26):
 - scss | fix responsivity of all of pages and popup
 
 - html&scss | create header again, mobile, dropdowns + check footer's responsivity
+- general | overall check all links tag (Link) and routes (to="/path-here")
 
 - general | with localStorage, both mobile & default, add language change, onload check & input changing
 - notes | breadcrumb when you in another page not home

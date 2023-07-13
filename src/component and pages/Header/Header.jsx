@@ -284,7 +284,7 @@ function Header() {
                         className="header__mobilemenu--links_items-icons" />
                         {textDataBaseSTATE.topside[5]}
                     </Link>
-                    <Link className="header__mobilemenu--links_items" to="/help">
+                    <Link className="header__mobilemenu--links_items" to="/support">
                         <img src="/asset_library/symbols_svg/icons8-support.svg" alt="support" 
                         className="header__mobilemenu--links_items-icons" />
                         {textDataBaseSTATE.topside[6]}
@@ -335,7 +335,7 @@ function Header() {
                 <Link className="header__topside--links" to="/faq">
                     {textDataBaseSTATE.topside[5]}
                 </Link>
-                <Link className="header__topside--links" to="/help">
+                <Link className="header__topside--links" to="/support">
                     {textDataBaseSTATE.topside[6]}
                 </Link>
             </div>
