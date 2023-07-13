@@ -1,1 +1,69 @@
-.support {}
+.support {
+    width: 100%;
+    height: auto;
+    background-color: var(--default-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__container {
+        width: 1280px;
+        height: auto;
+        // border: 1px solid var(--border-color);
+        padding: 50px 0 50px 0; // top right bottom left
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        &--title {
+            font-size: 30px;
+            text-transform: uppercase;
+            width: 90%;
+            color: var(--only-negative-color);
+            background: linear-gradient(to right, var(--retrogallery-custom-colorpick), var(--retrogallery-custom-colorpick), var(--only-negative-color));
+            margin: 0 0 20px 30px; // top right bottom left
+            padding: 0 0 0 10px; // top right bottom left
+        }
+        &--group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            &_cards {
+                border: 1px solid var(--light-text-color);
+                background-color: var(--default-bg-color);
+                width: 400px;
+                height: 300px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 5px;
+                flex-direction: column;
+                padding: 10px;
+                border-radius: 6px;
+                &-symbol {
+                    width: 100px;
+                    height: 100px;
+                    opacity: 0.5;
+                }
+                &-header {
+                    color: var(--default-text-color);
+                    text-transform: uppercase;
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+                &-description {
+                    color: var(--default-text-color);
+                    font-size: 18px;
+                }
+                &-link {
+                    color: var(--default-text-color);
+                    text-transform: capitalize;
+                    transition: var(--quick-fx);
+                    &:hover {
+                        color: var(--retrogallery-custom-colorpick);
+                    }
+                }
+            }
+        }
+    }
+}
