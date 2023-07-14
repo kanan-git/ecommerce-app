@@ -1,22 +1,26 @@
 ———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
-TO DO (July   14-15-16-17-18-19-20-21-22-23-24-25-26-27,   2023):
+TO DO (July   14-15-16-17-18-19-20-21,   2023):
 
-~ html&scss | create settings page
-- html&scss | create login page
-- html&scss | create recovery page
-- html&scss | create supportMore page
-- html&scss | create blog page
-- html&scss | create blogArticle page
-- html&scss | create mycart page
-- html&scss | create myfav page
-- html&scss | create myorders page
-- html&scss | create home page
-- html&scss | create market page
-- html&scss | create details page
+~ html | create settings page
+- html | create login page
+- html | create recovery page
+- html | create supportMore page
+- html | create blog page
+- html | create blogArticle page
+
+- html | create mycart page
+- html | create myfav page
+- html | create myorders page
+- html | create home page
+- html | create market page
+- html | create details page
+
 - popup | create purchasement details and apply popup page, svg
 ———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
 - routes, links, unique path with product id or something, user info and etc
-- RESPONSIVITY all of pages and popup
+- SCSS & RESPONSIVITY all of pages and popup
+- textDataBase, textDataBaseSTATE & their translation
+———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
 - header again with mobile version and responsivity / or only fix responsivity (tablet cart-fav btns, mobile menu sizes searcbar, menus ...), add searcbar to tablet and remove from menu when tablet mode, fix gaps, fix dropdown menu not show and responsivity
 - all functionalities, search, sort, authentication, purchase, payment, login, log out, routes, fetch, filter, etc.
 - overall check all links tag (Link) and routes (to="/path-here")

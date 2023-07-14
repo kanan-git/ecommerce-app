@@ -81,12 +81,34 @@
     }
 }
 
+.changes_saved {
+    position: absolute;
+    top: -80%;
+    left: 50%;
+    font-size: 14px;
+    width: 200px;
+    transform: translateX(-50%);
+    color: rgb(0,160,0);
+    display: none;
+}
+
+.something_wrong {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    font-size: 14px;
+    width: 200px;
+    transform: translateX(-50%);
+    color: rgb(240,110,0);
+    // display: none;
+}
+
 .container {
     background-color: transparent;
     &__profile {
         display: flex;
         gap: 20px;
-        margin-bottom: 50px;
+        margin-bottom: 100px;
         margin-left: 70%;
         &--image {
             width: 150px;
@@ -126,7 +148,7 @@
     &__username {
         display: flex;
         gap: 200px;
-        margin-bottom: 20px;
+        margin-bottom: 50px;
         &--name {
             font-size: 16px;
             font-weight: 600;
@@ -148,36 +170,66 @@
         font-size: 16px;
         font-weight: 600;
         text-transform: capitalize;
-        margin-bottom: 20px;
+        margin-bottom: 50px;
         &--input {
             margin-left: 20px;
+            width: 100px;
+            height: 30px;
+            outline: none;
+            padding: 0 10px;
+            background-color: var(--default-bg-color);
+            border: 1px solid var(--light-text-color);
             &_options {}
+            background-color: var(--default-bg-color);
         }
     }
     &__dateofbirth {
         font-size: 16px;
         font-weight: 600;
         text-transform: capitalize;
-        margin-bottom: 50px;
+        margin-bottom: 100px;
         &--input {
             margin-left: 20px;
-            &_options {}
+            width: auto;
+            height: 30px;
+            outline: none;
+            padding: 0 10px;
+            background-color: var(--default-bg-color);
+            border: 1px solid var(--light-text-color);
+            &_options {
+                background-color: var(--default-bg-color);
+            }
         }
     }
     &__submit {
+        position: relative;
         font-size: 16px;
-        background-color: var(--default-bg-color);
-        color: var(--border-color);
-        border: 1px solid var(--border-color);
-        padding: 5px;
+        background-color: var(--retrogallery-custom-colorpick);
+        color: var(--only-negative-color);
+        border: 1px solid var(--light-text-color);
+        padding: 10px;
         text-transform: uppercase;
         position: relative;
         transform: translateX(-50%);
         left: 50%;
         transition: var(--quick-fx);
         &:hover {
-            color: var(--only-negative-color);
-            background-color: var(--retrogallery-custom-colorpick);
+            background-color: var(--default-bg-color);
+            color: var(--retrogallery-custom-colorpick);
+            font-weight: 600;
+            filter: drop-shadow(0 0 15px var(--retrogallery-custom-colorpick));
+        }
+    }
+    &__blocks {
+        &--input {}
+        &--conditions {}
+        &--checkbox {}
+        &--info {}
+        &--inputpa {}
+        &--qu {
+            &_input {}
         }
     }
 }
+
+.show-password {}
