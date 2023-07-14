@@ -107,7 +107,7 @@
 }
 .footer__main--columns_info-content:hover {
   scale: 1.05;
-  filter: invert(1) sepia(80) saturate(50) hue-rotate(150deg);
+  filter: invert(1) sepia(80) saturate(50) hue-rotate(-60deg);
 }
 .footer__main--columns_header {
   margin: 0px 0px 10px 0px;
