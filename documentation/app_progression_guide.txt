@@ -1,38 +1,33 @@
 ———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
-TO DO (26):
+TO DO (July   14-15-16-17-18-19-20-21-22-23-24-25-26-27,   2023):
 
-~ html&scss | create support page
-~ html&scss | create login page
-~ html&scss | create recovery page
-~ html&scss | create profile and settings page
-~ html&scss | create blog page
-
-- html&scss | create myorders page
-- html&scss | create myfav page
+~ html&scss | create settings page
+- html&scss | create login page
+- html&scss | create recovery page
+- html&scss | create supportMore page
+- html&scss | create blog page
+- html&scss | create blogArticle page
 - html&scss | create mycart page
-
+- html&scss | create myfav page
+- html&scss | create myorders page
 - html&scss | create home page
 - html&scss | create market page
 - html&scss | create details page
-
-- popups | create purchasement details and apply popup page, svg
-- scss | fix responsivity of all of pages and popup
-
-- html&scss | create header again, mobile, dropdowns + check footer's responsivity
-- general | overall check all links tag (Link) and routes (to="/path-here")
-
-- general | with localStorage, both mobile & default, add language change, onload check & input changing
-- notes | breadcrumb when you in another page not home
-
-- notes | page urls with id or user info for routing
-- notes | keep footer and header on login page
-- notes | use localStorage for token (logged user's temporary string on its property)
-- notes | when token logout or expire delete and replace userdata without token empty property
-- notes | use localStorage for selectedLang, lightMode and cureentUser (guest or user id)
-- notes | use ChatGPT to generate blog, aboutus, contact, support, faq, settings, recovery, help pages text content
-- notes | swipe effect javascript learn and apply for homepage carousel, infinite loop
-
-- database | collect product images & info from hepsiantika, antikkutu, antikasatis create json for testing pages
-
-- authentication | edit user json properties
+- popup | create purchasement details and apply popup page, svg
+———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+- routes, links, unique path with product id or something, user info and etc
+- RESPONSIVITY all of pages and popup
+- header again with mobile version and responsivity / or only fix responsivity (tablet cart-fav btns, mobile menu sizes searcbar, menus ...), add searcbar to tablet and remove from menu when tablet mode, fix gaps, fix dropdown menu not show and responsivity
+- all functionalities, search, sort, authentication, purchase, payment, login, log out, routes, fetch, filter, etc.
+- overall check all links tag (Link) and routes (to="/path-here")
+- with localStorage, both mobile & default, add language change, onload check & input changing
+- breadcrumb when you in another page not home
+- keep footer and header on login page
+- use localStorage for token (logged user's temporary string on its property)
+- when token logout or expire delete and replace userdata without token empty property
+- use localStorage for selectedLang, lightMode and cureentUser (guest or user id)
+- use ChatGPT to generate blog, aboutus, contact, support, faq, settings, recovery, help pages text content
+- swipe effect javascript learn and apply for homepage carousel, infinite loop
+- collect product images & info from hepsiantika, antikkutu, antikasatis create json for testing pages
+- edit user json properties
 ———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————

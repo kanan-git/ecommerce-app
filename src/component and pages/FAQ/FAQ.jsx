@@ -134,7 +134,7 @@ function FAQ() {
                                 (element, index) => {
                                     return (
                                         <p className="faq__container--group_questions" id={`q_${index}`} key={index} onClick={
-                                            (e) => {
+                                            () => {
                                                 var answer = document.getElementById(index)
                                                 if(answer.style.height == "1px") {
                                                     answer.style.height = `100px`
