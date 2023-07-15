@@ -1,7 +1,7 @@
 import React, {StrictMode} from 'react'
 import {ReactDOM, createRoot} from 'react-dom/client'
 import {Provider} from 'react-redux'
-import {store} from './app/store'
+import store from './app/store'
 import App from './App'
 import {BrowserRouter as Router, Routes, Route, Link, Navigate} from 'react-router-dom'
 

@@ -2,6 +2,7 @@ import React, {useState, useEffect, useRef, Fragment} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 import {BrowserRouter as Router, Routes, Route, Link, Navigate} from 'react-router-dom'
 import './Header.css'
+import { setCurrentLanguage } from '../../features/counter/languageSlice'
 
 function Header() {
     const root = document.documentElement
@@ -108,9 +109,21 @@ function Header() {
             mobmenu: "изменение языка"
         }
     }
-    
+    // var localSavedLang = JSON.parse(localStorage.getItem("langChoice"))
     const [tempUserStatus, setTempUserStatus] = useState("guest") // "0 or any user ID" / "guest"
     const [textDataBaseSTATE, setTextDataBaseSTATE] = useState(textDataBase.AZ)
+
+    const dispatch = useDispatch()
+
+    // if(JSON.parse(localStorage.getItem("langChoice")) == "AZ") {
+    //     dispatch(setCurrentLanguage(textDataBase.AZ))
+    // } else if(JSON.parse(localStorage.getItem("langChoice")) == "EN") {
+    //     dispatch(setCurrentLanguage(textDataBase.EN))
+    // } else if(JSON.parse(localStorage.getItem("langChoice")) == "TR") {
+    //     dispatch(setCurrentLanguage(textDataBase.TR))
+    // } else if(JSON.parse(localStorage.getItem("langChoice")) == "RU") {
+    //     dispatch(setCurrentLanguage(textDataBase.RU))
+    // }
 
     // useEffect(
     //     () => {
@@ -296,15 +309,33 @@ function Header() {
                     </p>
                     <select name="language" id="language" className="header__mobilemenu--language_langbar" onChange={
                         (e) => {
+                            // e.preventDefault()
                             if(e.target.value == "AZ") {
                                 setTextDataBaseSTATE(textDataBase.AZ)
+                                localStorage.setItem("langChoice", JSON.stringify("AZ"))
+                                // dispatch(setCurrentLanguage("AZ"))
+                                dispatch(setCurrentLanguage(textDataBase.AZ))
+                                // dispatch(setCurrentLanguage(textDataBaseSTATE.AZ))
                             } else if(e.target.value == "EN") {
                                 setTextDataBaseSTATE(textDataBase.EN)
+                                localStorage.setItem("langChoice", JSON.stringify("EN"))
+                                // dispatch(setCurrentLanguage("EN"))
+                                dispatch(setCurrentLanguage(textDataBase.EN))
+                                // dispatch(setCurrentLanguage(textDataBaseSTATE.EN))
                             } else if(e.target.value == "TR") {
                                 setTextDataBaseSTATE(textDataBase.TR)
+                                localStorage.setItem("langChoice", JSON.stringify("TR"))
+                                // dispatch(setCurrentLanguage("TR"))
+                                dispatch(setCurrentLanguage(textDataBase.TR))
+                                // dispatch(setCurrentLanguage(textDataBaseSTATE.TR))
                             } else if(e.target.value == "RU") {
                                 setTextDataBaseSTATE(textDataBase.RU)
+                                localStorage.setItem("langChoice", JSON.stringify("RU"))
+                                // dispatch(setCurrentLanguage("RU"))
+                                dispatch(setCurrentLanguage(textDataBase.RU))
+                                // dispatch(setCurrentLanguage(textDataBaseSTATE.RU))
                             }
+                            // window.location.reload()
                         }
                     }>
                         <option value="AZ" className="header__mobilemenu--language_langbar-options"> AZ </option>
@@ -356,21 +387,39 @@ function Header() {
                 <div className="header__main--pref">
                     <select name="language" id="language" className="header__main--pref_langbar" onChange={
                         (e) => {
+                            // e.preventDefault()
                             if(e.target.value == "AZ") {
                                 setTextDataBaseSTATE(textDataBase.AZ)
+                                localStorage.setItem("langChoice", JSON.stringify("AZ"))
+                                // dispatch(setCurrentLanguage("AZ"))
+                                dispatch(setCurrentLanguage(textDataBase.AZ))
+                                // dispatch(setCurrentLanguage(textDataBaseSTATE.AZ))
                             } else if(e.target.value == "EN") {
                                 setTextDataBaseSTATE(textDataBase.EN)
+                                localStorage.setItem("langChoice", JSON.stringify("EN"))
+                                // dispatch(setCurrentLanguage("EN"))
+                                dispatch(setCurrentLanguage(textDataBase.EN))
+                                // dispatch(setCurrentLanguage(textDataBaseSTATE.EN))
                             } else if(e.target.value == "TR") {
                                 setTextDataBaseSTATE(textDataBase.TR)
+                                localStorage.setItem("langChoice", JSON.stringify("TR"))
+                                // dispatch(setCurrentLanguage("TR"))
+                                dispatch(setCurrentLanguage(textDataBase.TR))
+                                // dispatch(setCurrentLanguage(textDataBaseSTATE.TR))
                             } else if(e.target.value == "RU") {
                                 setTextDataBaseSTATE(textDataBase.RU)
+                                localStorage.setItem("langChoice", JSON.stringify("RU"))
+                                // dispatch(setCurrentLanguage("RU"))
+                                dispatch(setCurrentLanguage(textDataBase.RU))
+                                // dispatch(setCurrentLanguage(textDataBaseSTATE.RU))
                             }
+                            // window.location.reload()
                         }
                     }>
-                        <option value="AZ" className="header__main--pref_langbar-options"> AZ </option>
-                        <option value="EN" className="header__main--pref_langbar-options"> EN </option>
-                        <option value="TR" className="header__main--pref_langbar-options"> TR </option>
-                        <option value="RU" className="header__main--pref_langbar-options"> RU </option>
+                        <option id="opt_az" value="AZ" className="header__main--pref_langbar-options"> AZ </option>
+                        <option id="opt_en" value="EN" className="header__main--pref_langbar-options"> EN </option>
+                        <option id="opt_tr" value="TR" className="header__main--pref_langbar-options"> TR </option>
+                        <option id="opt_ru" value="RU" className="header__main--pref_langbar-options"> RU </option>
                     </select>
                 </div>
 

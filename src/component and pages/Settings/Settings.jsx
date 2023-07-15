@@ -2,8 +2,8 @@ import React, {useState, useEffect, useRef, Fragment} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 import {BrowserRouter as Router, Routes, Route, Link, Navigate} from 'react-router-dom'
 import './Settings.css'
-import Header from '../Header/Header.jsx'
-import Footer from '../Footer/Footer.jsx'
+// import Header from '../Header/Header.jsx'
+// import Footer from '../Footer/Footer.jsx'
 
 function Settings() {
     window.scrollTo(0, 0)
@@ -28,7 +28,7 @@ function Settings() {
 
     return (
         <>
-            <Header />
+            {/* <Header /> */}
 
             <div className="settings">
                 <div className="settings__container">
@@ -422,7 +422,7 @@ function Settings() {
                 </div>
             </div>
 
-            <Footer />
+            {/* <Footer /> */}
         </>
     )
 }

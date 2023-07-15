@@ -2,8 +2,8 @@ import React, {useState, useEffect, useRef, Fragment} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 import {BrowserRouter as Router, Routes, Route, Link, Navigate} from 'react-router-dom'
 import './Terms.css'
-import Header from '../Header/Header.jsx'
-import Footer from '../Footer/Footer.jsx'
+// import Header from '../Header/Header.jsx'
+// import Footer from '../Footer/Footer.jsx'
 
 function Terms() {
 
@@ -146,7 +146,7 @@ function Terms() {
 
     return (
         <>
-            <Header />
+            {/* <Header /> */}
 
             <div className="terms">
                 <div className="terms__container">
@@ -254,7 +254,7 @@ function Terms() {
                 </div>
             </div>
 
-            <Footer />
+            {/* <Footer /> */}
         </>
     )
 }

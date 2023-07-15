@@ -168,6 +168,13 @@ function Footer() {
         }
     }
 
+    const languageData = useSelector(
+        (state) => state.language.currentLang
+    )
+
+    // console.log(languageData)
+
+    // const [textDataBaseSTATE, setTextDataBaseSTATE] = useState(textDataBase.AZ)
     const [textDataBaseSTATE, setTextDataBaseSTATE] = useState(textDataBase.AZ)
 
     return (

@@ -9,7 +9,6 @@
 .blog__container {
   width: 1280px;
   height: auto;
-  border: 1px solid var(--border-color);
   padding: 50px 0 50px 0;
   display: flex;
   flex-direction: column;

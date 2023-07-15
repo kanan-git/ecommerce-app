@@ -1,8 +1,8 @@
 import React, {useState, useEffect, useRef} from 'react'
 import './global.css'
 import {BrowserRouter as Router, Routes, Route, Link, Navigate} from 'react-router-dom'
-// import Header from './component and pages/Header/Header.jsx'
-// import Footer from './component and pages/Footer/Footer.jsx'
+import Header from './component and pages/Header/Header.jsx'
+import Footer from './component and pages/Footer/Footer.jsx'
 import About from './component and pages/About/About.jsx'
 import Blog from './component and pages/Blog/Blog.jsx'
 import Contact from './component and pages/Contact/Contact.jsx'
@@ -33,6 +33,8 @@ function App() {
     <div className="App">
       {/* {window.location.pathname!="/login" && <Header />} */}
 
+      <Header />
+
       <Routes>
         {/*   + add_user_or_product_id_for_unique_links +   */}
         <Route path="/aboutus" element={<About />} />
@@ -56,6 +58,9 @@ function App() {
 
       {/* {pathCondition && <Footer />} */}
       {/* {!pathCondition && <Footer />} */}
+
+      <Footer />
+      
     </div>
   )    
 }

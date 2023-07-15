@@ -1,5 +1,5 @@
 ———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
-TO DO (July   14-15-16-17-18-19-20-21,   2023):
+TO DO (July   16-17-18-19-20,   2023):
 
 ~ html | create settings page
 - html | create login page
@@ -16,6 +16,28 @@ TO DO (July   14-15-16-17-18-19-20-21,   2023):
 - html | create details page
 
 - popup | create purchasement details and apply popup page, svg
+
+===============================================================================================================================================================================
+RetroQalereya — 16 Iyul VII
+only html, complete all pages with textDataBase and its state (myCart & myFav & myOrders) 1h
+only html, complete all pages with textDataBase and its state (home & market) 1h
+only html, complete all pages with textDataBase and its state (details & popupWindow) 1h
+fix header dropdown, check responsivity + scss, fix header mobile & menu, fix tablet searchbar 1h
+routes, links, unique link path with product id, user info or something else (header, footer, about, blog, blogArticle, contact, details, faq, home, login, market, myCart, myFav, myOrders, popupWindow, policy, recovery, settings, support, supportMore, terms) 30min
+complete previous done pages textDataBase + language conditions (blog, blogArticle, settings, login, recovery, supportMore, myCart, myFav, myOrders, home, market, details, popupWindow) 1h
+SCSS of all pages (settings, login, recovery, supportMore, blog, blogArticle, myCart, myFav, myOrders, home, market, details, popupWindow)
+responsivity and mobile version of all pages (about, blog, blogArticle, contact, details, faq, home, login, market, myCart, myFav, myOrders, popupWindow, policy, recovery, settings, support, supportMore, terms)
+add breadcrumb
+===============================================================================================================================================================================
+RetroQalereya — 17 Iyul I
+start to make all functionalities (user or guest, which user, authentication, search, sort, purchase, payment, login, logout, routes, fetch, filter, etc)
+add language changing effect with localStorage to all components (header, footer, about, blog, blogArticle, contact, details, faq, home, login, market, myCart, myFav, myOrders, popupWindow, policy, recovery, settings, support, supportMore, terms) 30min
+===============================================================================================================================================================================
+RetroQalereya — 18 Iyul II
+complete all functionalities for each (header, footer, about, blog, blogArticle, contact, details, faq, home, login, market, myCart, myFav, myOrders, popupWindow, policy, recovery, settings, support, supportMore, terms)
+combine frontend and backend
+===============================================================================================================================================================================
+
 ———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
 - routes, links, unique path with product id or something, user info and etc
 - SCSS & RESPONSIVITY all of pages and popup
