@@ -8,10 +8,82 @@ import './MyCart.css'
 function MyCart() {
 
     const textDataBase = {
-        AZ: {},
-        EN: {},
-        TR: {},
-        RU: {}
+        AZ: {
+            headers: [
+                "Məhsullar", 
+                "Cari balansınız", 
+                "Yekun məbləğ", 
+                "Qalıq balans"
+            ],
+            buttons: [
+                "Hamısını al", 
+                "Favorilərim", 
+                "Mağazaya keç"
+            ],
+            table: [
+                "Məhsul", 
+                "Qiymət", 
+                "Miqdar", 
+                "Yekun məbləğ"
+            ]
+        },
+        EN: {
+            headers: [
+                "Products", 
+                "Your current balance", 
+                "Total price", 
+                "Remainin balance"
+            ],
+            buttons: [
+                "Buy all", 
+                "Check Favorites", 
+                "Go to Store"
+            ],
+            table: [
+                "Product", 
+                "Price", 
+                "Count", 
+                "Sum"
+            ]
+        },
+        TR: {
+            headers: [
+                "Ürünler", 
+                "Mevcut bakiyeniz", 
+                "Toplam fiyat", 
+                "Kalan bakiye"
+            ],
+            buttons: [
+                "Hepsini al", 
+                "Favorilerine göz at", 
+                "Mağazaya git"
+            ],
+            table: [
+                "Ürün", 
+                "Fiyat", 
+                "Miktar", 
+                "Toplam"
+            ]
+        },
+        RU: {
+            headers: [
+                "Продукты", 
+                "Ваш текущий баланс", 
+                "Итоговая цена", 
+                "Остаток средств"
+            ],
+            buttons: [
+                "Купить все", 
+                "Проверить избранное", 
+                "Иди в магазин"
+            ],
+            table: [
+                "Продукт", 
+                "Цена", 
+                "Считать", 
+                "Сумма"
+            ]
+        }
     }
     const [textDataBaseSTATE, setTextDataBaseSTATE] = useState(textDataBase.AZ)
     useEffect(
@@ -43,12 +115,80 @@ function MyCart() {
             window.addEventListener("change", handleLanguage)
         }, []
     )
-    
+
     return (
         <>
             {/* <Header /> */}
 
-            <div className="mycart"> MyCart </div>
+            <div className="mycart">
+            <div className="mycart__container">
+                    <div className="mycart__container--info">
+                        {textDataBaseSTATE.headers[0]}: `10`
+                    </div>
+
+                    <table className="mycart__container--table">
+                        <tr className="mycart__container--table_rows">
+                            <th className="mycart__container--table_rows-cells"> {/* empty */} </th>
+                            <th className="mycart__container--table_rows-cells"> {/* empty */} </th>
+                            <th className="mycart__container--table_rows-cells"> {textDataBaseSTATE.table[0]} </th>
+                            <th className="mycart__container--table_rows-cells"> {textDataBaseSTATE.table[1]} (₼) </th>
+                            <th className="mycart__container--table_rows-cells"> {textDataBaseSTATE.table[2]} </th>
+                            <th className="mycart__container--table_rows-cells"> {textDataBaseSTATE.table[3]} (₼) </th>
+                        </tr>
+
+                        <tr className="mycart__container--table_rows">
+                            <td className="mycart__container--table_rows-cells">
+                                <button className="mycart__container--table_rows-cells__xmark">
+                                    <img src="/asset_library/symbols_svg/#" className="mycart__container--table_rows-cells__xmark--symbol" />
+                                </button>
+                            </td>
+                            <td className="mycart__container--table_rows-cells">
+                                object-fit cover
+                                <img src="/asset_library/products/#" alt="product-thumbnail" className="mycart__container--table_rows-cells__thumbnail" />
+                            </td>
+                            <td className="mycart__container--table_rows-cells"> product full title here </td>
+                            <td className="mycart__container--table_rows-cells"> 20 </td>
+                            <td className="mycart__container--table_rows-cells">
+                                <input type="number" 
+                                className="mycart__container--table_rows-cells__input" 
+                                min="1" max="999" defaultValue="1" />
+                            </td>
+                            <td className="mycart__container--table_rows-cells"> 100 </td>
+                        </tr>
+                        <tr className="mycart__container--table_rows">
+                            <td className="mycart__container--table_rows-cells">
+                                <button className="mycart__container--table_rows-cells__xmark">
+                                    <img src="/asset_library/symbols_svg/#" className="mycart__container--table_rows-cells__xmark--symbol" />
+                                </button>
+                            </td>
+                            <td className="mycart__container--table_rows-cells">
+                                object-fit cover
+                                <img src="/asset_library/products/#" alt="product-thumbnail" className="mycart__container--table_rows-cells__thumbnail" />
+                            </td>
+                            <td className="mycart__container--table_rows-cells"> product full title here </td>
+                            <td className="mycart__container--table_rows-cells"> 20 </td>
+                            <td className="mycart__container--table_rows-cells">
+                                <input type="number" 
+                                className="mycart__container--table_rows-cells__input" 
+                                min="1" max="999" defaultValue="1" />
+                            </td>
+                            <td className="mycart__container--table_rows-cells"> 100 </td>
+                        </tr>
+                    </table>
+
+                    <div className="mycart__container--payment">
+                        <p className="mycart__container--payment__price"> {textDataBaseSTATE.headers[1]}: `1500` ₼ </p>
+                        <strong className="mycart__container--payment__price"> {textDataBaseSTATE.headers[2]}: - `1000` ₼ </strong>
+                        <i className="mycart__container--payment__price"> {textDataBaseSTATE.headers[3]}: `500` ₼ </i>
+                        <button className="mycart__container--payment__button"> {textDataBaseSTATE.buttons[0]} </button>
+                    </div>
+
+                    <div className="mycart__container--directions">
+                        <button className="mycart__container--directions_buttons"> ◄ {textDataBaseSTATE.buttons[1]} </button>
+                        <button className="mycart__container--directions_buttons"> {textDataBaseSTATE.buttons[2]} ► </button>
+                    </div>
+                </div>
+            </div>
 
             {/* <Footer /> */}
         </>

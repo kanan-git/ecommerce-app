@@ -1,59 +1,6 @@
 ———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
 TO DO (July   16-17-18-19-20,   2023):
 
-~ html | create settings page
-- html | create login page
-- html | create recovery page
-- html | create supportMore page
-- html | create blog page
-- html | create blogArticle page
-
-- html | create mycart page
-- html | create myfav page
-- html | create myorders page
-- html | create home page
-- html | create market page
-- html | create details page
-
-- popup | create purchasement details and apply popup page, svg
-
-===============================================================================================================================================================================
-RetroQalereya — 16 Iyul VII
-only html, complete all pages with textDataBase and its state (myCart & myFav & myOrders) 1h
-only html, complete all pages with textDataBase and its state (home & market) 1h
-only html, complete all pages with textDataBase and its state (details & popupWindow) 1h
-fix header dropdown, check responsivity + scss, fix header mobile & menu, fix tablet searchbar 1h
-routes, links, unique link path with product id, user info or something else (header, footer, about, blog, blogArticle, contact, details, faq, home, login, market, myCart, myFav, myOrders, popupWindow, policy, recovery, settings, support, supportMore, terms) 30min
-complete previous done pages textDataBase + language conditions (blog, blogArticle, settings, login, recovery, supportMore, myCart, myFav, myOrders, home, market, details, popupWindow) 1h
-SCSS of all pages (settings, login, recovery, supportMore, blog, blogArticle, myCart, myFav, myOrders, home, market, details, popupWindow)
-responsivity and mobile version of all pages (about, blog, blogArticle, contact, details, faq, home, login, market, myCart, myFav, myOrders, popupWindow, policy, recovery, settings, support, supportMore, terms)
-add breadcrumb
-===============================================================================================================================================================================
-RetroQalereya — 17 Iyul I
-start to make all functionalities (user or guest, which user, authentication, search, sort, purchase, payment, login, logout, routes, fetch, filter, etc)
-add language changing effect with localStorage to all components (header, footer, about, blog, blogArticle, contact, details, faq, home, login, market, myCart, myFav, myOrders, popupWindow, policy, recovery, settings, support, supportMore, terms) 30min
-===============================================================================================================================================================================
-RetroQalereya — 18 Iyul II
-complete all functionalities for each (header, footer, about, blog, blogArticle, contact, details, faq, home, login, market, myCart, myFav, myOrders, popupWindow, policy, recovery, settings, support, supportMore, terms)
-combine frontend and backend
-===============================================================================================================================================================================
-
-———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
-- routes, links, unique path with product id or something, user info and etc
-- SCSS & RESPONSIVITY all of pages and popup
-- textDataBase, textDataBaseSTATE & their translation
-———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
-- header again with mobile version and responsivity / or only fix responsivity (tablet cart-fav btns, mobile menu sizes searcbar, menus ...), add searcbar to tablet and remove from menu when tablet mode, fix gaps, fix dropdown menu not show and responsivity
-- all functionalities, search, sort, authentication, purchase, payment, login, log out, routes, fetch, filter, etc.
-- overall check all links tag (Link) and routes (to="/path-here")
-- with localStorage, both mobile & default, add language change, onload check & input changing
-- breadcrumb when you in another page not home
-- keep footer and header on login page
-- use localStorage for token (logged user's temporary string on its property)
-- when token logout or expire delete and replace userdata without token empty property
-- use localStorage for selectedLang, lightMode and cureentUser (guest or user id)
-- use ChatGPT to generate blog, aboutus, contact, support, faq, settings, recovery, help pages text content
-- swipe effect javascript learn and apply for homepage carousel, infinite loop
-- collect product images & info from hepsiantika, antikkutu, antikasatis create json for testing pages
-- edit user json properties
+- vercel change link name (from 'ecommerce-app-kanan-git.vercel.app' to 'retroqalereya.vercel.app')
+...
 ———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————

@@ -8,10 +8,58 @@ import './MyFavorites.css'
 function MyFavorites() {
 
     const textDataBase = {
-        AZ: {},
-        EN: {},
-        TR: {},
-        RU: {}
+        AZ: {
+            headers: [
+                "Məhsullar"
+            ],
+            buttons: [
+                "Səbətim", 
+                "Mağazaya keç"
+            ],
+            table: [
+                "Məhsul", 
+                "Qiymət"
+            ]
+        },
+        EN: {
+            headers: [
+                "Products"
+            ],
+            buttons: [
+                "Check Cart", 
+                "Go to Store"
+            ],
+            table: [
+                "Product", 
+                "Price"
+            ]
+        },
+        TR: {
+            headers: [
+                "Ürünler"
+            ],
+            buttons: [
+                "Sepete göz at", 
+                "Mağazaya git"
+            ],
+            table: [
+                "Ürün", 
+                "Fiyat"
+            ]
+        },
+        RU: {
+            headers: [
+                "Продукты"
+            ],
+            buttons: [
+                "Проверить корзину", 
+                "Иди в магазин"
+            ],
+            table: [
+                "Продукт", 
+                "Цена"
+            ]
+        }
     }
     const [textDataBaseSTATE, setTextDataBaseSTATE] = useState(textDataBase.AZ)
     useEffect(
@@ -43,12 +91,59 @@ function MyFavorites() {
             window.addEventListener("change", handleLanguage)
         }, []
     )
-    
+
     return (
         <>
             {/* <Header /> */}
 
-            <div className="myfavorites"> MyFavorites </div>
+            <div className="myfavorites">
+                <div className="myfavorites__container">
+                    <div className="myfavorites__container--info">
+                        {textDataBaseSTATE.headers[0]}: `10`
+                    </div>
+
+                    <table className="myfavorites__container--table">
+                        <tr className="myfavorites__container--table_rows">
+                            <th className="myfavorites__container--table_rows-cells"> {/* empty */} </th>
+                            <th className="myfavorites__container--table_rows-cells"> {/* empty */} </th>
+                            <th className="myfavorites__container--table_rows-cells"> {textDataBaseSTATE.table[0]} </th>
+                            <th className="myfavorites__container--table_rows-cells"> {textDataBaseSTATE.table[1]} (₼) </th>
+                        </tr>
+
+                        <tr className="myfavorites__container--table_rows">
+                            <td className="myfavorites__container--table_rows-cells">
+                                <button className="myfavorites__container--table_rows-cells__xmark">
+                                    <img src="/asset_library/symbols_svg/#" className="myfavorites__container--table_rows-cells__xmark--symbol" />
+                                </button>
+                            </td>
+                            <td className="myfavorites__container--table_rows-cells">
+                                object-fit cover
+                                <img src="/asset_library/products/#" alt="product-thumbnail" className="myfavorites__container--table_rows-cells__thumbnail" />
+                            </td>
+                            <td className="myfavorites__container--table_rows-cells"> product full title here </td>
+                            <td className="myfavorites__container--table_rows-cells"> 20 </td>
+                        </tr>
+                        <tr className="myfavorites__container--table_rows">
+                            <td className="myfavorites__container--table_rows-cells">
+                                <button className="myfavorites__container--table_rows-cells__xmark">
+                                    <img src="/asset_library/symbols_svg/#" className="myfavorites__container--table_rows-cells__xmark--symbol" />
+                                </button>
+                            </td>
+                            <td className="myfavorites__container--table_rows-cells">
+                                object-fit cover
+                                <img src="/asset_library/products/#" alt="product-thumbnail" className="myfavorites__container--table_rows-cells__thumbnail" />
+                            </td>
+                            <td className="myfavorites__container--table_rows-cells"> product full title here </td>
+                            <td className="myfavorites__container--table_rows-cells"> 20 </td>
+                        </tr>
+                    </table>
+
+                    <div className="myfavorites__container--directions">
+                        <button className="myfavorites__container--directions_buttons"> ◄ {textDataBaseSTATE.buttons[0]} </button>
+                        <button className="myfavorites__container--directions_buttons"> {textDataBaseSTATE.buttons[1]} ► </button>
+                    </div>
+                </div>
+            </div>
 
             {/* <Footer /> */}
         </>

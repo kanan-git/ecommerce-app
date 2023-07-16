@@ -41,10 +41,10 @@ function PaymentPopup() {
             window.addEventListener("change", handleLanguage)
         }, []
     )
-    
+
     return (
         <div className="paymentpopup">
-            PaymentPopup
+            PaymentPopup ₼
         </div>
     )
 }
