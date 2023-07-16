@@ -10,6 +10,76 @@ function Settings() {
 
     const textDataBase = {
         AZ: {
+            title: "RetroQalereya | Hesab Tənzimləmələri", 
+            buttons: [
+                "profil", // 0
+                "parol və təhlükəsizlik", // 1
+                "e-poçt seçimləri", // 2
+                "ödəmə metodları", // 3
+                "hesabı silin" // 4
+            ],
+            profile_btn: [
+                "redaktə", // 0
+                "sil", // 1
+                "ad", // 2
+                "soyad", // 3
+                "cins", // 4
+                "Kişi", // 5
+                "Qadın", // 6
+                "Doğum tarixi", // 7
+                "Uğurla yadda saxlanıldı", // 8
+                "yadda saxla" // 9
+            ],
+            password_btn: [
+                "Hazırkı şifrə", // 0
+                "cari parolunuzu daxil edin", // 1
+                "yeni şifrə", // 2
+                "yeni parol daxil edin", // 3
+                "Ən azı 12 simvol uzunluğunda, lakin 14 və ya daha çox simvol daha yaxşıdır.", // 4
+                "Böyük hərflərin, kiçik hərflərin, rəqəmlərin və simvolların birləşməsi.", // 5
+                "Lüğətdə və ya bir şəxsin, xarakterin, məhsulun və ya təşkilatın adında tapıla bilən söz deyil.", // 6
+                "Əvvəlki parollarınızdan əhəmiyyətli dərəcədə fərqlidir.", // 7
+                "Yadda saxlamaq sizin üçün asandır, amma başqaları üçün təxmin etmək çətindir. '6MonkeysRLooking^' kimi yaddaqalan ifadədən istifadə etməyi düşünün.", // 8
+                "Parolu təkrarlayın", // 9
+                "yeni parolu təkrarlayın" // 10
+            ],
+            email_btn: [
+                "cari e-poçt", // 0
+                "yeni Email", // 1
+                "yeni Email", // 2
+                "yeni e-poçtu təkrarlayın", // 3
+                "yeni e-poçtu təkrarlayın", // 4
+                "E-poçtumu dəyişdirmək istədiyimə əminəm" // 5
+            ],
+            payment_btn: [
+                "CARİ BALANS", // 0
+                "Ödəniş məlumatlarını əlavə edin və ya dəyişdirin", // 1
+                "16 rəqəmli nömrə", // 2
+                "Bitmə tarixi", // 3
+                "Ünvan əlavə edin və ya dəyişdirin", // 4
+                "Dilarə Əliyeva küç., 28 May, Bakı" // 5
+            ],
+            delete_btn: [
+                "hesabınızı siləcəyinizə əminsiniz?" ,// 0
+                "təsdiq etmək üçün 'DELETE' yazın" // 1
+            ],
+            topside: "İstifadəçi kodu",
+            month: [
+                "Yanvar", 
+                "Fevral", 
+                "Mart", 
+                "Aprel", 
+                "May", 
+                "İyun", 
+                "İyul", 
+                "Avqust", 
+                "Sentyabr", 
+                "Oktyabr", 
+                "Noyabr", 
+                "Dekabr"
+            ]
+        }, 
+        EN: {
             title: "RetroGallery | Account Settings", 
             buttons: [
                 "profile", // 0
@@ -17,13 +87,212 @@ function Settings() {
                 "email preferences", // 2
                 "payment methods", // 3
                 "delete account" // 4
+            ],
+            profile_btn: [
+                "edit", // 0
+                "remove", // 1
+                "name", // 2
+                "lastname", // 3
+                "gender", // 4
+                "Male", // 5
+                "Female", // 6
+                "date of birth", // 7
+                "Successfully saved", // 8
+                "save changes" // 9
+            ],
+            password_btn: [
+                "current password", // 0
+                "enter your current password", // 1
+                "new password", // 2
+                "enter new password", // 3
+                "At least 12 characters long but 14 or more is better.", // 4
+                "A combination of uppercase letters, lowercase letters, numbers, and symbols.", // 5
+                "Not a word that can be found in a dictionary or the name of a person, character, product, or organization.", // 6
+                "Significantly different from your previous passwords.", // 7
+                "Easy for you to remember but difficult for others to guess. Consider using a memorable phrase like '6MonkeysRLooking^'.", // 8
+                "repeat password", // 9
+                "repeat new password" // 10
+            ],
+            email_btn: [
+                "current email", // 0
+                "new email", // 1
+                "new email", // 2
+                "repeat new email", // 3
+                "repeat new email", // 4
+                "I'm sure to change my email" // 5
+            ],
+            payment_btn: [
+                "CURRENT BALANCE", // 0
+                "Add or change billing information", // 1
+                "16 digit number", // 2
+                "Expire date", // 3
+                "Add or change addressline", // 4
+                "Dilara Aliyeva st, 28 May, Baku" // 5
+            ],
+            delete_btn: [
+                "are you sure to delete your account ?" ,// 0
+                "type 'DELETE' to confirm" // 1
+            ],
+            topside: "User ID",
+            month: [
+                "January", 
+                "February", 
+                "March", 
+                "April", 
+                "May", 
+                "June", 
+                "July", 
+                "August", 
+                "September", 
+                "October", 
+                "November", 
+                "December"
             ]
         }, 
-        EN: {}, 
-        TR: {}, 
-        RU: {}
+        TR: {
+            title: "RetroGaleri | Hesap ayarları", 
+            buttons: [
+                "profil", // 0
+                "şifre ve güvenlik", // 1
+                "E-posta Tercihleri", // 2
+                "Ödeme yöntemleri", // 3
+                "Hesabı sil" // 4
+            ],
+            profile_btn: [
+                "düzenle", // 0
+                "kaldır", // 1
+                "isim", // 2
+                "soy isim", // 3
+                "cinsiyet", // 4
+                "Erkek", // 5
+                "Kadın", // 6
+                "doğum tarihi", // 7
+                "Başarıyla kaydedildi", // 8
+                "değişiklikleri Kaydet" // 9
+            ],
+            password_btn: [
+                "Mevcut Şifre", // 0
+                "mevcut şifrenizi girin", // 1
+                "Yeni Şifre", // 2
+                "yeni şifreyi girin", // 3
+                "En az 12 karakter uzunluğunda ancak 14 veya daha fazla olması daha iyidir.", // 4
+                "Büyük harfler, küçük harfler, sayılar ve simgelerden oluşan bir kombinasyon.", // 5
+                "Bir sözlükte bulunabilecek bir kelime veya bir kişinin, karakterin, ürünün veya kuruluşun adı değil.", // 6
+                "Önceki şifrelerinizden önemli ölçüde farklı.", // 7
+                "Sizin için hatırlaması kolay ama başkaları için tahmin etmesi zor. '6MonkeysRLooking^' gibi akılda kalıcı bir ifade kullanmayı düşünün.", // 8
+                "Şifreyi tekrar girin", // 9
+                "Yeni şifreyi tekrar girin" // 10
+            ],
+            email_btn: [
+                "mevcut e-posta", // 0
+                "Yeni E-posta", // 1
+                "Yeni E-posta", // 2
+                "yeni e-postayı tekrarla", // 3
+                "yeni e-postayı tekrarla", // 4
+                "E-postamı değiştireceğime eminim" // 5
+            ],
+            payment_btn: [
+                "CARİ BAKİYE", // 0
+                "Fatura bilgilerini ekleyin veya değiştirin", // 1
+                "16 haneli sayı", // 2
+                "Son kullanma tarihi", // 3
+                "Adres satırı ekle veya değiştir", // 4
+                "Dilara Aliyeva sokağı, 28 Mayıs, Bakü" // 5
+            ],
+            delete_btn: [
+                "hesabınızı sileceğinizden emin misiniz?" ,// 0
+                "onaylamak için 'DELETE' yazın" // 1
+            ],
+            topside: "Kullanıcı kimliği",
+            month: [
+                "Ocak", 
+                "Şubat", 
+                "Mart", 
+                "Nisan", 
+                "Mayıs", 
+                "Haziran", 
+                "Temmuz", 
+                "Ağustos", 
+                "Eylül", 
+                "Ekim", 
+                "Kasım", 
+                "Aralık"
+            ]
+        }, 
+        RU: {
+            title: "РетроГалерея | Настройки учетной записи", 
+            buttons: [
+                "профиль", // 0
+                "пароль и безопасность", // 1
+                "Настройки электронной почты", // 2
+                "Способы оплаты", // 3
+                "удалить аккаунт" // 4
+            ],
+            profile_btn: [
+                "редактировать", // 0
+                "удалять", // 1
+                "имя", // 2
+                "фамилия", // 3
+                "пол", // 4
+                "Мужской", // 5
+                "Женский", // 6
+                "Дата рождения", // 7
+                "Успешно сохранено", // 8
+                "Сохранить изменения" // 9
+            ],
+            password_btn: [
+                "Текущий пароль", // 0
+                "Введите ваш текущий пароль", // 1
+                "Новый пароль", // 2
+                "Введите новый пароль", // 3
+                "Минимум 12 символов, но лучше 14 или больше.", // 4
+                "Комбинация прописных и строчных букв, цифр и символов.", // 5
+                "Ни слова, которое можно найти в словаре, ни имени человека, персонажа, продукта или организации.", // 6
+                "Значительно отличается от ваших предыдущих паролей.", // 7
+                "Вам легко запомнить, но трудно догадаться другим. Попробуйте использовать запоминающуюся фразу, например «6MonkeysRLooking^».", // 8
+                "Повторите пароль", // 9
+                "повторите новый пароль" // 10
+            ],
+            email_btn: [
+                "текущая электронная почта", // 0
+                "Новый E-mail", // 1
+                "Новый E-mail", // 2
+                "повторить новое письмо", // 3
+                "повторить новое письмо", // 4
+                "Я обязательно изменю свой адрес электронной почты" // 5
+            ],
+            payment_btn: [
+                "ТЕКУЩИЙ БАЛАНС", // 0
+                "Добавить или изменить платежную информацию", // 1
+                "16-значный номер", // 2
+                "Годен до", // 3
+                "Добавить или изменить адресную строку", // 4
+                "улица Дилары Алиевой, 28 мая, Баку" // 5
+            ],
+            delete_btn: [
+                "Вы уверены, что хотите удалить свой аккаунт?" ,// 0
+                "введите «DELETE» для подтверждения" // 1
+            ],
+            topside: "Пользователь ID",
+            month: [
+                "Январь", 
+                "Февраль", 
+                "Март", 
+                "Апрель", 
+                "Май", 
+                "Июнь", 
+                "Июль", 
+                "Август", 
+                "Сентябрь", 
+                "Октябрь", 
+                "Ноябрь", 
+                "Декабрь"
+            ]
+        }
     }
     const [textDataBaseSTATE, setTextDataBaseSTATE] = useState(textDataBase.AZ)
+    const [daysSTATE, setDaysSTATE] = useState([])
+    const [yearsSTATE, setYearsSTATE] = useState([])
     useEffect(
         () => {
             if(JSON.parse(localStorage.getItem("langChoice")) == null) {
@@ -51,6 +320,18 @@ function Settings() {
                 }
             }
             window.addEventListener("change", handleLanguage)
+
+            var daysOfMonth = []
+            for(var i=1; i<=31; i++) {
+                daysOfMonth.push(i)
+            }
+            setDaysSTATE(daysOfMonth)
+
+            var yearsRegistered = []
+            for(var y=2023; y>1900; y--) {
+                yearsRegistered.push(y)
+            }
+            setYearsSTATE(yearsRegistered)
         }, []
     )
 
@@ -105,7 +386,7 @@ function Settings() {
                         <span className="settings__container--group_parameters" id="0" style={{display: "flex"}}>
                             <div className="upside">
                                 <h3 className="upside__title"> {textDataBaseSTATE.buttons[0]} </h3>
-                                <p className="upside__userid"> User ID: 0 </p>
+                                <p className="upside__userid"> {textDataBaseSTATE.topside}: 0 </p>
                             </div>
 
                             <div className="container">
@@ -116,192 +397,83 @@ function Settings() {
                                         <button className="container__profile--group_buttons">
                                             <img src="/asset_library/symbols_svg/edit-3-svgrepo-com.svg" 
                                             className="container__profile--group_buttons-symbol" />
-                                            edit
+                                            {textDataBaseSTATE.profile_btn[0]}
                                         </button>
                                         <button className="container__profile--group_buttons">
                                             <img src="/asset_library/symbols_svg/xmark-circle-svgrepo-com.svg" 
                                             className="container__profile--group_buttons-symbol" />
-                                            remove
+                                            {textDataBaseSTATE.profile_btn[1]}
                                         </button>
                                     </span>
                                 </div>
                                 <div className="container__username">
                                     <span className="container__username--name">
-                                        name:
+                                        {textDataBaseSTATE.profile_btn[2]}:
                                         <input type="text" className="container__username--name_input" 
                                         placeholder="nameOfTheUser" />
                                     </span>
                                     <span className="container__username--name">
-                                        lastname:
+                                        {textDataBaseSTATE.profile_btn[3]}:
                                         <input type="text" className="container__username--name_input" 
                                         placeholder="lastnameOfTheUser" />
                                     </span>
                                 </div>
                                 <div className="container__gender">
-                                    gender:
+                                    {textDataBaseSTATE.profile_btn[4]}:
                                     <select name="gender" id="gender" className="container__gender--input">
                                         <option value="Male" className="container__gender--input_options">
-                                            Male
+                                            {textDataBaseSTATE.profile_btn[5]}
                                         </option>
                                         <option value="Female" className="container__gender--input_options">
-                                            Female
+                                            {textDataBaseSTATE.profile_btn[6]}
                                         </option>
                                     </select>
                                 </div>
                                 <div className="container__dateofbirth">
-                                    date of birth:
+                                    {textDataBaseSTATE.profile_btn[7]}:
                                     <select name="month" id="month" className="container__dateofbirth--input">
-                                        <option value="January" className="container__dateofbirth--input_options">
-                                            January
-                                        </option>
-                                        <option value="February" className="container__dateofbirth--input_options">
-                                            February
-                                        </option>
-                                        <option value="March" className="container__dateofbirth--input_options">
-                                            March
-                                        </option>
-                                        <option value="April" className="container__dateofbirth--input_options">
-                                            April
-                                        </option>
-                                        <option value="May" className="container__dateofbirth--input_options">
-                                            May
-                                        </option>
-                                        <option value="June" className="container__dateofbirth--input_options">
-                                            June
-                                        </option>
-                                        <option value="July" className="container__dateofbirth--input_options">
-                                            July
-                                        </option>
-                                        <option value="August" className="container__dateofbirth--input_options">
-                                            August
-                                        </option>
-                                        <option value="September" className="container__dateofbirth--input_options">
-                                            September
-                                        </option>
-                                        <option value="October" className="container__dateofbirth--input_options">
-                                            October
-                                        </option>
-                                        <option value="November" className="container__dateofbirth--input_options">
-                                            November
-                                        </option>
-                                        <option value="December" className="container__dateofbirth--input_options">
-                                            December
-                                        </option>
+                                        {
+                                            textDataBaseSTATE.month.map(
+                                                (element, index) => {
+                                                    return (
+                                                        <option value="January" className="container__dateofbirth--input_options" key={index}>
+                                                            {element}
+                                                        </option>
+                                                    )
+                                                }
+                                            )
+                                        }
                                     </select>
                                     <select name="day" id="day" className="container__dateofbirth--input">
-                                        <option value="1" className="container__dateofbirth--input_options">
-                                            1
-                                        </option>
-                                        <option value="2" className="container__dateofbirth--input_options">
-                                            2
-                                        </option>
-                                        <option value="3" className="container__dateofbirth--input_options">
-                                            3
-                                        </option>
-                                        <option value="4" className="container__dateofbirth--input_options">
-                                            4
-                                        </option>
-                                        <option value="5" className="container__dateofbirth--input_options">
-                                            5
-                                        </option>
-                                        <option value="6" className="container__dateofbirth--input_options">
-                                            6
-                                        </option>
-                                        <option value="7" className="container__dateofbirth--input_options">
-                                            7
-                                        </option>
-                                        <option value="8" className="container__dateofbirth--input_options">
-                                            8
-                                        </option>
-                                        <option value="9" className="container__dateofbirth--input_options">
-                                            9
-                                        </option>
-
-                                        <option value="10" className="container__dateofbirth--input_options">
-                                            10
-                                        </option>
-                                        <option value="11" className="container__dateofbirth--input_options">
-                                            11
-                                        </option>
-                                        <option value="12" className="container__dateofbirth--input_options">
-                                            12
-                                        </option>
-                                        <option value="13" className="container__dateofbirth--input_options">
-                                            13
-                                        </option>
-                                        <option value="13" className="container__dateofbirth--input_options">
-                                            13
-                                        </option>
-                                        <option value="14" className="container__dateofbirth--input_options">
-                                            14
-                                        </option>
-                                        <option value="15" className="container__dateofbirth--input_options">
-                                            15
-                                        </option>
-                                        <option value="16" className="container__dateofbirth--input_options">
-                                            16
-                                        </option>
-                                        <option value="17" className="container__dateofbirth--input_options">
-                                            17
-                                        </option>
-                                        <option value="18" className="container__dateofbirth--input_options">
-                                            18
-                                        </option>
-                                        <option value="19" className="container__dateofbirth--input_options">
-                                            19
-                                        </option>
-                                        <option value="20" className="container__dateofbirth--input_options">
-                                            20
-                                        </option>
-                                        <option value="21" className="container__dateofbirth--input_options">
-                                            21
-                                        </option>
-                                        <option value="22" className="container__dateofbirth--input_options">
-                                            22
-                                        </option>
-                                        <option value="23" className="container__dateofbirth--input_options">
-                                            23
-                                        </option>
-                                        <option value="23" className="container__dateofbirth--input_options">
-                                            23
-                                        </option>
-                                        <option value="24" className="container__dateofbirth--input_options">
-                                            24
-                                        </option>
-                                        <option value="25" className="container__dateofbirth--input_options">
-                                            25
-                                        </option>
-                                        <option value="26" className="container__dateofbirth--input_options">
-                                            26
-                                        </option>
-                                        <option value="27" className="container__dateofbirth--input_options">
-                                            27
-                                        </option>
-                                        <option value="28" className="container__dateofbirth--input_options">
-                                            28
-                                        </option>
-                                        <option value="29" className="container__dateofbirth--input_options">
-                                            29
-                                        </option>
-                                        <option value="30" className="container__dateofbirth--input_options">
-                                            30
-                                        </option>
-                                        <option value="31" className="container__dateofbirth--input_options">
-                                            31
-                                        </option>
+                                        {
+                                            daysSTATE.map(
+                                                (day) => {
+                                                    return (
+                                                        <option value={day} className="container__dateofbirth--input_options" key={day}>
+                                                            {day}
+                                                        </option>
+                                                    )
+                                                }
+                                            )
+                                        }
                                     </select>
                                     <select name="year" id="year" className="container__dateofbirth--input">
-                                        <option value="2023" className="container__dateofbirth--input_options">
-                                            2023
-                                        </option>
-                                        <option value="1901" className="container__dateofbirth--input_options">
-                                            1901
-                                        </option>
+                                        {
+                                            yearsSTATE.map(
+                                                (year) => {
+                                                    return (
+                                                        <option value={year} className="container__dateofbirth--input_options" key={year}>
+                                                            {year}
+                                                        </option>
+                                                    )
+                                                }
+                                            )
+                                        }
                                     </select>
                                 </div>
                                 <button className="container__submit">
-                                    <p className="changes_saved"> Successfully saved. </p>
-                                    save changes
+                                    <p className="changes_saved"> {textDataBaseSTATE.profile_btn[8]}. </p>
+                                    {textDataBaseSTATE.profile_btn[9]}
                                 </button>
                             </div>
                         </span>
@@ -309,48 +481,48 @@ function Settings() {
                         <span className="settings__container--group_parameters" id="1" style={{display: "none"}}>
                             <div className="upside">
                                 <h3 className="upside__title"> {textDataBaseSTATE.buttons[1]} </h3>
-                                <p className="upside__userid"> User ID: 0 </p>
+                                <p className="upside__userid"> {textDataBaseSTATE.topside}: 0 </p>
                             </div>
 
                             <div className="container">
                                 <div className="container__blocks">
-                                    current password:
+                                    {textDataBaseSTATE.password_btn[0]}:
                                     <input type="password" className="container__blocks--input" 
-                                    placeholder="enter your current password" />
+                                    placeholder={textDataBaseSTATE.password_btn[1]} />
                                     <img src="#" className="show-password" />
                                 </div>
                                 <div className="container__blocks">
-                                    new password:
+                                    {textDataBaseSTATE.password_btn[2]}:
                                     <input type="password" className="container__blocks--input" 
-                                    placeholder="enter new password" />
+                                    placeholder={textDataBaseSTATE.password_btn[3]} />
                                     <img src="#" className="show-password" />
                                 </div>
                                 <ul className="container__blocks">
                                     <li className="container__blocks--conditions">
-                                        • uiawdiubaioubsdiob
+                                        • {textDataBaseSTATE.password_btn[4]}
                                     </li>
                                     <li className="container__blocks--conditions">
-                                        • hinawiudbpahdopwe
+                                        • {textDataBaseSTATE.password_btn[5]}
                                     </li>
                                     <li className="container__blocks--conditions">
-                                        • awdinawuibovnioenawye
+                                        • {textDataBaseSTATE.password_btn[6]}
                                     </li>
                                     <li className="container__blocks--conditions">
-                                        • giydvlhkdjworhbcv
+                                        • {textDataBaseSTATE.password_btn[7]}
                                     </li>
                                     <li className="container__blocks--conditions">
-                                        • pfirmgycpbqhyydjrtzpobkrmdg
+                                        • {textDataBaseSTATE.password_btn[8]}
                                     </li>
                                 </ul>
                                 <div className="container__blocks">
-                                    repeat password:
+                                    {textDataBaseSTATE.password_btn[9]}:
                                     <input type="password" className="container__blocks--input" 
-                                    placeholder="repeat new password" />
+                                    placeholder={textDataBaseSTATE.password_btn[10]} />
                                     <img src="#" className="show-password" />
                                 </div>
                                 <button className="container__submit">
-                                    <p className="changes_saved"> Successfully saved. </p>
-                                    save changes
+                                    <p className="changes_saved"> {textDataBaseSTATE.profile_btn[8]}. </p>
+                                    {textDataBaseSTATE.profile_btn[9]}
                                 </button>
                             </div>
                         </span>
@@ -358,34 +530,34 @@ function Settings() {
                         <span className="settings__container--group_parameters" id="2" style={{display: "none"}}>
                             <div className="upside">
                                 <h3 className="upside__title"> {textDataBaseSTATE.buttons[2]} </h3>
-                                <p className="upside__userid"> User ID: 0 </p>
+                                <p className="upside__userid"> {textDataBaseSTATE.topside}: 0 </p>
                             </div>
 
                             <div className="container">
                                 <div className="container__blocks">
-                                    current email:
+                                    {textDataBaseSTATE.email_btn[0]}:
                                     <input type="email" className="container__blocks--input" 
-                                    placeholder="igejjappgejcn@gmail.com" />
+                                    placeholder="qwertyuiop@gmail.com" />
                                 </div>
                                 <div className="container__blocks">
                                     <input type="checkbox" name="agree" id="agree" 
                                     style={{accentColor: "rgb(255,0,0"}} 
                                     className="container__blocks--checkbox" />
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                    {textDataBaseSTATE.email_btn[5]}.
                                 </div>
                                 <div className="container__blocks">
-                                    new email:
+                                    {textDataBaseSTATE.email_btn[1]}:
                                     <input type="email" className="container__blocks--input" 
-                                    placeholder="new email" />
+                                    placeholder={textDataBaseSTATE.email_btn[2]} />
                                 </div>
                                 <div className="container__blocks">
-                                    repeat new email:
+                                    {textDataBaseSTATE.email_btn[3]}:
                                     <input type="email" className="container__blocks--input" 
-                                    placeholder="repeat new email" />
+                                    placeholder={textDataBaseSTATE.email_btn[4]} />
                                 </div>
                                 <button className="container__submit">
-                                    <p className="changes_saved"> Successfully saved. </p>
-                                    save changes
+                                    <p className="changes_saved"> {textDataBaseSTATE.profile_btn[8]}. </p>
+                                    {textDataBaseSTATE.profile_btn[9]}
                                 </button>
                             </div>
                         </span>
@@ -393,32 +565,32 @@ function Settings() {
                         <span className="settings__container--group_parameters" id="3" style={{display: "none"}}>
                             <div className="upside">
                                 <h3 className="upside__title"> {textDataBaseSTATE.buttons[3]} </h3>
-                                <p className="upside__userid"> User ID: 0 </p>
+                                <p className="upside__userid"> {textDataBaseSTATE.topside}: 0 </p>
                             </div>
 
                             <div className="container">
                                 <div className="container__blocks">
                                     <p className="container__blocks--info">
-                                        CURRENT BALANCE: 0.00 ₼
+                                        {textDataBaseSTATE.payment_btn[0]}: 0.00 ₼
                                     </p>
                                 </div>
                                 <div className="container__blocks">
-                                    Add or change billing information:
+                                    {textDataBaseSTATE.payment_btn[1]}:
                                     <input type="text" className="container__blocks--inputpa" 
-                                    placeholder="16 digit number (0123 4567 8901 2345)" />
+                                    placeholder={textDataBaseSTATE.payment_btn[2]+" (0123 4567 8901 2345)"} />
                                     <input type="text" className="container__blocks--inputpa" 
-                                    placeholder="Expire date (MM/YY)" />
+                                    placeholder={textDataBaseSTATE.payment_btn[3]+" (MM/YY)"} />
                                     <input type="text" className="container__blocks--inputpa" 
                                     placeholder="CVC (123)" />
                                 </div>
                                 <div className="container__blocks">
-                                    Add or change addressline:
+                                    {textDataBaseSTATE.payment_btn[4]}:
                                     <input type="text" className="container__blocks--inputpa" 
-                                    placeholder="Dilara Aliyeva st, 28 May, Baku" />
+                                    placeholder={textDataBaseSTATE.payment_btn[5]} />
                                 </div>
                                 <button className="container__submit">
-                                    <p className="changes_saved"> Successfully saved. </p>
-                                    save changes
+                                    <p className="changes_saved"> {textDataBaseSTATE.profile_btn[8]}. </p>
+                                    {textDataBaseSTATE.profile_btn[9]}
                                 </button>
                             </div>
                         </span>
@@ -426,22 +598,22 @@ function Settings() {
                         <span className="settings__container--group_parameters" id="4" style={{display: "none"}}>
                             <div className="upside">
                                 <h3 className="upside__title"> {textDataBaseSTATE.buttons[4]} </h3>
-                                <p className="upside__userid"> User ID: 0 </p>
+                                <p className="upside__userid"> {textDataBaseSTATE.topside}: 0 </p>
                             </div>
 
                             <div className="container">
                                 <div className="container__blocks">
                                     <p className="container__blocks--qu">
-                                        are you sure to delete your account ?
+                                        {textDataBaseSTATE.delete_btn[0]}
                                     </p>
                                     <p className="container__blocks--qu">
-                                        type 'DELETE' to confirm:
+                                        {textDataBaseSTATE.delete_btn[1]}:
                                         <input type="text" className="container__blocks--qu_input" />
                                     </p>
                                 </div>
                                 <button className="container__submit">
-                                    <p className="changes_saved"> Successfully saved. </p>
-                                    save changes
+                                    <p className="changes_saved"> {textDataBaseSTATE.profile_btn[8]}. </p>
+                                    {textDataBaseSTATE.profile_btn[9]}
                                 </button>
                             </div>
                         </span>
