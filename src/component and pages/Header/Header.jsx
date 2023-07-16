@@ -7,6 +7,10 @@ import { setCurrentLanguage } from '../../features/counter/languageSlice'
 function Header() {
     const root = document.documentElement
 
+    if(JSON.parse(localStorage.getItem("langChoice")) == null) {
+        localStorage.setItem("langChoice", JSON.stringify("AZ"))
+    }
+
     const textDataBase = {
         AZ: {
             topside: [
@@ -114,31 +118,6 @@ function Header() {
     const [textDataBaseSTATE, setTextDataBaseSTATE] = useState(textDataBase.AZ)
 
     const dispatch = useDispatch()
-
-    // if(JSON.parse(localStorage.getItem("langChoice")) == "AZ") {
-    //     dispatch(setCurrentLanguage(textDataBase.AZ))
-    // } else if(JSON.parse(localStorage.getItem("langChoice")) == "EN") {
-    //     dispatch(setCurrentLanguage(textDataBase.EN))
-    // } else if(JSON.parse(localStorage.getItem("langChoice")) == "TR") {
-    //     dispatch(setCurrentLanguage(textDataBase.TR))
-    // } else if(JSON.parse(localStorage.getItem("langChoice")) == "RU") {
-    //     dispatch(setCurrentLanguage(textDataBase.RU))
-    // }
-
-    // useEffect(
-    //     () => {
-    //         const tempValue = prompt("guest | 0")
-    //         setTempUserStatus(tempValue)
-    //     }, []
-    // )
-
-    // console.log(window.location.pathname)
-
-    // if(window.innerWidth < "1920") {
-    //     alert("MOBILE RESPONSIBILITY WILL BE WORKING SOON")
-    // }
-
-    // document.getElementsByClassName("header__main--userpanel")
 
     return (
         <div className="header">
@@ -314,25 +293,25 @@ function Header() {
                                 setTextDataBaseSTATE(textDataBase.AZ)
                                 localStorage.setItem("langChoice", JSON.stringify("AZ"))
                                 // dispatch(setCurrentLanguage("AZ"))
-                                dispatch(setCurrentLanguage(textDataBase.AZ))
+                                // dispatch(setCurrentLanguage(textDataBase.AZ))
                                 // dispatch(setCurrentLanguage(textDataBaseSTATE.AZ))
                             } else if(e.target.value == "EN") {
                                 setTextDataBaseSTATE(textDataBase.EN)
                                 localStorage.setItem("langChoice", JSON.stringify("EN"))
                                 // dispatch(setCurrentLanguage("EN"))
-                                dispatch(setCurrentLanguage(textDataBase.EN))
+                                // dispatch(setCurrentLanguage(textDataBase.EN))
                                 // dispatch(setCurrentLanguage(textDataBaseSTATE.EN))
                             } else if(e.target.value == "TR") {
                                 setTextDataBaseSTATE(textDataBase.TR)
                                 localStorage.setItem("langChoice", JSON.stringify("TR"))
                                 // dispatch(setCurrentLanguage("TR"))
-                                dispatch(setCurrentLanguage(textDataBase.TR))
+                                // dispatch(setCurrentLanguage(textDataBase.TR))
                                 // dispatch(setCurrentLanguage(textDataBaseSTATE.TR))
                             } else if(e.target.value == "RU") {
                                 setTextDataBaseSTATE(textDataBase.RU)
                                 localStorage.setItem("langChoice", JSON.stringify("RU"))
                                 // dispatch(setCurrentLanguage("RU"))
-                                dispatch(setCurrentLanguage(textDataBase.RU))
+                                // dispatch(setCurrentLanguage(textDataBase.RU))
                                 // dispatch(setCurrentLanguage(textDataBaseSTATE.RU))
                             }
                             // window.location.reload()
@@ -392,25 +371,25 @@ function Header() {
                                 setTextDataBaseSTATE(textDataBase.AZ)
                                 localStorage.setItem("langChoice", JSON.stringify("AZ"))
                                 // dispatch(setCurrentLanguage("AZ"))
-                                dispatch(setCurrentLanguage(textDataBase.AZ))
+                                // dispatch(setCurrentLanguage(textDataBase.AZ))
                                 // dispatch(setCurrentLanguage(textDataBaseSTATE.AZ))
                             } else if(e.target.value == "EN") {
                                 setTextDataBaseSTATE(textDataBase.EN)
                                 localStorage.setItem("langChoice", JSON.stringify("EN"))
                                 // dispatch(setCurrentLanguage("EN"))
-                                dispatch(setCurrentLanguage(textDataBase.EN))
+                                // dispatch(setCurrentLanguage(textDataBase.EN))
                                 // dispatch(setCurrentLanguage(textDataBaseSTATE.EN))
                             } else if(e.target.value == "TR") {
                                 setTextDataBaseSTATE(textDataBase.TR)
                                 localStorage.setItem("langChoice", JSON.stringify("TR"))
                                 // dispatch(setCurrentLanguage("TR"))
-                                dispatch(setCurrentLanguage(textDataBase.TR))
+                                // dispatch(setCurrentLanguage(textDataBase.TR))
                                 // dispatch(setCurrentLanguage(textDataBaseSTATE.TR))
                             } else if(e.target.value == "RU") {
                                 setTextDataBaseSTATE(textDataBase.RU)
                                 localStorage.setItem("langChoice", JSON.stringify("RU"))
                                 // dispatch(setCurrentLanguage("RU"))
-                                dispatch(setCurrentLanguage(textDataBase.RU))
+                                // dispatch(setCurrentLanguage(textDataBase.RU))
                                 // dispatch(setCurrentLanguage(textDataBaseSTATE.RU))
                             }
                             // window.location.reload()
