@@ -9,10 +9,46 @@ function Details() {
     window.scrollTo(0, 0)
     
     const textDataBase = {
-        AZ: {},
-        EN: {},
-        TR: {},
-        RU: {}
+        AZ: {
+            text: [
+                "miqdar", // 0
+                "indi al", // 1
+                "favorilər", // 2
+                "səbət", // 3
+                "favorilərə keçid", // 4
+                "səbətə keçid", // 5
+                "oxşar məhsullar" // 6
+            ]
+        },
+        EN: {
+            text: [
+                "count", // 0
+                "buy now", // 1
+                "favorites", // 2
+                "cart", // 3
+                "check favorites", // 4
+                "check cart", // 5
+                "related products" // 6
+            ]
+        },
+        TR: {text: [
+                "miktar", // 0
+                "satın al", // 1
+                "favoriler", // 2
+                "sepet", // 3
+                "favorileri kontrol et", // 4
+                "sepeti kontrol et", // 5
+                "ilgili ürünler" // 6
+            ]},
+        RU: {text: [
+                "считать", // 0
+                "купить сейчас", // 1
+                "избранное", // 2
+                "тележка", // 3
+                "проверить избранное", // 4
+                "проверить корзину", // 5
+                "сопутствующие товары" // 6
+            ]}
     }
     const [textDataBaseSTATE, setTextDataBaseSTATE] = useState(textDataBase.AZ)
     useEffect(
@@ -49,7 +85,76 @@ function Details() {
         <>
             {/* <Header /> */}
 
-            <div className="details"> Details </div>
+            <div className="details">
+                <div className="details__container">
+                    <div className="details__container--visual">
+                        <div className="details__container--visual_image">
+                            <img src="#" alt="" className="details__container--visual_image-content" />
+                        </div>
+                        <div className="details__container--visual_thumbnails">
+                            <div className="details__container--visual_thumbnails-carousel">
+                                <div className="details__container--visual_thumbnails-carousel__images">
+                                    <img src="#" alt="" className="details__container--visual_thumbnails-carousel__images--content" />
+                                </div>
+                                <div className="details__container--visual_thumbnails-carousel__images">
+                                    <img src="#" alt="" className="details__container--visual_thumbnails-carousel__images--content" />
+                                </div>
+                            </div>
+                            <div className="details__container--visual_thumbnails-buttons">
+                                <button className="details__container--visual_thumbnails-buttons__btn" id="det_crl_prev"> ◄ </button>
+                                <button className="details__container--visual_thumbnails-buttons__btn" id="det_crl_next"> ► </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="details__container--information">
+                        <h3 className="details__container--information_title">
+                            title from API product
+                        </h3>
+                        <i className="details__container--information_category">
+                            category from API product
+                        </i>
+                        <strong className="details__container--information_price">
+                            price from API product
+                        </strong>
+                        <div className="details__container--information_count">
+                            {textDataBaseSTATE.text[0]}:
+                            <input type="number" className="details__container--information_count-input" min="1" max="999" defaultValue="1" />
+                        </div>
+                        <p className="details__container--information_description">
+                            description from API product
+                        </p>
+                        <div className="details__container--information_buttons">
+                            <button className="details__container--information_buttons-btn">
+                                <img src="#" className="details__container--information_buttons-btn__symbol" />
+                                {textDataBaseSTATE.text[1]}
+                            </button>
+                            <button className="details__container--information_buttons-btn">
+                                <img src="#" className="details__container--information_buttons-btn__symbol" />
+                                {textDataBaseSTATE.text[2]}
+                            </button>
+                            <button className="details__container--information_buttons-btn">
+                                <img src="#" className="details__container--information_buttons-btn__symbol" />
+                                {textDataBaseSTATE.text[3]}
+                            </button>
+                        </div>
+                        <div className="details__container--information_links">
+                            <Link className="details__container--information_links-item"> {textDataBaseSTATE.text[4]} </Link>
+                            <Link className="details__container--information_links-item"> {textDataBaseSTATE.text[5]} </Link>
+                        </div>
+                    </div>
+
+                    <h3 className="details__container--header"> {textDataBaseSTATE.text[6]}: </h3>
+                    <div className="details__container--related">    
+                        <div className="details__container--related_cards">
+                            <div className="details__container--related_cards-image">
+                                <img src="#" alt="product_01" className="details__container--related_cards-image__content" />
+                            </div>
+                            <p className="details__container--related_cards-title"> from api </p>
+                            <strong className="details__container--related_cards-price"> from api </strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             {/* <Footer /> */}
         </>
