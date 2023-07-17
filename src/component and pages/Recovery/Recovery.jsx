@@ -6,7 +6,8 @@ import './Recovery.css'
 // import Footer from '../Footer/Footer.jsx'
 
 function Recovery() {
-
+    window.scrollTo(0, 0)
+    
     const textDataBase = {
         AZ: {},
         EN: {},

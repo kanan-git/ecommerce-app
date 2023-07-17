@@ -6,6 +6,7 @@ import './Terms.css'
 // import Footer from '../Footer/Footer.jsx'
 
 function Terms() {
+    window.scrollTo(0, 0)
 
     const textDataBase = {
         AZ: {

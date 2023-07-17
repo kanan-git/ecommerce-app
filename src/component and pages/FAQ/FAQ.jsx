@@ -6,6 +6,7 @@ import './FAQ.css'
 // import Footer from '../Footer/Footer.jsx'
 
 function FAQ() {
+    window.scrollTo(0, 0)
 
     const textDataBase = {
         AZ: {

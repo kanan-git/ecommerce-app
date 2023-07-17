@@ -6,7 +6,8 @@ import './Market.css'
 // import Footer from '../Footer/Footer.jsx'
 
 function Market() {
-
+    window.scrollTo(0, 0)
+    
     const textDataBase = {
         AZ: {},
         EN: {},

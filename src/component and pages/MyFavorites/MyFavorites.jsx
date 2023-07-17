@@ -6,6 +6,7 @@ import './MyFavorites.css'
 // import Footer from '../Footer/Footer.jsx'
 
 function MyFavorites() {
+    window.scrollTo(0, 0)
 
     const textDataBase = {
         AZ: {

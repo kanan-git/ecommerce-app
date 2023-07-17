@@ -6,7 +6,8 @@ import './Login.css'
 // import Footer from '../Footer/Footer.jsx'
 
 function Login() {
-
+    window.scrollTo(0, 0)
+    
     const [tempSign, setTempSign] = useState("login") // login register
     const [passInputSwitch, setPassInputSwitch] = useState("show") // show hide
 

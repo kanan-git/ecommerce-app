@@ -6,6 +6,7 @@ import './About.css'
 // import Footer from '../Footer/Footer.jsx'
 
 function About() {
+    window.scrollTo(0, 0)
 
     const textDataBase = {
         AZ: {

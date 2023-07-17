@@ -6,7 +6,8 @@ import './SupportMore.css'
 // import Footer from '../Footer/Footer.jsx'
 
 function SupportMore() {
-
+    window.scrollTo(0, 0)
+    
     const textDataBase = {
         AZ: {
             title: "RetroQalereya | Tez-tez verilən suallar (FAQ)", 

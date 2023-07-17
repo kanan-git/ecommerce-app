@@ -6,6 +6,7 @@ import './Support.css'
 // import Footer from '../Footer/Footer.jsx'
 
 function Support() {
+    window.scrollTo(0, 0)
 
     const textDataBase = {
         symbols_path: [

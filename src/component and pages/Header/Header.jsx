@@ -119,6 +119,14 @@ function Header() {
 
     const dispatch = useDispatch()
 
+    useEffect(
+        () => {
+            if(JSON.parse(localStorage.getItem("langChoice")) != null) {
+                document.getElementById("language").value = JSON.parse(localStorage.getItem("langChoice"))
+            }
+        }, []
+    )
+
     return (
         <div className="header">
             {/* mobile button */}
@@ -286,7 +294,7 @@ function Header() {
                     <p className="header__mobilemenu--language_info">
                         {textDataBaseSTATE.mobmenu}
                     </p>
-                    <select name="language" id="language" className="header__mobilemenu--language_langbar" onChange={
+                    <select name="mob_language" id="mob_language" className="header__mobilemenu--language_langbar" onChange={
                         (e) => {
                             // e.preventDefault()
                             if(e.target.value == "AZ") {
@@ -317,10 +325,10 @@ function Header() {
                             // window.location.reload()
                         }
                     }>
-                        <option value="AZ" className="header__mobilemenu--language_langbar-options"> AZ </option>
-                        <option value="EN" className="header__mobilemenu--language_langbar-options"> EN </option>
-                        <option value="TR" className="header__mobilemenu--language_langbar-options"> TR </option>
-                        <option value="RU" className="header__mobilemenu--language_langbar-options"> RU </option>
+                        <option id="opt_mob_az" value="AZ" className="header__mobilemenu--language_langbar-options"> AZ </option>
+                        <option id="opt_mob_en" value="EN" className="header__mobilemenu--language_langbar-options"> EN </option>
+                        <option id="opt_mob_tr" value="TR" className="header__mobilemenu--language_langbar-options"> TR </option>
+                        <option id="opt_mob_ru" value="RU" className="header__mobilemenu--language_langbar-options"> RU </option>
                     </select>
                 </div>
             </div>

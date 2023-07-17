@@ -6,6 +6,7 @@ import './Contact.css'
 // import Footer from '../Footer/Footer.jsx'
 
 function Contact() {
+    window.scrollTo(0, 0)
 
     const textDataBase = {
         AZ: {

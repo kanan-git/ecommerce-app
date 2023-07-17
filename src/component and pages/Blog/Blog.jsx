@@ -6,7 +6,8 @@ import './Blog.css'
 // import Footer from '../Footer/Footer.jsx'
 
 function Blog() {
-
+    window.scrollTo(0, 0)
+    
     const textDataBase = {
         AZ: {},
         EN: {},

@@ -6,6 +6,7 @@ import './Policy.css'
 // import Footer from '../Footer/Footer.jsx'
 
 function Policy() {
+    window.scrollTo(0, 0)
 
     const textDataBase = {
         AZ: {
