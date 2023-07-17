@@ -175,7 +175,7 @@ function Contact() {
                                 Twitter: twitter.com/retrogallery
                             </li>
                         </ul>
-                        <div className="contact__container--group_mapapi"></div>
+                        <div className="contact__container--group_mapapi" id="map" style={{width: "600px", height: "400px"}}></div>
                     </div>
                     <p className="contact__container--text">
                         {textDataBaseSTATE.paragraphs[3]}

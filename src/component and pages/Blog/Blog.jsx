@@ -9,7 +9,7 @@ function Blog() {
     window.scrollTo(0, 0)
     
     const textDataBase = {
-        AZ: {},
+        AZ: {}, // translate only ui not blog contents or product info
         EN: {},
         TR: {},
         RU: {}

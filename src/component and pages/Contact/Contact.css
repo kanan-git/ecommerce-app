@@ -50,9 +50,6 @@
   margin-right: 10px;
 }
 .contact__container--group_mapapi {
-  background-color: bisque;
-  width: 640px;
-  height: 360px;
   overflow: hidden;
   border: 1px solid var(--border-color);
   border-radius: 10px;
