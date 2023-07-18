@@ -123,6 +123,7 @@ function Header() {
         () => {
             if(JSON.parse(localStorage.getItem("langChoice")) != null) {
                 document.getElementById("language").value = JSON.parse(localStorage.getItem("langChoice"))
+                document.getElementById("mob_language").value = JSON.parse(localStorage.getItem("langChoice"))
             }
         }, []
     )

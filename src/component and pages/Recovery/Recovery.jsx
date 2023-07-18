@@ -9,10 +9,54 @@ function Recovery() {
     window.scrollTo(0, 0)
     
     const textDataBase = {
-        AZ: {},
-        EN: {},
-        TR: {},
-        RU: {}
+        AZ: {
+            textcontent: [
+                "E-poçt", // 0
+                "E-poçtunuzu daxil edin", // 1
+                "Doğrulama kodu e-poçtunuza göndərildi", // 2
+                "Bu e-poçt hələ qeydiyyatdan keçməyib", // 3
+                "Yoxlama kodu", // 4
+                "Doğrulama kodunu daxil edin", // 5
+                "Kodu əldə edin", // 6
+                "təqdim", // 7
+            ]
+        },
+        EN: {
+            textcontent: [
+                "Email", // 0
+                "Enter your email", // 1
+                "Verification code sent to your email", // 2
+                "This email not registered yet", // 3
+                "Verification code", // 4
+                "Enter verification code", // 5
+                "Get code", // 6
+                "Submit", // 7
+            ]
+        },
+        TR: {
+            textcontent: [
+                "E-posta", // 0
+                "E-postanızı giriniz", // 1
+                "E-postanıza gönderilen doğrulama kodu", // 2
+                "Bu e-posta henüz kayıtlı değil", // 3
+                "Doğrulama kodu", // 4
+                "dogrulama kodunu giriniz", // 5
+                "Kodu al", // 6
+                "Göndermek", // 7
+            ]
+        },
+        RU: {
+            textcontent: [
+                "Электронная почта", // 0
+                "Введите адрес электронной почты", // 1
+                "Код подтверждения отправлен на вашу электронную почту", // 2
+                "Этот адрес электронной почты еще не зарегистрирован", // 3
+                "Проверочный код", // 4
+                "введите код подтверждения", // 5
+                "Получить код", // 6
+                "Отправлять", // 7
+            ]
+        }
     }
     const [textDataBaseSTATE, setTextDataBaseSTATE] = useState(textDataBase.AZ)
     useEffect(
@@ -52,25 +96,25 @@ function Recovery() {
             <div className="recovery">
                 <div className="recovery__container">
                     <div className="recovery__container--block">
-                        Email:
+                        {textDataBaseSTATE.textcontent[0]}:
                         <input type="email" className="recovery__container--block_input" 
-                        placeholder="Enter your email" />
+                        placeholder={textDataBaseSTATE.textcontent[1]} />
                         {/* <p className="alert_text">
-                            Verification code sent to your email
+                            {textDataBaseSTATE.textcontent[2]}
                         </p> */}
                         {/* <p className="something_wrong">
-                            This email not registered yet
+                            {textDataBaseSTATE.textcontent[3]}
                         </p> */}
                     </div>
                     {/* <div className="recovery__container--block">
-                        Verification code:
+                        {textDataBaseSTATE.textcontent[4]}:
                         <input type="text" className="recovery__container--block_input" 
-                        placeholder="Enter verification code" />
+                        placeholder={textDataBaseSTATE.textcontent[5]} />
                     </div> */}
                     <div className="recovery__container--block">
                         <button className="recovery__container--block__submit">
-                            Get code
-                            {/* Submit */}
+                            {textDataBaseSTATE.textcontent[6]}
+                            {/* {textDataBaseSTATE.textcontent[7]} */}
                         </button>
                     </div>
                 </div>
