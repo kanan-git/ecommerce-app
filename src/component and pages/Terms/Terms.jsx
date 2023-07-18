@@ -177,7 +177,7 @@ function Terms() {
         <>
             {/* <Header /> */}
 
-            <div className="terms">
+            <section className="terms">
                 <div className="terms__container">
                     <h1 className="terms__container--title">
                         {textDataBaseSTATE.title}
@@ -281,7 +281,7 @@ function Terms() {
                         {textDataBaseSTATE.paragraphs[16]}
                     </p>
                 </div>
-            </div>
+            </section>
 
             {/* <Footer /> */}
         </>

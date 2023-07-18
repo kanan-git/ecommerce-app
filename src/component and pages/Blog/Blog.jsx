@@ -9,10 +9,18 @@ function Blog() {
     window.scrollTo(0, 0)
     
     const textDataBase = {
-        AZ: {}, // translate only ui not blog contents or product info
-        EN: {},
-        TR: {},
-        RU: {}
+        AZ: {
+            title: "RetroQalereya | Blog"
+        }, 
+        EN: { // translate only ui not blog contents or product info
+            title: "RetroGallery | Blog"
+        },
+        TR: {
+            title: "RetroGaleri | Blog"
+        },
+        RU: {
+            title: "РетроГалерея | Блог"
+        }
     }
     const [textDataBaseSTATE, setTextDataBaseSTATE] = useState(textDataBase.AZ)
     useEffect(
@@ -49,10 +57,10 @@ function Blog() {
         <>
             {/* <Header /> */}
 
-            <div className="blog">
+            <section className="blog">
                 <div className="blog__container">
                     <h3 className="blog__container--title">
-                        RetroGallery | Blog
+                        {textDataBaseSTATE.title}
                     </h3>
                     <div className="blog__container--group">
                         <div className="blog__container--group_cards">
@@ -78,7 +86,7 @@ function Blog() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
             {/* <Footer /> */}
         </>

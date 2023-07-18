@@ -258,7 +258,7 @@ function Login() {
         <>
             {/* <Header /> */}
 
-            <div className="auth">
+            <section className="auth">
                 <div className="auth__container">
                     <div className="auth__container--selections">
                         <button className="auth__container--selections_buttons" onClick={
@@ -425,7 +425,7 @@ function Login() {
                         </form>
                     )}
                 </div>
-            </div>
+            </section>
 
             {/* <Footer /> */}
         </>

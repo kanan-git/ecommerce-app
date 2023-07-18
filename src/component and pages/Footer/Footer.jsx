@@ -199,7 +199,7 @@ function Footer() {
     )
 
     return (
-        <div className="footer">
+        <footer className="footer">
             <div className="footer__main">
                 <ul className="footer__main--columns">
                     <img src="/asset_library/logo_and_icon/RetroQalereya_transparent_bg_logo.png" 
@@ -263,7 +263,7 @@ function Footer() {
                     <img src="/asset_library/symbols_svg/american-express-svgrepo-com.svg" alt="american-express" className="footer__bottom--icons_content" />
                 </span>
             </div>
-        </div>
+        </footer>
     )
 }
 

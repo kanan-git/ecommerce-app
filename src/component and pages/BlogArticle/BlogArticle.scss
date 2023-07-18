@@ -1,0 +1,11 @@
+.blogarticle {
+    &__container {
+        &--header {}
+        &--synopsis {}
+        &--image {}
+        &--article {}
+    }
+    &__menu {
+        &--articles {}
+    }
+}

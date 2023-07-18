@@ -85,7 +85,7 @@ function Details() {
         <>
             {/* <Header /> */}
 
-            <div className="details">
+            <section className="details">
                 <div className="details__container">
                     <div className="details__container--visual">
                         <div className="details__container--visual_image">
@@ -154,7 +154,7 @@ function Details() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
             {/* <Footer /> */}
         </>

@@ -153,7 +153,7 @@ function FAQ() {
         <>
             {/* <Header /> */}
 
-            <div className="faq">
+            <section className="faq">
                 <div className="faq__container">
                     <h3 className="faq__container--title"> {textDataBaseSTATE.title} </h3>
 
@@ -183,7 +183,7 @@ function FAQ() {
                         }
                     </div>
                 </div>
-            </div>
+            </section>
 
             {/* <Footer /> */}
         </>

@@ -144,7 +144,7 @@ function Market() {
     return (
         <>
             {/* <Header /> */}
-            <div className="market">
+            <section className="market">
                 <div className="market__container">
                     <div className="market__container--filter">
                         <h3 className="market__container--filter_header"> {textDataBaseSTATE.textcontents[0]} </h3>
@@ -249,7 +249,7 @@ function Market() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
             {/* <Footer /> */}
         </>
     )

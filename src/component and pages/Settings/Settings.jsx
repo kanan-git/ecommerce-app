@@ -339,7 +339,7 @@ function Settings() {
         <>
             {/* <Header /> */}
 
-            <div className="settings">
+            <section className="settings">
                 <div className="settings__container">
                     <h3 className="settings__container--title">
                         {textDataBaseSTATE.title}
@@ -620,7 +620,7 @@ function Settings() {
                         {/* ------------------------------------------------------------------ */}
                     </div>
                 </div>
-            </div>
+            </section>
 
             {/* <Footer /> */}
         </>

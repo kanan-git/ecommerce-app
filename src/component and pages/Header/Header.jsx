@@ -129,7 +129,7 @@ function Header() {
     )
 
     return (
-        <div className="header">
+        <header className="header">
             {/* mobile button */}
             <button className="header__mobilebtn" onClick={
                 () => {
@@ -496,7 +496,7 @@ function Header() {
                     )}
                 </button>
             </div>
-        </div>
+        </header>
     )
 }
 

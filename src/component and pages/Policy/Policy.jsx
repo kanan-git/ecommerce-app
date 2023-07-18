@@ -161,7 +161,7 @@ function Policy() {
         <>
             {/* <Header /> */}
 
-            <div className="policy">
+            <section className="policy">
                 <div className="policy__container">
                     <h1 className="policy__container--title">
                         {textDataBaseSTATE.title}
@@ -252,7 +252,7 @@ function Policy() {
                         {textDataBaseSTATE.paragraphs[12]}
                     </p>
                 </div>
-            </div>
+            </section>
 
             {/* <Footer /> */}
         </>

@@ -501,9 +501,8 @@ function Home() {
                         </div>
                     </div>
 
-                    <h3 className="home__container--sectors_headers"> {textDataBaseSTATE.headers[0]} </h3>
+                    <h3 className="home__container--headers"> {textDataBaseSTATE.headers[0]} </h3>
                     <div className="home__container--sectors">
-
                         <div className="home__container--sectors_cards">
                             <div className="home__container--sectors_cards-image">
                                 <img src="#" alt="product_0" className="home__container--sectors_cards-image__content" />
@@ -531,7 +530,7 @@ function Home() {
                         </div>
                     </div>
 
-                    <h3 className="home__container--sectors_headers"> {textDataBaseSTATE.headers[1]} </h3>
+                    <h3 className="home__container--headers"> {textDataBaseSTATE.headers[1]} </h3>
                     <div className="home__container--sectors">
                         <div className="home__container--sectors_blogs">
                             <div className="home__container--sectors_blogs-img">

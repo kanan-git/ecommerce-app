@@ -302,7 +302,7 @@ function SupportMore() {
         <>
             {/* <Header /> */}
 
-            <div className="supportmore">
+            <section className="supportmore">
                 <div className="supportmore__header">
                     {textDataBaseSTATE.menus[0]}
                 </div>
@@ -335,7 +335,7 @@ function SupportMore() {
                         }
                     </aside>
                 </div>
-            </div>
+            </section>
 
             {/* <Footer /> */}
         </>

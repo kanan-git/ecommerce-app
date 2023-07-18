@@ -117,7 +117,7 @@ function About() {
         <>
             {/* <Header /> */}
 
-            <div className="about">
+            <section className="about">
                 <div className="about__container">
 
                     <div className="about__container--groups">
@@ -180,7 +180,7 @@ function About() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
             {/* <Footer /> */}
         </>

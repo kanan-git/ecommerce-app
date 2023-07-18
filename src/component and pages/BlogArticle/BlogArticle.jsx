@@ -49,7 +49,7 @@ function BlogArticle() {
         <>
             {/* <Header /> */}
 
-            <div className="blogarticle">
+            <section className="blogarticle">
                 <div className="blogarticle__container">
                     <h3 className="blogarticle__container--header"> Lorem ipsum dolor sit amet. </h3>
                     <h6 className="blogarticle__container--synopsis"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident, dolore eligendi ipsam nobis quo quisquam. </h6>
@@ -76,7 +76,7 @@ function BlogArticle() {
                     <button className="blogarticle__menu--articles"> aioniunopnduw </button>
                     <button className="blogarticle__menu--articles"> madoinirgfjuwrt </button>
                 </aside>
-            </div>
+            </section>
 
             {/* <Footer /> */}
         </>

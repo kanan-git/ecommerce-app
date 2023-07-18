@@ -133,7 +133,7 @@ function Support() {
         <>
             {/* <Header /> */}
 
-            <div className="support">
+            <section className="support">
                 <div className="support__container">
                     <h3 className="support__container--title"> {textDataBaseSTATE.title} </h3>
                     <div className="support__container--group">
@@ -155,7 +155,7 @@ function Support() {
 
                     </div>
                 </div>
-            </div>
+            </section>
 
             {/* <Footer /> */}
         </>

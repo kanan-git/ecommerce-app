@@ -5,7 +5,54 @@
 // @media only screen and (max-width: 450px) {}
 
 .home {
-    height: auto;
-    // background-color: white;
-    // display: none;
+    &__container {
+        &--sectors {
+            &_navbar {
+                &-button {
+                    &__symbol {}
+                    &__dropdown {
+                        &--btn {}
+                    }
+                }
+            }
+            &_carousel {
+                &-img {
+                    &__content {}
+                }
+                &-dots {
+                    &__dot {}
+                }
+                &-buttons {
+                    &__btn {}
+                }
+                
+            }
+            &_headers {}
+            &_cards {
+                &-image {
+                    &__content {}
+                }
+                &-title {}
+                &-price {}
+            }
+            &_slides {
+                &-img {}
+                &-title {}
+                &-button {}
+            }
+            &_dots {
+                &-dot {}
+            }
+            &_sliders {
+                &-btn {}
+            }
+            &_blogs {
+                &-img {
+                    &__content {}
+                }
+                &-title {}
+                &-button {}
+            }
+        }
+    }
 }

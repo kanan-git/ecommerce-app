@@ -125,7 +125,7 @@ function Contact() {
         <>
             {/* <Header /> */}
 
-            <div className="contact">
+            <section className="contact">
                 <div className="contact__container">
                     <h3 className="contact__container--header">
                         {textDataBaseSTATE.headers[0]}
@@ -187,7 +187,7 @@ function Contact() {
                         {textDataBaseSTATE.paragraphs[6]}
                     </p>
                 </div>
-            </div>
+            </section>
 
             {/* <Footer /> */}
         </>

@@ -1,1 +1,45 @@
-.details {}
+.details {
+    &__container {
+        &--visual {
+            &_image {}
+            &_image-content {}
+            &_thumbnails {
+                &-carousel {
+                    &__images {
+                        &--content {}
+                    }
+                }
+                &-buttons {
+                    &__btn {}
+                }
+            }
+        }
+        &--information {
+            &_title {}
+            &_category {}
+            &_price {}
+            &_count {
+                &-input {}
+            }
+            &_description {}
+            &_buttons {
+                &-btn {
+                    &__symbol {}
+                }
+            }
+            &_links {
+                &-item {}
+            }
+        }
+        &--header {}
+        &--related {
+            &_cards {
+                &-image {
+                    &__content {}
+                }
+                &-title {}
+                &-price {}
+            }
+        }
+    }
+}
