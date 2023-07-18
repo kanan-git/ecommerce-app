@@ -19,6 +19,8 @@ import Recovery from './component and pages/Recovery/Recovery.jsx'
 import Settings from './component and pages/Settings/Settings.jsx'
 import Support from './component and pages/Support/Support.jsx'
 import Terms from './component and pages/Terms/Terms.jsx'
+import SupportMore from './component and pages/SupportMore/SupportMore.jsx'
+import BlogArticle from './component and pages/BlogArticle/BlogArticle.jsx'
 import PaymentPopup from './component and pages/PaymentPopup/PaymentPopup.jsx'
 
 function App() {
@@ -53,6 +55,8 @@ function App() {
         <Route path="/settings" element={<Settings />} />
         <Route path="/support" element={<Support />} />
         <Route path="/terms" element={<Terms />} />
+        <Route path="/support/chosen_id_here" element={<SupportMore />} />
+        <Route path="/blog/article" element={<BlogArticle />} />
         {/*   + add_user_or_product_id_for_unique_links +   */}
       </Routes>
 
