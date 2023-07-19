@@ -97,7 +97,7 @@ function MyFavorites() {
         <>
             {/* <Header /> */}
 
-            <div className="myfavorites">
+            <section className="myfavorites">
                 <div className="myfavorites__container">
                     <div className="myfavorites__container--info">
                         {textDataBaseSTATE.headers[0]}: `10`
@@ -144,7 +144,7 @@ function MyFavorites() {
                         <button className="myfavorites__container--directions_buttons"> {textDataBaseSTATE.buttons[1]} ► </button>
                     </div>
                 </div>
-            </div>
+            </section>
 
             {/* <Footer /> */}
         </>

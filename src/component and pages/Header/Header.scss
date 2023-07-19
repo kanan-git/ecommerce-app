@@ -297,7 +297,7 @@
                         height: 20px;
                     }
                     &:hover {
-                        filter: invert(1.0) sepia(75) saturate(25) hue-rotate(150deg) brightness(0.8);
+                        filter: invert(0.6) sepia(150) saturate(50) hue-rotate(-20deg);
                     }
                 }
             }
@@ -418,8 +418,11 @@
                 width: 300px;
                 height: 200px; // auto
                 background-color: var(--default-bg-color);
+                top: 90px;
+                left: 0px;
                 visibility: hidden;
                 opacity: 0.0;
+                transition: var(--quick-fx);
                 &-buttons {
                     width: 100%;
                     height: auto;

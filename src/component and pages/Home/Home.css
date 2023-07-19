@@ -1,3 +1,15 @@
-.home {
-  height: auto;
+.home__container {
+  width: 1300px;
+}
+.home__container--sectors_navbar {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+.home__container--sectors_navbar-button {
+  text-transform: uppercase;
+}
+.home__container--sectors_navbar-button__symbol {
+  width: 20px;
+  height: 20px;
 }/*# sourceMappingURL=Home.css.map */

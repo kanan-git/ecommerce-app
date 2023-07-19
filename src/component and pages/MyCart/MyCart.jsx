@@ -121,8 +121,8 @@ function MyCart() {
         <>
             {/* <Header /> */}
 
-            <div className="mycart">
-            <div className="mycart__container">
+            <section className="mycart">
+                <div className="mycart__container">
                     <div className="mycart__container--info">
                         {textDataBaseSTATE.headers[0]}: `10`
                     </div>
@@ -189,7 +189,7 @@ function MyCart() {
                         <button className="mycart__container--directions_buttons"> {textDataBaseSTATE.buttons[2]} ► </button>
                     </div>
                 </div>
-            </div>
+            </section>
 
             {/* <Footer /> */}
         </>

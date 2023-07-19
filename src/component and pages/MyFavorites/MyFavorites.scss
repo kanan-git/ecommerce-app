@@ -1,1 +1,18 @@
-.myfavorites {}
+.myfavorites {
+    &__container {
+        &--info {}
+        &--table {
+            &_rows {
+                &-cells {
+                    &__xmark {
+                        &--symbol {}
+                    }
+                    &__thumbnail {}
+                }
+            }
+        }
+        &--directions {
+            &_buttons {}
+        }
+    }
+}

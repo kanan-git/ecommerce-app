@@ -6,10 +6,18 @@
 
 .home {
     &__container {
+        width: 1300px;
         &--sectors {
             &_navbar {
+                width: 200px;
+                display: flex;
+                flex-direction: column;
                 &-button {
-                    &__symbol {}
+                    text-transform: uppercase;
+                    &__symbol {
+                        width: 20px;
+                        height: 20px;
+                    }
                     &__dropdown {
                         &--btn {}
                     }

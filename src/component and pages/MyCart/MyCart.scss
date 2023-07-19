@@ -1,1 +1,23 @@
-.mycart {}
+.mycart {
+    &__container {
+        &--info {}
+        &--table {
+            &_rows {
+                &-cells {
+                    &__xmark {
+                        &--symbol {}
+                    }
+                    &__thumbnail {}
+                    &__input {}
+                }
+            }
+        }
+        &--payment {
+            &__price {}
+            &__button {}
+        }
+        &--directions {
+            &_buttons {}
+        }
+    }
+}

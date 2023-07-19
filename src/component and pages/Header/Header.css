@@ -292,7 +292,7 @@
   height: 20px;
 }
 .header__main--userpanel_dropdown-buttons:hover {
-  filter: invert(1) sepia(75) saturate(25) hue-rotate(150deg) brightness(0.8);
+  filter: invert(0.6) sepia(150) saturate(50) hue-rotate(-20deg);
 }
 .header__main--buttons {
   display: flex;
@@ -420,8 +420,11 @@
   width: 300px;
   height: 200px;
   background-color: var(--default-bg-color);
+  top: 90px;
+  left: 0px;
   visibility: hidden;
   opacity: 0;
+  transition: var(--quick-fx);
 }
 .header__mobilestatic--userpanel_dropdown-buttons {
   width: 100%;

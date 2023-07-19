@@ -93,7 +93,7 @@ function Recovery() {
         <>
             {/* <Header /> */}
 
-            <div className="recovery">
+            <section className="recovery">
                 <div className="recovery__container">
                     <div className="recovery__container--block">
                         {textDataBaseSTATE.textcontent[0]}:
@@ -112,13 +112,13 @@ function Recovery() {
                         placeholder={textDataBaseSTATE.textcontent[5]} />
                     </div> */}
                     <div className="recovery__container--block">
-                        <button className="recovery__container--block__submit">
+                        <button className="recovery__container--block_submit">
                             {textDataBaseSTATE.textcontent[6]}
                             {/* {textDataBaseSTATE.textcontent[7]} */}
                         </button>
                     </div>
                 </div>
-            </div>
+            </section>
 
             {/* <Footer /> */}
         </>

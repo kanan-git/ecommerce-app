@@ -1,1 +1,14 @@
-.myorders {}
+.myorders {
+    &__container {
+        &--table {
+            &_rows {
+                &-cells {
+                    &__thumbnail {}
+                }
+            }
+        }
+        &--directions {
+            &_buttons {}
+        }
+    }
+}

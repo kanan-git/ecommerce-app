@@ -212,29 +212,29 @@ function Footer() {
                 </ul>
                 <ul className="footer__main--columns">
                     <h6 className="footer__main--columns_header"> {textDataBaseSTATE.headers[0]} </h6>
-                    <li className="footer__main--columns_list"> {textDataBaseSTATE.shop[0]} </li>
-                    <li className="footer__main--columns_list"> {textDataBaseSTATE.shop[1]} </li>
-                    <li className="footer__main--columns_list"> {textDataBaseSTATE.shop[2]} </li>
-                    <li className="footer__main--columns_list"> {textDataBaseSTATE.shop[3]} </li>
-                    <li className="footer__main--columns_list"> {textDataBaseSTATE.shop[4]} </li>
-                    <li className="footer__main--columns_list"> {textDataBaseSTATE.shop[5]} </li>
-                    <li className="footer__main--columns_list"> {textDataBaseSTATE.shop[6]} </li>
-                    <li className="footer__main--columns_list"> {textDataBaseSTATE.shop[7]} </li>
+                    <Link to="/products" className="footer__main--columns_list"> {textDataBaseSTATE.shop[0]} </Link>
+                    <Link to="/products" className="footer__main--columns_list"> {textDataBaseSTATE.shop[1]} </Link>
+                    <Link to="/products" className="footer__main--columns_list"> {textDataBaseSTATE.shop[2]} </Link>
+                    <Link to="/products" className="footer__main--columns_list"> {textDataBaseSTATE.shop[3]} </Link>
+                    <Link to="/products" className="footer__main--columns_list"> {textDataBaseSTATE.shop[4]} </Link>
+                    <Link to="/products" className="footer__main--columns_list"> {textDataBaseSTATE.shop[5]} </Link>
+                    <Link to="/products" className="footer__main--columns_list"> {textDataBaseSTATE.shop[6]} </Link>
+                    <Link to="/products" className="footer__main--columns_list"> {textDataBaseSTATE.shop[7]} </Link>
                 </ul>
                 <ul className="footer__main--columns">
                     <h6 className="footer__main--columns_header"> {textDataBaseSTATE.headers[1]} </h6>
-                    <li className="footer__main--columns_list"> {textDataBaseSTATE.profile[0]} </li>
-                    <li className="footer__main--columns_list"> {textDataBaseSTATE.profile[1]} </li>
-                    <li className="footer__main--columns_list"> {textDataBaseSTATE.profile[2]} </li>
-                    <li className="footer__main--columns_list"> {textDataBaseSTATE.profile[3]} </li>
+                    <Link to="/myorders" className="footer__main--columns_list"> {textDataBaseSTATE.profile[0]} </Link>
+                    <Link to="/myfav" className="footer__main--columns_list"> {textDataBaseSTATE.profile[1]} </Link>
+                    <Link to="/mycart" className="footer__main--columns_list"> {textDataBaseSTATE.profile[2]} </Link>
+                    <Link to="/settings" className="footer__main--columns_list"> {textDataBaseSTATE.profile[3]} </Link>
                 </ul>
                 <ul className="footer__main--columns">
                     <h6 className="footer__main--columns_header"> {textDataBaseSTATE.headers[2]} </h6>
-                    <li className="footer__main--columns_list"> {textDataBaseSTATE.support[0]} </li>
-                    <li className="footer__main--columns_list"> {textDataBaseSTATE.support[1]} </li>
-                    <li className="footer__main--columns_list"> {textDataBaseSTATE.support[2]} </li>
-                    <li className="footer__main--columns_list"> {textDataBaseSTATE.support[3]} </li>
-                    <li className="footer__main--columns_list"> {textDataBaseSTATE.support[4]} </li>
+                    <Link to="/policy" className="footer__main--columns_list"> {textDataBaseSTATE.support[0]} </Link>
+                    <Link to="/terms" className="footer__main--columns_list"> {textDataBaseSTATE.support[1]} </Link>
+                    <Link to="/faq" className="footer__main--columns_list"> {textDataBaseSTATE.support[2]} </Link>
+                    <Link to="/contact" className="footer__main--columns_list"> {textDataBaseSTATE.support[3]} </Link>
+                    <Link to="/about" className="footer__main--columns_list"> {textDataBaseSTATE.support[4]} </Link>
                 </ul>
                 <ul className="footer__main--columns">
                     <h6 className="footer__main--columns_header"> {textDataBaseSTATE.headers[3]} </h6>

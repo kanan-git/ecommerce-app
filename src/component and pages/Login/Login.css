@@ -1,4 +1,8 @@
-.login {
+.something_wrong {
+  display: none;
+}
+
+.auth {
   width: 100%;
   height: auto;
   background-color: var(--default-bg-color);
@@ -6,7 +10,7 @@
   justify-content: center;
   align-items: center;
 }
-.login__container {
+.auth__container {
   width: 1280px;
   height: auto;
   border: 1px solid var(--border-color);
@@ -14,13 +18,4 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
-.login__container--title {
-  font-size: 30px;
-  text-transform: uppercase;
-  width: 90%;
-  color: var(--only-negative-color);
-  background: linear-gradient(to right, var(--retrogallery-custom-colorpick), var(--retrogallery-custom-colorpick), var(--only-negative-color));
-  margin: 0 0 20px 30px;
-  padding: 0 0 0 10px;
 }/*# sourceMappingURL=Login.css.map */

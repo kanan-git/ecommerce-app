@@ -1,8 +1,9 @@
 import React, {useState, useEffect, useRef, Fragment} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 import {BrowserRouter as Router, Routes, Route, Link, Navigate} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 import './Header.css'
-import { setCurrentLanguage } from '../../features/counter/languageSlice'
+import {setCurrentLanguage} from '../../features/counter/languageSlice'
 
 function Header() {
     const root = document.documentElement
@@ -118,6 +119,7 @@ function Header() {
     const [textDataBaseSTATE, setTextDataBaseSTATE] = useState(textDataBase.AZ)
 
     const dispatch = useDispatch()
+    const navigate = useNavigate()
 
     useEffect(
         () => {
@@ -162,14 +164,14 @@ function Header() {
                 </Link>
                 <div className="header__mobilestatic--userpanel" onMouseEnter={
                     () => {
-                        var UPDropdown = document.getElementById("user_dropdown")
+                        var UPDropdown = document.getElementById("mob_user_dropdown")
                         // UPDropdown.style.display = `flex`
                         UPDropdown.style.visibility = `visible`
                         UPDropdown.style.opacity = `1.0`
                     }
                 } onMouseLeave={
                     () => {
-                        var UPDropdown = document.getElementById("user_dropdown")
+                        var UPDropdown = document.getElementById("mob_user_dropdown")
                         // UPDropdown.style.display = `none`
                         UPDropdown.style.visibility = `hidden`
                         UPDropdown.style.opacity = `0.0`
@@ -195,64 +197,70 @@ function Header() {
                             <p className="header__mobilestatic--userpanel_profile-name"> Name <br /> Lastname </p>
                         </Link>
                     )}
-                    <div className="header__mobilestatic--userpanel_dropdown" id="user_dropdown">
+                    <div className="header__mobilestatic--userpanel_dropdown" id="mob_user_dropdown">
                         {tempUserStatus == "guest" && (<>
-                            <button className="header__mobilestatic--userpanel_dropdown-buttons">
+                            <Link to="/login" className="header__mobilestatic--userpanel_dropdown-buttons">
                                 <img src="/asset_library/symbols_svg/sign-in-svgrepo-com.svg" className="header__mobilestatic--userpanel_dropdown-buttons__symbols" />
                                 {textDataBaseSTATE.dropdown[0]}
-                            </button>
-                            <button className="header__mobilestatic--userpanel_dropdown-buttons">
+                            </Link>
+                            <Link to="/login" className="header__mobilestatic--userpanel_dropdown-buttons">
                                 <img src="/asset_library/symbols_svg/register-svgrepo-com.svg" className="header__mobilestatic--userpanel_dropdown-buttons__symbols" />
                                 {textDataBaseSTATE.dropdown[1]}
-                            </button>
+                            </Link>
                         </>)}
                         {tempUserStatus == "0" && (<>
-                            <button className="header__mobilestatic--userpanel_dropdown-buttons">
+                            <Link to="/myorders" className="header__mobilestatic--userpanel_dropdown-buttons">
                                 <img src="/asset_library/symbols_svg/dollar-svgrepo-com.svg" className="header__mobilestatic--userpanel_dropdown-buttons__symbols" />
                                 {textDataBaseSTATE.dropdown[2]}
-                            </button>
-                            <button className="header__mobilestatic--userpanel_dropdown-buttons">
+                            </Link>
+                            <Link to="/mycart" className="header__mobilestatic--userpanel_dropdown-buttons">
                                 <img src="/asset_library/symbols_svg/cart-svgrepo-com.svg" className="header__mobilestatic--userpanel_dropdown-buttons__symbols" />
                                 {textDataBaseSTATE.dropdown[3]}
-                            </button>
-                            <button className="header__mobilestatic--userpanel_dropdown-buttons">
+                            </Link>
+                            <Link to="/myfav" className="header__mobilestatic--userpanel_dropdown-buttons">
                                 <img src="/asset_library/symbols_svg/favorite-svgrepo-com.svg" className="header__mobilestatic--userpanel_dropdown-buttons__symbols" />
                                 {textDataBaseSTATE.dropdown[4]}
-                            </button>
-                            <button className="header__mobilestatic--userpanel_dropdown-buttons">
+                            </Link>
+                            <Link to="/settings" className="header__mobilestatic--userpanel_dropdown-buttons">
                                 <img src="/asset_library/symbols_svg/icons8-settings.svg" className="header__mobilestatic--userpanel_dropdown-buttons__symbols" />
                                 {textDataBaseSTATE.dropdown[5]}
-                            </button>
-                            <button className="header__mobilestatic--userpanel_dropdown-buttons">
+                            </Link>
+                            <Link className="header__mobilestatic--userpanel_dropdown-buttons" onClick={
+                                () => {
+                                    // localStorage.setItem("signedUser", JSON.stringify("guest"))
+                                    navigate("/")
+                                    window.location.reload()
+                                }
+                            }>
                                 <img src="/asset_library/symbols_svg/out-profile-ui-user-group-people-svgrepo-com.svg" className="header__mobilestatic--userpanel_dropdown-buttons__symbols" />
                                 {textDataBaseSTATE.dropdown[6]}
-                            </button>
+                            </Link>
                         </>)}
                     </div>
                 </div>
-                <button className="header__mobilestatic--buttons">
+                <Link to="/myfav" className="header__mobilestatic--buttons">
                     <img src="/asset_library/symbols_svg/favorite-svgrepo-com.svg" alt="fav" 
                     className="header__mobilestatic--buttons_icon" />
                     {tempUserStatus != "guest" && (
                         <p className="header__mobilestatic--buttons_counter"> 100 </p>
                     )}
-                </button>
-                <button className="header__mobilestatic--buttons">
+                </Link>
+                <Link to="/mycart" className="header__mobilestatic--buttons">
                     <img src="/asset_library/symbols_svg/cart-svgrepo-com.svg" alt="cart" 
                     className="header__mobilestatic--buttons_icon" />
                     {tempUserStatus != "guest" && (
                         <p className="header__mobilestatic--buttons_counter"> 0 </p>
                     )}
-                </button>
+                </Link>
             </div>
             <div className="header__mobilemenu" id="mobmenu">
                 <div className="header__mobilemenu--search">
                     <input type="search" className="header__mobilemenu--search_bar" 
                     placeholder={textDataBaseSTATE.main[0]} />
-                    <button className="header__mobilemenu--search_btn">
+                    <Link to="/products" className="header__mobilemenu--search_btn">
                         <img src="/asset_library/symbols_svg/icons8-search.svg" 
                         className="header__mobilemenu--search_btn-content" />
-                    </button>
+                    </Link>
                 </div>
                 <div className="header__mobilemenu--links">
                     <Link className="header__mobilemenu--links_items" to="/">
@@ -369,7 +377,11 @@ function Header() {
                     <input className="header__main--search_bar" type="search" 
                     placeholder={textDataBaseSTATE.main[0]} />
                     <img src="/asset_library/symbols_svg/icons8-search.svg" alt="magnifier" 
-                    className="header__main--search_button" />
+                    className="header__main--search_button" onClick={
+                        () => {
+                            navigate("/products")
+                        }
+                    } />
                 </div>
 
                 <div className="header__main--pref">

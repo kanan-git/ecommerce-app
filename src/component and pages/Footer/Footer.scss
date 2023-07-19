@@ -74,6 +74,10 @@
                     width: 170px;
                 }
             }
+            &:not(:last-of-type) {
+                display: flex;
+                flex-direction: column;
+            }
             &_logo {
                 width: 80%;
                 height: auto;
@@ -104,7 +108,7 @@
                     }
                     &:hover {
                         scale: 1.05;
-                        filter: invert(1) sepia(80) saturate(50) hue-rotate(-60deg);
+                        filter: invert(0.6) sepia(150) saturate(50) hue-rotate(-20deg);
                     }
                 }
             }

@@ -121,7 +121,7 @@ function MyOrders() {
         <>
             {/* <Header /> */}
 
-            <div className="myorders">
+            <section className="myorders">
                 <div className="myorders__container">
                     <table className="myorders__container--table">
                         <tr className="myorders__container--table_rows">
@@ -159,7 +159,7 @@ function MyOrders() {
                         <button className="myorders__container--directions_buttons"> {textDataBaseSTATE.buttons[1]} ► </button>
                     </div>
                 </div>
-            </div>
+            </section>
 
             {/* <Footer /> */}
         </>

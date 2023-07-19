@@ -218,6 +218,9 @@ function Market() {
                             <div className="market__container--main_products-cards">
                                 <div className="market__container--main_products-cards__image">
                                     <img src="#" alt="from api" className="market__container--main_products-cards__image--content" />
+                                    <button className="market__container--main_products-cards__image--btn">
+                                        <img src="#" className="market__container--main_products-cards__image--btn_symbol" />
+                                    </button>
                                 </div>
                                 <p className="market__container--main_products-cards__title"> from api </p>
                                 <strong className="market__container--main_products-cards__price"> from api </strong>
@@ -227,6 +230,9 @@ function Market() {
                             <div className="market__container--main_products-cards">
                                 <div className="market__container--main_products-cards__image">
                                     <img src="#" alt="from api" className="market__container--main_products-cards__image--content" />
+                                    <button className="market__container--main_products-cards__image--btn">
+                                        <img src="#" className="market__container--main_products-cards__image--btn_symbol" />
+                                    </button>
                                 </div>
                                 <p className="market__container--main_products-cards__title"> from api </p>
                                 <strong className="market__container--main_products-cards__price"> from api </strong>
@@ -235,6 +241,9 @@ function Market() {
                             <div className="market__container--main_products-cards">
                                 <div className="market__container--main_products-cards__image">
                                     <img src="#" alt="from api" className="market__container--main_products-cards__image--content" />
+                                    <button className="market__container--main_products-cards__image--btn">
+                                        <img src="#" className="market__container--main_products-cards__image--btn_symbol" />
+                                    </button>
                                 </div>
                                 <p className="market__container--main_products-cards__title"> from api </p>
                                 <strong className="market__container--main_products-cards__price"> from api </strong>
