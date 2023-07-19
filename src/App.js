@@ -1,6 +1,7 @@
 import React, {useState, useEffect, useRef} from 'react'
 import './global.css'
 import {BrowserRouter as Router, Routes, Route, Link, Navigate} from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 
 import Header from './component and pages/Header/Header.jsx'
 import Footer from './component and pages/Footer/Footer.jsx'
@@ -29,19 +30,15 @@ import SupportMore from './component and pages/SupportMore/SupportMore.jsx'
 import Terms from './component and pages/Terms/Terms.jsx'
 
 function App() {
-  // const [pathCondition, setPathCondition] = useState(true)
-  // const currentPath = window.location.pathname
-  // useEffect(
-  //   () => {
-  //     currentPath=="/login" ? setPathCondition(false) : setPathCondition(true)
-  //   }, []
-  // )
+
+  const location = useLocation()
+
   return (
     <div className="App">
       {/* {window.location.pathname!="/login" && <Header />} */}
 
       <Header />
-      {/* <Breadcrumb /> */}
+      {location.pathname != "/" && <Breadcrumb />}
 
       <Routes>
         {/*   + add_user_or_product_id_for_unique_links +   */}

@@ -234,7 +234,7 @@ function Footer() {
                     <Link to="/terms" className="footer__main--columns_list"> {textDataBaseSTATE.support[1]} </Link>
                     <Link to="/faq" className="footer__main--columns_list"> {textDataBaseSTATE.support[2]} </Link>
                     <Link to="/contact" className="footer__main--columns_list"> {textDataBaseSTATE.support[3]} </Link>
-                    <Link to="/about" className="footer__main--columns_list"> {textDataBaseSTATE.support[4]} </Link>
+                    <Link to="/aboutus" className="footer__main--columns_list"> {textDataBaseSTATE.support[4]} </Link>
                 </ul>
                 <ul className="footer__main--columns">
                     <h6 className="footer__main--columns_header"> {textDataBaseSTATE.headers[3]} </h6>

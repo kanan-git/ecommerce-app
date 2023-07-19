@@ -1,6 +1,8 @@
 ———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
-TO DO (July   16-17-18-19-20,   2023):
+TO DO (July   19-20,   2023):
 
 - vercel change link name (from 'ecommerce-app-kanan-git.vercel.app' to 'retroqalereya.vercel.app')
-...
+- SCSS all rest of pages (settings, login, recovery, supportMore, blog, blogArticle, myCart, myFav, myOrders, home, market, details)
+- add breadcrumb without text just links, responsivity, mobile version, routes
+- functionalities (user or guest, which user, authentication, search, sort, purchase, payment, login, logout, routes, fetch, filter, etc., just set up which one will come from backend)
 ———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
