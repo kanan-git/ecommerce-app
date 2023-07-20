@@ -1,20 +1,81 @@
 .details {
+    width: 100%;
+    height: auto;
+    background-color: var(--default-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     &__container {
+        width: 1280px;
+        height: auto;
+        // border: 1px solid red;
+        gap: 100px;
+        padding: 50px 0 50px 0; // top right bottom left
+        display: flex;
+        // flex-direction: column;
+        gap: 50px;
+        flex-wrap: wrap;
         &--visual {
-            &_image {}
-            &_image-content {}
+            // border: 1px solid salmon;
+            &_image {
+                width: 500px;
+                height: 500px;
+                &-content {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
             &_thumbnails {
+                width: 500px;
+                position: relative;
+                margin-top: 20px;
+                padding: 0 40px;
+                margin-bottom: 20px;
                 &-carousel {
+                    display: flex;
+                    // border: 1px solid gold;
+                    width: 100%;
+                    gap: 10px;
+                    overflow: hidden;
                     &__images {
-                        &--content {}
+                        width: 100px;
+                        height: 100px;
+                        &--content {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
                     }
                 }
                 &-buttons {
-                    &__btn {}
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    display: flex;
+                    width: 100%;
+                    justify-content: space-between;
+                    padding: 10px;
+                    &__btn {
+                        width: 20px;
+                        height: 40px;
+                        padding: 2px;
+                        opacity: 0.5;
+                        border-radius: 5px;
+                        background-color: var(--default-bg-color);
+                        border: 1px solid var(--default-text-color);
+                        color: var(--default-text-color);
+                        transition: var(--quick-fx);
+                        &:hover {
+                            opacity: 1.0;
+                        }
+                    }
                 }
             }
         }
         &--information {
+            border: 1px solid blueviolet;
             &_title {}
             &_category {}
             &_price {}

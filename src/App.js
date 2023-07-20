@@ -38,15 +38,16 @@ function App() {
       {/* {window.location.pathname!="/login" && <Header />} */}
 
       <Header />
+      {/* {location.pathname != "/" && location.pathname != "/recovery" && location.pathname != "/login" && <Breadcrumb />} */}
       {location.pathname != "/" && <Breadcrumb />}
 
       <Routes>
         {/*   + add_user_or_product_id_for_unique_links +   */}
         <Route path="/aboutus" element={<About />} />
         <Route path="/blog" element={<Blog />} />
-        <Route path="/blog/article%20id=?" element={<BlogArticle />} />
+        <Route path="/blog/article" element={<BlogArticle />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/details" element={<Details />} />
+        <Route path="/products/details" element={<Details />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
@@ -57,13 +58,12 @@ function App() {
         <Route path="/policy" element={<Policy />} />
         <Route path="/recovery" element={<Recovery />} />
         <Route path="/service" element={<Service />} />
-        <Route path="/service/profile%20id=?" element={<ServiceProfiles />} />
+        <Route path="/service/profile" element={<ServiceProfiles />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="/login/verify" element={<SignUpVerify />} />
         <Route path="/support" element={<Support />} />
+        <Route path="/support/topic" element={<SupportMore />} />
         <Route path="/terms" element={<Terms />} />
-        <Route path="/support/chosen_id_here" element={<SupportMore />} />
-        <Route path="/blog/article" element={<BlogArticle />} />
         {/*   + add_user_or_product_id_for_unique_links +   */}
       </Routes>
 

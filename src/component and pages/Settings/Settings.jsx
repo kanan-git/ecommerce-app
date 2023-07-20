@@ -579,9 +579,9 @@ function Settings() {
                                     <input type="text" className="container__blocks--inputpa" 
                                     placeholder={textDataBaseSTATE.payment_btn[2]+" (0123 4567 8901 2345)"} />
                                     <input type="text" className="container__blocks--inputpa" 
-                                    placeholder={textDataBaseSTATE.payment_btn[3]+" (MM/YY)"} />
+                                    placeholder={textDataBaseSTATE.payment_btn[3]+" (MM/YY)"} style={{width: "200px"}} />
                                     <input type="text" className="container__blocks--inputpa" 
-                                    placeholder="CVC (123)" />
+                                    placeholder="CVC (123)" style={{width: "100px"}} />
                                 </div>
                                 <div className="container__blocks">
                                     {textDataBaseSTATE.payment_btn[4]}:

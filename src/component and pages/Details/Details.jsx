@@ -89,15 +89,15 @@ function Details() {
                 <div className="details__container">
                     <div className="details__container--visual">
                         <div className="details__container--visual_image">
-                            <img src="#" alt="" className="details__container--visual_image-content" />
+                            <img src="/asset_library/products/product_1_1.png" alt="" className="details__container--visual_image-content" />
                         </div>
                         <div className="details__container--visual_thumbnails">
                             <div className="details__container--visual_thumbnails-carousel">
                                 <div className="details__container--visual_thumbnails-carousel__images">
-                                    <img src="#" alt="" className="details__container--visual_thumbnails-carousel__images--content" />
+                                    <img src="/asset_library/products/product_1_1.png" alt="" className="details__container--visual_thumbnails-carousel__images--content" />
                                 </div>
                                 <div className="details__container--visual_thumbnails-carousel__images">
-                                    <img src="#" alt="" className="details__container--visual_thumbnails-carousel__images--content" />
+                                    <img src="/asset_library/products/product_1_1.png" alt="" className="details__container--visual_thumbnails-carousel__images--content" />
                                 </div>
                             </div>
                             <div className="details__container--visual_thumbnails-buttons">

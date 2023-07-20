@@ -179,8 +179,8 @@ function MyCart() {
 
                     <div className="mycart__container--payment">
                         <p className="mycart__container--payment__price"> {textDataBaseSTATE.headers[1]}: `1500` ₼ </p>
-                        <strong className="mycart__container--payment__price"> {textDataBaseSTATE.headers[2]}: - `1000` ₼ </strong>
-                        <i className="mycart__container--payment__price"> {textDataBaseSTATE.headers[3]}: `500` ₼ </i>
+                        <strong className="mycart__container--payment__price"> {textDataBaseSTATE.headers[2]}: -`1000` ₼ </strong>
+                        <p className="mycart__container--payment__price"> {textDataBaseSTATE.headers[3]}: `500` ₼ </p>
                         <button className="mycart__container--payment__button"> {textDataBaseSTATE.buttons[0]} </button>
                     </div>
 

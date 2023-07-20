@@ -1,14 +1,51 @@
 .myorders {
+    width: 100%;
+    height: auto;
+    background-color: var(--default-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     &__container {
+        width: 1280px;
+        min-height: 500px;
+        gap: 100px;
+        padding: 50px 0 50px 0; // top right bottom left
+        display: flex;
+        gap: 50px;
+        flex-direction: column;
         &--table {
+            border: 1px solid var(--border-color);
+            border-collapse: collapse;
             &_rows {
                 &-cells {
-                    &__thumbnail {}
+                    border: 1px solid var(--border-color);
+                    padding: 10px;
+                    object-fit: cover;
+                    &__thumbnail {
+                        height: 50px;
+                    }
                 }
             }
         }
         &--directions {
-            &_buttons {}
+            border: none;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 10px;
+            &_buttons {
+                width: auto;
+                padding: 5px;
+                height: 30px;
+                border: 1px solid var(--border-color);
+                background-color: var(--default-bg-color);
+                transition: var(--quick-fx);
+                &:hover {
+                    background-color: var(--retrogallery-custom-colorpick);
+                    color: var(--only-negative-color);
+                }
+            }
         }
     }
 }

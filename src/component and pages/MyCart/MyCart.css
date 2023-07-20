@@ -1,1 +1,91 @@
-/*# sourceMappingURL=MyCart.css.map */
+.mycart {
+  width: 100%;
+  height: auto;
+  background-color: var(--default-bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mycart__container {
+  width: 1280px;
+  min-height: 500px;
+  gap: 100px;
+  padding: 50px 0 50px 0;
+  display: flex;
+  gap: 50px;
+  flex-direction: column;
+}
+.mycart__container--info {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+.mycart__container--table {
+  border: 1px solid var(--border-color);
+  border-collapse: collapse;
+}
+.mycart__container--table_rows-cells {
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.mycart__container--table_rows-cells__xmark {
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--border-color);
+  background-color: var(--default-bg-color);
+  border-radius: 50%;
+  overflow: hidden;
+}
+.mycart__container--table_rows-cells__xmark--symbol {
+  width: 100%;
+}
+.mycart__container--table_rows-cells__thumbnail {
+  height: 50px;
+}
+.mycart__container--table_rows-cells__input {
+  padding-left: 5px;
+}
+.mycart__container--payment {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.mycart__container--payment__price {
+  font-size: 18px;
+}
+.mycart__container--payment__button {
+  width: auto;
+  margin-top: 10px;
+  padding: 5px;
+  height: 30px;
+  border: 1px solid var(--border-color);
+  background-color: var(--default-bg-color);
+  transition: var(--quick-fx);
+}
+.mycart__container--payment__button:hover {
+  background-color: var(--retrogallery-custom-colorpick);
+  color: var(--only-negative-color);
+}
+.mycart__container--directions {
+  border: none;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+}
+.mycart__container--directions_buttons {
+  width: auto;
+  padding: 5px;
+  height: 30px;
+  border: 1px solid var(--border-color);
+  background-color: var(--default-bg-color);
+  transition: var(--quick-fx);
+}
+.mycart__container--directions_buttons:hover {
+  background-color: var(--retrogallery-custom-colorpick);
+  color: var(--only-negative-color);
+}/*# sourceMappingURL=MyCart.css.map */

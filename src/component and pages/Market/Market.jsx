@@ -21,7 +21,7 @@ function Market() {
                 "efemer", 
                 "nəqliyyat vasitələri", 
                 "Qiymət", 
-                "müraciət edin", 
+                "tətbiq et", 
                 "Antika / dodemsel", 
                 "Antikvar", 
                 "Retro", 
@@ -172,21 +172,21 @@ function Market() {
 
                         <h3 className="market__container--filter_header"> {textDataBaseSTATE.textcontents[11]} </h3>
                         <div className="market__container--filter_block">
-                            <span className="market__container--filter_block-selection">
+                            <div className="market__container--filter_block-selection">
                                 <input type="checkbox" 
                                 className="market__container--filter_block-selection__checkbox" />
                                 {textDataBaseSTATE.textcontents[12]}
-                            </span>
-                            <span className="market__container--filter_block-selection">
+                            </div>
+                            <div className="market__container--filter_block-selection">
                                 <input type="checkbox" 
                                 className="market__container--filter_block-selection__checkbox" />
                                 {textDataBaseSTATE.textcontents[13]} (1950-1975)
-                            </span>
-                            <span className="market__container--filter_block-selection">
+                            </div>
+                            <div className="market__container--filter_block-selection">
                                 <input type="checkbox" 
                                 className="market__container--filter_block-selection__checkbox" />
                                 {textDataBaseSTATE.textcontents[14]} (1975 or up)
-                            </span>
+                            </div>
                         </div>
                     </div>
                     <div className="market__container--main">
@@ -217,37 +217,81 @@ function Market() {
                             </h4>
                             <div className="market__container--main_products-cards">
                                 <div className="market__container--main_products-cards__image">
-                                    <img src="#" alt="from api" className="market__container--main_products-cards__image--content" />
+                                    <img src="/asset_library/products/product_1_1.png" alt="from api" className="market__container--main_products-cards__image--content" />
                                     <button className="market__container--main_products-cards__image--btn">
                                         <img src="#" className="market__container--main_products-cards__image--btn_symbol" />
                                     </button>
                                 </div>
                                 <p className="market__container--main_products-cards__title"> from api </p>
-                                <strong className="market__container--main_products-cards__price"> from api </strong>
-                                <i className="market__container--main_products-cards__category"> from api </i>
+                                <strong className="market__container--main_products-cards__price"> 123 ₼ </strong>
+                                <p className="market__container--main_products-cards__category"> from api </p>
                             </div>
 
                             <div className="market__container--main_products-cards">
                                 <div className="market__container--main_products-cards__image">
-                                    <img src="#" alt="from api" className="market__container--main_products-cards__image--content" />
+                                    <img src="/asset_library/products/product_1_1.png" alt="from api" className="market__container--main_products-cards__image--content" />
                                     <button className="market__container--main_products-cards__image--btn">
                                         <img src="#" className="market__container--main_products-cards__image--btn_symbol" />
                                     </button>
                                 </div>
                                 <p className="market__container--main_products-cards__title"> from api </p>
-                                <strong className="market__container--main_products-cards__price"> from api </strong>
-                                <i className="market__container--main_products-cards__category"> from api </i>
+                                <strong className="market__container--main_products-cards__price"> 123 ₼ </strong>
+                                <p className="market__container--main_products-cards__category"> from api </p>
                             </div>
                             <div className="market__container--main_products-cards">
                                 <div className="market__container--main_products-cards__image">
-                                    <img src="#" alt="from api" className="market__container--main_products-cards__image--content" />
+                                    <img src="/asset_library/products/product_1_1.png" alt="from api" className="market__container--main_products-cards__image--content" />
                                     <button className="market__container--main_products-cards__image--btn">
                                         <img src="#" className="market__container--main_products-cards__image--btn_symbol" />
                                     </button>
                                 </div>
                                 <p className="market__container--main_products-cards__title"> from api </p>
-                                <strong className="market__container--main_products-cards__price"> from api </strong>
-                                <i className="market__container--main_products-cards__category"> from api </i>
+                                <strong className="market__container--main_products-cards__price"> 123 ₼ </strong>
+                                <p className="market__container--main_products-cards__category"> from api </p>
+                            </div>
+                            <div className="market__container--main_products-cards">
+                                <div className="market__container--main_products-cards__image">
+                                    <img src="/asset_library/products/product_1_1.png" alt="from api" className="market__container--main_products-cards__image--content" />
+                                    <button className="market__container--main_products-cards__image--btn">
+                                        <img src="#" className="market__container--main_products-cards__image--btn_symbol" />
+                                    </button>
+                                </div>
+                                <p className="market__container--main_products-cards__title"> from api </p>
+                                <strong className="market__container--main_products-cards__price"> 123 ₼ </strong>
+                                <p className="market__container--main_products-cards__category"> from api </p>
+                            </div>
+                            <div className="market__container--main_products-cards">
+                                <div className="market__container--main_products-cards__image">
+                                    <img src="/asset_library/products/product_1_1.png" alt="from api" className="market__container--main_products-cards__image--content" />
+                                    <button className="market__container--main_products-cards__image--btn">
+                                        <img src="#" className="market__container--main_products-cards__image--btn_symbol" />
+                                    </button>
+                                </div>
+                                <p className="market__container--main_products-cards__title"> from api </p>
+                                <strong className="market__container--main_products-cards__price"> 123 ₼ </strong>
+                                <p className="market__container--main_products-cards__category"> from api </p>
+                            </div>
+                            <div className="market__container--main_products-cards">
+                                <div className="market__container--main_products-cards__image">
+                                    <img src="/asset_library/products/product_1_1.png" alt="from api" className="market__container--main_products-cards__image--content" />
+                                    <button className="market__container--main_products-cards__image--btn">
+                                        <img src="#" className="market__container--main_products-cards__image--btn_symbol" />
+                                    </button>
+                                </div>
+                                <p className="market__container--main_products-cards__title"> from api </p>
+                                <strong className="market__container--main_products-cards__price"> 123 ₼ </strong>
+                                <p className="market__container--main_products-cards__category"> from api </p>
+                            </div>
+                            <div className="market__container--main_products-cards">
+                                <div className="market__container--main_products-cards__image">
+                                    <img src="/asset_library/products/product_1_1.png" alt="from api" className="market__container--main_products-cards__image--content" />
+                                    <button className="market__container--main_products-cards__image--btn">
+                                        <img src="#" className="market__container--main_products-cards__image--btn_symbol" />
+                                    </button>
+                                </div>
+                                <p className="market__container--main_products-cards__title"> from api </p>
+                                <strong className="market__container--main_products-cards__price"> 123 ₼ </strong>
+                                <p className="market__container--main_products-cards__category"> from api </p>
                             </div>
                         </div>
 

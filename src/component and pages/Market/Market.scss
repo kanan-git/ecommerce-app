@@ -1,41 +1,209 @@
 .market {
+    width: 100%;
+    height: auto;
+    background-color: var(--default-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     &__container {
+        width: 1280px;
+        height: auto;
+        // border: 1px solid green;
+        padding: 50px 0 50px 0; // top right bottom left
+        display: flex;
+        gap: 40px;
         &--filter {
-            &_header {}
+            border: 1px solid var(--light-text-color);
+            width: 340px;
+            padding: 20px;
+            &_header {
+                font-size: 28px;
+                font-weight: 600;
+                &:not(:first-of-type) {
+                    margin-top: 50px;
+                }
+                &:not(:last-of-type) {
+                    margin-bottom: 10px;
+                }
+            }
             &_block {
-                &-tags {}
-                &-input {}
-                &-button {}
+                width: 100%;
+                &-tags {
+                    font-size: 20px;
+                    margin-bottom: 5px;
+                    text-transform: capitalize;
+                    cursor: pointer;
+                    width: fit-content;
+                    transition: var(--quick-fx);
+                    &:hover {
+                        color: var(--retrogallery-custom-colorpick);
+                    }
+                }
+                &-input {
+                    font-size: 20px;
+                    padding-left: 10px;
+                    width: 140px;
+                    height: 40px;
+                    border-radius: 6px;
+                    outline: none;
+                    border: 1px solid var(--light-text-color);
+                    margin-right: 5px;
+                    margin-bottom: 5px;
+                }
+                &-button {
+                    border: 1px solid var(--light-text-color);
+                    cursor: pointer;
+                    background-color: var(--retrogallery-custom-colorpick);
+                    color: var(--only-negative-color);
+                    width: 285px;
+                    height: 40px;
+                    border-radius: 6px;
+                    font-size: 20px;
+                    text-transform: uppercase;
+                    transition: var(--quick-fx);
+                    &:hover {
+                        color: var(--retrogallery-custom-colorpick);
+                        background-color: var(--default-bg-color);
+                        filter: drop-shadow(0 0 5px var(--retrogallery-custom-colorpick));
+                    }
+                }
                 &-selection {
-                    &__checkbox {}
+                    padding-top: 10px;
+                    &__checkbox {
+                        accent-color: var(--retrogallery-custom-colorpick);
+                        margin-right: 10px;
+                    }
                 }
             }
         }
         &--main {
+            border: 1px solid var(--light-text-color);
+            width: 900px;
             &_topside {
+                border: none;
+                border-bottom: 1px solid var(--light-text-color);
+                width: 100%;
+                height: 40px;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
                 &-group {
-                    &__btn {}
+                    display: flex;
+                    gap: 5px;
+                    &__btn {
+                        width: 30px;
+                        height: 30px;
+                        border: 1px solid var(--border-color);
+                        background-color: var(--default-bg-color);
+                        transition: var(--quick-fx);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
                     &__selector {
+                        width: 170px;
                         &--opt {}
                     }
                 }
             }
             &_products {
-                &-searchinfo {}
+                display: flex;
+                padding-top: 20px; // 60px 20px
+                padding-left: 20px;
+                padding-right: 20px;
+                gap: 50px;
+                position: relative;
+                flex-wrap: wrap;
+                // flex-direction: column;
+                &-searchinfo {
+                    position: absolute;
+                    top: 10px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    font-size: 30px;
+                    width: 100%;
+                    text-align: center;
+                    display: none; // block none
+                }
                 &-cards {
+                    border: 1px solid var(--light-text-color);
+                    background-color: var(--default-bg-color);
+                    width: 250px;
+                    height: 350px;
+                    border-radius: 5px;
+                    overflow: hidden;
+                    padding: 5px;
+                    cursor: pointer;
+                    transition: var(--quick-fx);
+                    // display: flex;
+                    // width: 100%;
+                    // height: 100px;
+                    &:hover {
+                        scale: 1.02;
+                    }
                     &__image {
-                        &--content {}
+                        width: 100%;
+                        // width: auto;
+                        height: auto;
+                        // height: 100%;
+                        position: relative;
+                        border-bottom: 1px solid var(--light-text-color);
+                        &--content {
+                            width: 100%;
+                            // height: 100%;
+                            object-fit: cover;
+                        }
                         &--btn {
-                            &_symbol {}
+                            width: 30px;
+                            height: 30px;
+                            overflow: hidden;
+                            border: 1px solid var(--light-text-color);
+                            background-color: var(--default-bg-color);
+                            border-radius: 50%;
+                            position: absolute;
+                            top: 5px;
+                            right: 5px;
+                            transition: var(--quick-fx);
+                            &:hover {
+                                filter: invert(0.6) sepia(150) saturate(50) hue-rotate(-20deg);
+                            }
+                            &_symbol {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
                         }
                     }
-                    &__title {}
-                    &__price {}
-                    &__category {}
+                    &__title {
+                        font-size: 16px;
+                        font-weight: 600;
+                        margin-bottom: 5px;
+                    }
+                    &__price {
+                        font-size: 18px;
+                        margin-bottom: 5px;
+                    }
+                    &__category {
+                        font-size: 14px;
+                        opacity: 0.75;
+                    }
                 }
             }
             &_bottomside {
-                &-loadmore {}
+                margin-top: 50px;
+                width: 100%;
+                text-align: center;
+                &-loadmore {
+                    font-size: 20px;
+                    text-transform: capitalize;
+                    background-color: transparent;
+                    border: none;
+                    margin-bottom: 20px;
+                    transition: var(--quick-fx);
+                    &:hover {
+                        color: var(--retrogallery-custom-colorpick);
+                    }
+                }
             }
         }
     }

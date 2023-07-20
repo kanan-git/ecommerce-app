@@ -1,1 +1,50 @@
-/*# sourceMappingURL=MyOrders.css.map */
+.myorders {
+  width: 100%;
+  height: auto;
+  background-color: var(--default-bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.myorders__container {
+  width: 1280px;
+  min-height: 500px;
+  gap: 100px;
+  padding: 50px 0 50px 0;
+  display: flex;
+  gap: 50px;
+  flex-direction: column;
+}
+.myorders__container--table {
+  border: 1px solid var(--border-color);
+  border-collapse: collapse;
+}
+.myorders__container--table_rows-cells {
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.myorders__container--table_rows-cells__thumbnail {
+  height: 50px;
+}
+.myorders__container--directions {
+  border: none;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+}
+.myorders__container--directions_buttons {
+  width: auto;
+  padding: 5px;
+  height: 30px;
+  border: 1px solid var(--border-color);
+  background-color: var(--default-bg-color);
+  transition: var(--quick-fx);
+}
+.myorders__container--directions_buttons:hover {
+  background-color: var(--retrogallery-custom-colorpick);
+  color: var(--only-negative-color);
+}/*# sourceMappingURL=MyOrders.css.map */

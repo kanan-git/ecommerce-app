@@ -479,13 +479,7 @@ function Home() {
                         </div>
                         <div className="home__container--sectors_carousel">
                             <div className="home__container--sectors_carousel-img" id="carousel_img_1">
-                                <img src="#" alt="cover-img-1" className="home__container--sectors_carousel-img__content" />
-                            </div>
-                            <div className="home__container--sectors_carousel-img" id="carousel_img_2">
-                                <img src="#" alt="cover-img-2" className="home__container--sectors_carousel-img__content" />
-                            </div>
-                            <div className="home__container--sectors_carousel-img" id="carousel_img_2">
-                                <img src="#" alt="cover-img-3" className="home__container--sectors_carousel-img__content" />
+                                <img src="/asset_library/gallery/test_img_1.png" alt="cover-img-1" className="home__container--sectors_carousel-img__content" />
                             </div>
 
                             <div className="home__container--sectors_carousel-dots">
@@ -505,16 +499,59 @@ function Home() {
                     <div className="home__container--sectors">
                         <div className="home__container--sectors_cards">
                             <div className="home__container--sectors_cards-image">
-                                <img src="#" alt="product_0" className="home__container--sectors_cards-image__content" />
+                                <img src="/asset_library/products/product_1_1.png" alt="product_1_1" className="home__container--sectors_cards-image__content" />
                             </div>
-                            <p className="home__container--sectors_cards-title"></p>
-                            <strong className="home__container--sectors_cards-price"></strong>
+                            <p className="home__container--sectors_cards-title"> wauinfpp iuawpdub pawndpnawp hejdfvryw </p>
+                            <strong className="home__container--sectors_cards-price"> 123 ₼ </strong>
+                        </div>
+
+                        <div className="home__container--sectors_cards">
+                            <div className="home__container--sectors_cards-image">
+                                <img src="/asset_library/products/product_1_1.png" alt="product_1_1" className="home__container--sectors_cards-image__content" />
+                            </div>
+                            <p className="home__container--sectors_cards-title"> wauinfpp iuawpdub pawndpnawp hejdfvryw </p>
+                            <strong className="home__container--sectors_cards-price"> 123 ₼ </strong>
+                        </div>
+                        <div className="home__container--sectors_cards">
+                            <div className="home__container--sectors_cards-image">
+                                <img src="/asset_library/products/product_1_1.png" alt="product_1_1" className="home__container--sectors_cards-image__content" />
+                            </div>
+                            <p className="home__container--sectors_cards-title"> wauinfpp iuawpdub pawndpnawp hejdfvryw </p>
+                            <strong className="home__container--sectors_cards-price"> 123 ₼ </strong>
+                        </div>
+                        <div className="home__container--sectors_cards">
+                            <div className="home__container--sectors_cards-image">
+                                <img src="/asset_library/products/product_1_1.png" alt="product_1_1" className="home__container--sectors_cards-image__content" />
+                            </div>
+                            <p className="home__container--sectors_cards-title"> wauinfpp iuawpdub pawndpnawp hejdfvryw </p>
+                            <strong className="home__container--sectors_cards-price"> 123 ₼ </strong>
+                        </div>
+                        <div className="home__container--sectors_cards">
+                            <div className="home__container--sectors_cards-image">
+                                <img src="/asset_library/products/product_1_1.png" alt="product_1_1" className="home__container--sectors_cards-image__content" />
+                            </div>
+                            <p className="home__container--sectors_cards-title"> wauinfpp iuawpdub pawndpnawp hejdfvryw </p>
+                            <strong className="home__container--sectors_cards-price"> 123 ₼ </strong>
+                        </div>
+                        <div className="home__container--sectors_cards">
+                            <div className="home__container--sectors_cards-image">
+                                <img src="/asset_library/products/product_1_1.png" alt="product_1_1" className="home__container--sectors_cards-image__content" />
+                            </div>
+                            <p className="home__container--sectors_cards-title"> wauinfpp iuawpdub pawndpnawp hejdfvryw </p>
+                            <strong className="home__container--sectors_cards-price"> 123 ₼ </strong>
+                        </div>
+                        <div className="home__container--sectors_cards">
+                            <div className="home__container--sectors_cards-image">
+                                <img src="/asset_library/products/product_1_1.png" alt="product_1_1" className="home__container--sectors_cards-image__content" />
+                            </div>
+                            <p className="home__container--sectors_cards-title"> wauinfpp iuawpdub pawndpnawp hejdfvryw </p>
+                            <strong className="home__container--sectors_cards-price"> 123 ₼ </strong>
                         </div>
                     </div>
 
                     <div className="home__container--sectors">
                         <div className="home__container--sectors_slides">
-                            <img src="#" alt="categ_cover_1" className="home__container--sectors_slides-img" />
+                            <img src="/asset_library/gallery/test_img_1.png" alt="categ_cover_1" className="home__container--sectors_slides-img" />
                             <p className="home__container--sectors_slides-title">
                                 title
                             </p>
@@ -522,6 +559,8 @@ function Home() {
                         </div>
                         
                         <div className="home__container--sectors_dots">
+                            <div className="home__container--sectors_dots-dot"></div>
+                            <div className="home__container--sectors_dots-dot"></div>
                             <div className="home__container--sectors_dots-dot"></div>
                         </div>
                         <div className="home__container--sectors_sliders">
