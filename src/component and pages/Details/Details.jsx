@@ -110,9 +110,9 @@ function Details() {
                         <h3 className="details__container--information_title">
                             title from API product
                         </h3>
-                        <i className="details__container--information_category">
+                        <p className="details__container--information_category">
                             category from API product
-                        </i>
+                        </p>
                         <strong className="details__container--information_price">
                             price from API product
                         </strong>
@@ -151,6 +151,25 @@ function Details() {
                             </div>
                             <p className="details__container--related_cards-title"> from api </p>
                             <strong className="details__container--related_cards-price"> from api </strong>
+                        </div>
+
+                        <div className="details__container--related_cards">
+                            <div className="details__container--related_cards-image">
+                                <img src="#" alt="product_01" className="details__container--related_cards-image__content" />
+                            </div>
+                            <p className="details__container--related_cards-title"> from api </p>
+                            <strong className="details__container--related_cards-price"> from api </strong>
+                        </div>
+                        <div className="details__container--related_cards">
+                            <div className="details__container--related_cards-image">
+                                <img src="#" alt="product_01" className="details__container--related_cards-image__content" />
+                            </div>
+                            <p className="details__container--related_cards-title"> from api </p>
+                            <strong className="details__container--related_cards-price"> from api </strong>
+                        </div>
+                        <div className="details__container--related_buttons">
+                            <button className="details__container--related_buttons-btn" id="det_rel_crl_prev"> ◄ </button>
+                            <button className="details__container--related_buttons-btn" id="det_rel_crl_next"> ► </button>
                         </div>
                     </div>
                 </div>

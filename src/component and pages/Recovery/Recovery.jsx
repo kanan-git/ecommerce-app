@@ -19,6 +19,7 @@ function Recovery() {
                 "Doğrulama kodunu daxil edin", // 5
                 "Kodu əldə edin", // 6
                 "təqdim", // 7
+                "Kod yanlışdır" // 8
             ]
         },
         EN: {
@@ -31,6 +32,7 @@ function Recovery() {
                 "Enter verification code", // 5
                 "Get code", // 6
                 "Submit", // 7
+                "The code is incorrect" // 8
             ]
         },
         TR: {
@@ -43,6 +45,7 @@ function Recovery() {
                 "dogrulama kodunu giriniz", // 5
                 "Kodu al", // 6
                 "Göndermek", // 7
+                "Şifre yanlış" // 8
             ]
         },
         RU: {
@@ -55,6 +58,7 @@ function Recovery() {
                 "введите код подтверждения", // 5
                 "Получить код", // 6
                 "Отправлять", // 7
+                "Код неверный" // 8
             ]
         }
     }
@@ -99,18 +103,21 @@ function Recovery() {
                         {textDataBaseSTATE.textcontent[0]}:
                         <input type="email" className="recovery__container--block_input" 
                         placeholder={textDataBaseSTATE.textcontent[1]} />
-                        {/* <p className="alert_text">
+                        <p className="alert_text" style={{display: "none"}}>
                             {textDataBaseSTATE.textcontent[2]}
-                        </p> */}
-                        {/* <p className="something_wrong">
+                        </p>
+                        <p className="something_is_wrong" style={{display: "none"}}>
                             {textDataBaseSTATE.textcontent[3]}
-                        </p> */}
+                        </p>
                     </div>
-                    {/* <div className="recovery__container--block">
+                    <div className="recovery__container--block">
                         {textDataBaseSTATE.textcontent[4]}:
                         <input type="text" className="recovery__container--block_input" 
                         placeholder={textDataBaseSTATE.textcontent[5]} />
-                    </div> */}
+                        <p className="something_is_wrong" style={{display: "none"}}>
+                            {textDataBaseSTATE.textcontent[8]}
+                        </p>
+                    </div>
                     <div className="recovery__container--block">
                         <button className="recovery__container--block_submit">
                             {textDataBaseSTATE.textcontent[6]}

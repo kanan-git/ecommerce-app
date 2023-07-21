@@ -64,6 +64,7 @@
     font-weight: var(--default-font-weight);
     font-family: 'Ysabeau Infant', sans-serif;
     color: var(--default-text-color);
+    // z-index: 1;
     &::selection {
         background: var(--selected-text-color);
         color: var(--white-color);

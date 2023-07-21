@@ -268,6 +268,7 @@ function SupportMore() {
     }
     const [textDataBaseSTATE, setTextDataBaseSTATE] = useState(textDataBase.AZ)
     const [currentSupMenu, setCurrentSupMenu] = useState(0)
+    const [currentHeader, setCurrentHeader] = useState(0)
     useEffect(
         () => {
             if(JSON.parse(localStorage.getItem("langChoice")) == null) {
@@ -304,7 +305,7 @@ function SupportMore() {
 
             <section className="supportmore">
                 <div className="supportmore__header">
-                    {textDataBaseSTATE.menus[0]}
+                    {textDataBaseSTATE.menus[currentHeader]}
                 </div>
                 <div className="supportmore__container">
                     <p className="supportmore__container--textcontent">
@@ -325,6 +326,7 @@ function SupportMore() {
                                         key={index} id={"supp_menu_"+index} onClick={
                                             () => {
                                                 setCurrentSupMenu(index)
+                                                setCurrentHeader(index)
                                             }
                                         }>
                                             {element}

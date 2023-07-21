@@ -578,6 +578,49 @@ function Home() {
                             <p className="home__container--sectors_blogs-title"> about what </p>
                             <button className="home__container--sectors_blogs-button"> read article </button>
                         </div>
+
+                        <div className="home__container--sectors_blogs">
+                            <div className="home__container--sectors_blogs-img">
+                                <img src="#" alt="blog_01" className="home__container--sectors_blogs-img__content" />
+                            </div>
+                            <p className="home__container--sectors_blogs-title"> about what </p>
+                            <button className="home__container--sectors_blogs-button"> read article </button>
+                        </div>
+                        <div className="home__container--sectors_blogs">
+                            <div className="home__container--sectors_blogs-img">
+                                <img src="#" alt="blog_01" className="home__container--sectors_blogs-img__content" />
+                            </div>
+                            <p className="home__container--sectors_blogs-title"> about what </p>
+                            <button className="home__container--sectors_blogs-button"> read article </button>
+                        </div>
+                        <div className="home__container--sectors_blogs">
+                            <div className="home__container--sectors_blogs-img">
+                                <img src="#" alt="blog_01" className="home__container--sectors_blogs-img__content" />
+                            </div>
+                            <p className="home__container--sectors_blogs-title"> about what </p>
+                            <button className="home__container--sectors_blogs-button"> read article </button>
+                        </div>
+                        <div className="home__container--sectors_blogs">
+                            <div className="home__container--sectors_blogs-img">
+                                <img src="#" alt="blog_01" className="home__container--sectors_blogs-img__content" />
+                            </div>
+                            <p className="home__container--sectors_blogs-title"> about what </p>
+                            <button className="home__container--sectors_blogs-button"> read article </button>
+                        </div>
+                        <div className="home__container--sectors_blogs">
+                            <div className="home__container--sectors_blogs-img">
+                                <img src="#" alt="blog_01" className="home__container--sectors_blogs-img__content" />
+                            </div>
+                            <p className="home__container--sectors_blogs-title"> about what </p>
+                            <button className="home__container--sectors_blogs-button"> read article </button>
+                        </div>
+                        <div className="home__container--sectors_blogs">
+                            <div className="home__container--sectors_blogs-img">
+                                <img src="#" alt="blog_01" className="home__container--sectors_blogs-img__content" />
+                            </div>
+                            <p className="home__container--sectors_blogs-title"> about what </p>
+                            <button className="home__container--sectors_blogs-button"> read article </button>
+                        </div>
                     </div>
                 </div>
             </section>

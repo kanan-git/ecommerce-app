@@ -5,6 +5,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+.supportmore__header {
+  margin-top: 50px;
+  font-size: 28px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  color: var(--default-text-color);
+  padding: 10px 60px;
+  background: linear-gradient(to top, transparent, var(--retrogallery-custom-colorpick));
 }
 .supportmore__container {
   width: 1280px;
@@ -12,6 +24,26 @@
   gap: 100px;
   padding: 50px 0 50px 0;
   display: flex;
+}
+.supportmore__container--textcontent {
+  width: 1000px;
+  font-size: 20px;
+}
+.supportmore__container--menus {
+  width: 280px;
+  display: flex;
   flex-direction: column;
-  gap: 50px;
+  overflow: hidden;
+}
+.supportmore__container--menus_btn {
+  width: 100%;
+  height: 30px;
+  text-transform: capitalize;
+  border: 1px solid var(--border-color);
+  background-color: var(--default-bg-color);
+  transition: var(--quick-fx);
+}
+.supportmore__container--menus_btn:hover {
+  background-color: var(--dark-color);
+  color: var(--only-negative-color);
 }/*# sourceMappingURL=SupportMore.css.map */

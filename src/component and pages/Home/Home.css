@@ -1,4 +1,5 @@
 .home {
+  z-index: 1;
   width: 100%;
   height: auto;
   background-color: var(--default-bg-color);
@@ -7,12 +8,14 @@
   align-items: center;
 }
 .home__container {
+  z-index: 2;
   width: 1280px;
   height: auto;
   gap: 100px;
   padding: 50px 0 50px 0;
 }
 .home__container--sectors {
+  z-index: 3;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
@@ -23,6 +26,7 @@
   margin-bottom: 100px;
 }
 .home__container--sectors_navbar {
+  z-index: 9;
   width: 350px;
   display: flex;
   flex-direction: column;
@@ -90,6 +94,7 @@
   filter: invert(0.6) sepia(150) saturate(50) hue-rotate(-20deg);
 }
 .home__container--sectors_carousel {
+  z-index: 4;
   border: 1px solid var(--border-color);
   width: 800px;
   height: 450px;
@@ -108,6 +113,7 @@
   left: 0%;
 }
 .home__container--sectors_carousel-img__content {
+  z-index: 1;
   width: 100%;
   height: 100%;
 }
