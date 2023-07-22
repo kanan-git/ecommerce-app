@@ -1,31 +1,44 @@
 ———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
-TO DO - July 22-23, 2023 (retroqalereya.vercel.app):
+TO DO (retroqalereya.vercel.app) - July 22, 2023:
+———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+—  about - completed ■
+—  policy - completed ■
+—  faq - completed ■
+—  terms - completed ■
 
-► functionalities (user or guest, which user, authentication, search, sort, purchase, payment, login, logout, routes, fetch, filter, etc., just set up which one will come from backend)
+=>  paymentPopup - ...
+=>  recovery - ...
+=>  signUpVerify - ...
 
-• about - completed ■
-• blog - scss, link to blog articles, get data from backend, sass responsivity
-• blogArticle - scss, data from clicked card on blog page, sass responsivity
-• breadcrumb - check current location and navigate component pages, sass responsivity
-• contact - fix yandex map api issue which not reload on route pages and when reload on different pages, it does giving error message
-• details - ...
-• faq - completed ■
-• footer - make condition for links, if user, navigate to pages, if guest must login first, filter tags to market page with redux toolkit slice with unique links
-• header - searchbar to market page with redux toolkit slice with unique links, dropdown if choose register, start with register menu, fix responsivity, logout function
-• home - ...
-• login - ...
-• market - ...
-• myCart - ...
-• myFavorites - ...
-• myOrders - ...
-• paymentPopup - ...
-• policy - completed ■
-• recovery - ...
-• service - ...
-• serviceProfiles - ...
-• settings - ...
-• signUpVerify - ...
-• support - link to supportMore topic pages, sass responsivity
-• supportMore - active page menu color change onload and onchange, responsivity, unique link for each topic
-• terms - completed ■
+--→  overall functionalities - onload user or guest and which user, authentication, purchase, payment, fetch get and post, filter and etc
+--→  overall sas responsivities - myFavorites, myCart, myOrders, blog, blogArticle, breadcrumb, contact, details, home, login, market, service, serviceProfiles, settings, 
+support, supportMore
+———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+•►  blog - scss, link to blog articles, get data from backend with fetch
+•►  blogArticle - scss, data from backend with clicked card id with redux on blog page
+•►  footer - make condition for links, if user, navigate to pages, if guest must login first, filter tags to market page with redux toolkit slice with unique links
+•►  breadcrumb - check current location and navigate component pages
+•►  details - btn symbols, count change price, thumbnail carousel and buttons if more images, show clicked image, unique link for products, functions of buttons and links, 
+related from api, carousel related
+•►  header - searchbar to market page with redux toolkit slice with unique links, dropdown if choose register, start with register menu, fix responsivity, logout function
+
+
+•►  home - navbar and menuBtns to market route with redux to filter, carousels images position and slide buttons, see all "categ" products to market page with redux to filter, 
+product cards 2 details, cards color + fav btn add, remove hover effect blog card, see all btn 2 article, card images and color
+•►  login (signin) - on login fail, error message top of submit btn, password show/hide btn, sign in function on submit navigate home, forgot 2 recovery page
+•►  login (signup) - i agree with terms remove margin between, sign up function with verify routing
+•►  market - filter category tags, filter price, filter type, list grid view function and active and symbols, ascend / descend sort, sort type, product cards with unique 
+links 2 details page, market unique links with filter or search, load more btn
+
+
+•►  myCart & myFavorites & myOrders - data from user api, page btn route functions, count of products, buy all info from api, remove from cart or fav, remove count slot from fav cart
+•►  service - html, css, data from api, route to profiles with unique links
+•►  serviceProfiles - html, css, data from api
+
+
+•►  settings - with id for each menu add save changes function, edit or remove profile image, data from api, pass show hide buttons css and symbol and 
+function, delete account function
+•►  support - link to supportMore topic pages
+•►  supportMore - active page menu color change onload and onchange, unique link for each topic
+•►  contact - fix yandex map api issue which not reload on route pages and when reload on different pages, it does giving error message
 ———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————

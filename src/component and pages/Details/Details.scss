@@ -34,13 +34,18 @@
                 margin-bottom: 20px;
                 &-carousel {
                     display: flex;
-                    // border: 1px solid gold;
-                    width: 100%;
+                    border: 1px solid gold;
+                    width: 420px;
+                    height: 100px;
                     gap: 10px;
                     overflow: hidden;
+                    position: relative;
                     &__images {
+                        z-index: 1;
                         width: 100px;
                         height: 100px;
+                        cursor: pointer;
+                        position: absolute;
                         &--content {
                             width: 100%;
                             height: 100%;
@@ -84,23 +89,24 @@
                 margin-bottom: 20px;
             }
             &_category {
-                font-size: 24px;
+                font-size: 20px;
                 font-style: italic;
                 margin-bottom: 50px;
             }
             &_price {
-                font-size: 24px;
+                font-size: 28px;
             }
             &_count {
                 margin-top: 20px;
                 margin-bottom: 50px;
-                font-size: 24px;
+                font-size: 20px;
                 text-transform: capitalize;
                 &-input {
                     margin-left: 20px;
                     padding-left: 10px;
                     width: 100px;
-                    height: 30px;
+                    height: 40px;
+                    font-size: 20px;
                 }
             }
             &_description {
@@ -185,6 +191,7 @@
                 padding: 5px;
                 cursor: pointer;
                 transition: var(--quick-fx);
+                // position: absolute;
                 &:hover {
                     scale: 1.02;
                 }
@@ -193,6 +200,7 @@
                     height: auto;
                     position: relative;
                     border-bottom: 1px solid var(--light-text-color);
+                    margin-bottom: 10px;
                     &__content {
                         width: 100%;
                         object-fit: cover;

@@ -5,6 +5,21 @@ import './Footer.css'
 
 function Footer() {
 
+    const statLinkGuest = [
+        "/login", // 0
+        "/login", // 1
+        "/login", // 2
+        "/login" // 3
+    ]
+    const dynLinksArray = [
+        "/myorders", // 0
+        "/myfav", // 1
+        "/mycart", // 2
+        "/settings" // 3
+    ]
+    const tempFakeUserCondition = "guest" // guest 0
+
+
     const textDataBase = {
         AZ: {
             description: "Retro Qalereya keçmiş dövrlərin mahiyyətini əks etdirən incə antik məhsullar üçün əsas məkandır. Bizim diqqətlə seçilmiş üzüm xəzinələri kolleksiyamızı araşdırarkən özünüzü əbədi gözəllik dünyasına qərq edin. Nadir mebel parçalarından tutmuş bəzəkli dekor əşyalarına qədər hər bir artefakt tarixin və sənətkarlığın valehedici hekayəsindən bəhs edir. Keçmişin cazibəsini kəşf edin və Retro Qalereya ilə yaşayış məkanınıza nostalji toxunuşu gətirin.",
@@ -168,8 +183,17 @@ function Footer() {
         }
     }
     const [textDataBaseSTATE, setTextDataBaseSTATE] = useState(textDataBase.AZ)
+    // const [tempFakeUserCond, setTempFakeUserCond] = useState("guest") // guest 0
+    const [routeLinks, setRouteLinks] = useState(statLinkGuest)
     useEffect(
         () => {
+            if(tempFakeUserCondition == "guest") {
+                setRouteLinks(statLinkGuest)
+            } else {
+                setRouteLinks(dynLinksArray)
+            }
+
+
             if(JSON.parse(localStorage.getItem("langChoice")) == null) {
                 localStorage.setItem("langChoice", JSON.stringify("AZ"))
             } else if(JSON.parse(localStorage.getItem("langChoice")) == "AZ") {
@@ -223,10 +247,10 @@ function Footer() {
                 </ul>
                 <ul className="footer__main--columns">
                     <h6 className="footer__main--columns_header"> {textDataBaseSTATE.headers[1]} </h6>
-                    <Link to="/myorders" className="footer__main--columns_list"> {textDataBaseSTATE.profile[0]} </Link>
-                    <Link to="/myfav" className="footer__main--columns_list"> {textDataBaseSTATE.profile[1]} </Link>
-                    <Link to="/mycart" className="footer__main--columns_list"> {textDataBaseSTATE.profile[2]} </Link>
-                    <Link to="/settings" className="footer__main--columns_list"> {textDataBaseSTATE.profile[3]} </Link>
+                    <Link to={routeLinks[0]} className="footer__main--columns_list"> {textDataBaseSTATE.profile[0]} </Link>
+                    <Link to={routeLinks[1]} className="footer__main--columns_list"> {textDataBaseSTATE.profile[1]} </Link>
+                    <Link to={routeLinks[2]} className="footer__main--columns_list"> {textDataBaseSTATE.profile[2]} </Link>
+                    <Link to={routeLinks[3]} className="footer__main--columns_list"> {textDataBaseSTATE.profile[3]} </Link>
                 </ul>
                 <ul className="footer__main--columns">
                     <h6 className="footer__main--columns_header"> {textDataBaseSTATE.headers[2]} </h6>

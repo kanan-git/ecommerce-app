@@ -52,8 +52,7 @@ function BlogArticle() {
             <section className="blogarticle">
                 <div className="blogarticle__container">
                     <h3 className="blogarticle__container--header"> Lorem ipsum dolor sit amet. </h3>
-                    <h6 className="blogarticle__container--synopsis"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident, dolore eligendi ipsam nobis quo quisquam. </h6>
-                    <img src="/asset_library/blog/#" alt="cover" className="blogarticle__container--image" />
+                    <img src="/asset_library/blog/test_img_1.png" alt="cover" className="blogarticle__container--image" />
                     <article className="blogarticle__container--article">
                         Lorem ipsum, dolor sit amet consectetur adipisicing.
                         <br />
@@ -67,15 +66,21 @@ function BlogArticle() {
                         <br />
                         Lorem, ipsum dolor sit amet consectetur adipisicing.
                     </article>
+                    <aside className="blogarticle__container--menu">
+                        <button className="blogarticle__container--menu_articles"> aioniunopnduw </button>
+                        <button className="blogarticle__container--menu_articles"> madoinirgfjuwrt </button>
+                        <button className="blogarticle__container--menu_articles"> aioniunopnduwaioniunopnduw aioniunopnduw </button>
+                        <button className="blogarticle__container--menu_articles"> madoinirgfjuwrt </button>
+                        <button className="blogarticle__container--menu_articles"> aioniunopnduw </button>
+                        <button className="blogarticle__container--menu_articles"> madoinirgfjuwrt </button>
+                        <button className="blogarticle__container--menu_articles"> aioniunopnduwaioniunopnduw aioniunopnduw </button>
+                        <button className="blogarticle__container--menu_articles"> madoinirgfjuwrt </button>
+                        <button className="blogarticle__container--menu_articles"> aioniunopnduw </button>
+                        <button className="blogarticle__container--menu_articles"> madoinirgfjuwrt </button>
+                        <button className="blogarticle__container--menu_articles"> aioniunopnduwaioniunopnduw aioniunopnduw </button>
+                        <button className="blogarticle__container--menu_articles"> madoinirgfjuwrt </button>
+                    </aside>
                 </div>
-                <aside className="blogarticle__menu">
-                    <button className="blogarticle__menu--articles"> aioniunopnduw </button>
-                    <button className="blogarticle__menu--articles"> madoinirgfjuwrt </button>
-                    <button className="blogarticle__menu--articles"> aioniunopnduw </button>
-                    <button className="blogarticle__menu--articles"> madoinirgfjuwrt </button>
-                    <button className="blogarticle__menu--articles"> aioniunopnduw </button>
-                    <button className="blogarticle__menu--articles"> madoinirgfjuwrt </button>
-                </aside>
             </section>
 
             {/* <Footer /> */}

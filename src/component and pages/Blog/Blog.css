@@ -22,4 +22,42 @@
   background: linear-gradient(to right, var(--retrogallery-custom-colorpick), var(--retrogallery-custom-colorpick), var(--only-negative-color));
   margin: 0 0 20px 30px;
   padding: 0 0 0 10px;
+}
+.blog__container--group {
+  width: 100%;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 10px;
+}
+.blog__container--group_cards {
+  border: 1px solid var(--border-color);
+  width: 400px;
+  height: 300px;
+  background-color: var(--default-bg-color);
+  border-radius: 6px;
+  position: relative;
+  transition: var(--quick-fx);
+}
+.blog__container--group_cards:hover {
+  scale: 1.02;
+}
+.blog__container--group_cards-image {
+  border: 1px solid red;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.blog__container--group_cards-info {
+  position: absolute;
+  top: 200px;
+  left: 20px;
+  text-transform: capitalize;
+  width: 360px;
+  font-size: 20px;
+  font-weight: 600;
+  overflow: hidden;
 }/*# sourceMappingURL=Blog.css.map */

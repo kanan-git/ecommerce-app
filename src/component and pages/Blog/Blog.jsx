@@ -63,27 +63,35 @@ function Blog() {
                         {textDataBaseSTATE.title}
                     </h3>
                     <div className="blog__container--group">
-                        <div className="blog__container--group_cards">
-                            <img src="/asset_library/blog/#" alt="cover" 
+                        <Link to="/blog/article" className="blog__container--group_cards">
+                            <img src="/asset_library/blog/test_img_1.png" alt="cover" 
                             className="blog__container--group_cards-image" />
                             <p className="blog__container--group_cards-info">
                                 antikalar ve kolleksiyonlar
                             </p>
-                        </div>
-                        <div className="blog__container--group_cards">
-                            <img src="/asset_library/blog/#" alt="cover" 
+                        </Link>
+
+                        <Link to="/blog/article" className="blog__container--group_cards">
+                            <img src="/asset_library/blog/test_img_1.png" alt="cover" 
                             className="blog__container--group_cards-image" />
                             <p className="blog__container--group_cards-info">
                                 antikalar ve modern tasarim
                             </p>
-                        </div>
-                        <div className="blog__container--group_cards">
-                            <img src="/asset_library/blog/#" alt="cover" 
+                        </Link>
+                        <Link to="/blog/article" className="blog__container--group_cards">
+                            <img src="/asset_library/blog/test_img_1.png" alt="cover" 
                             className="blog__container--group_cards-image" />
                             <p className="blog__container--group_cards-info">
                                 antika yatirimi
                             </p>
-                        </div>
+                        </Link>
+                        <Link to="/blog/article" className="blog__container--group_cards">
+                            <img src="/asset_library/blog/test_img_1.png" alt="cover" 
+                            className="blog__container--group_cards-image" />
+                            <p className="blog__container--group_cards-info">
+                                antika yatirimi
+                            </p>
+                        </Link>
                     </div>
                 </div>
             </section>

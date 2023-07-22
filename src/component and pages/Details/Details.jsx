@@ -51,6 +51,8 @@ function Details() {
             ]}
     }
     const [textDataBaseSTATE, setTextDataBaseSTATE] = useState(textDataBase.AZ)
+    const [tempPrice, setTempPrice] = useState(20) // 20 for testing or data from API
+    const [totalPrice, setTotalPrice] = useState(20) // 20 for testing or data from API
     useEffect(
         () => {
             if(JSON.parse(localStorage.getItem("langChoice")) == null) {
@@ -93,6 +95,29 @@ function Details() {
                         </div>
                         <div className="details__container--visual_thumbnails">
                             <div className="details__container--visual_thumbnails-carousel">
+                                {/* var currentIndexCateg = 0 */}
+                                {/* filterCards_Cloth.forEach(
+                                    (element, index) => {
+                                        element.style.transform = `translateX(${(index - currentIndexClothingState) * 110}%)`
+                                    }
+                                ) */}
+                                {/* categBtn_left.addEventListener("click", () => {
+                                    if(currentIndexCateg == 0) {
+                                        currentIndexCateg = filterCards_Categ.length-1
+                                    } else {
+                                        currentIndexCateg--
+                                    }
+                                    // console.log(currentIndexCateg, "categories left button is working", filterCards_Categ.length)
+                                    filterCards_Categ.forEach(
+                                        (element, index) => {
+                                            element.style.transform = `translateX(${(index - currentIndexCateg) * 110}%)`
+                                        }
+                                    )
+                                }) */}
+
+                                <div className="details__container--visual_thumbnails-carousel__images">
+                                    <img src="/asset_library/products/product_1_1.png" alt="" className="details__container--visual_thumbnails-carousel__images--content" />
+                                </div>
                                 <div className="details__container--visual_thumbnails-carousel__images">
                                     <img src="/asset_library/products/product_1_1.png" alt="" className="details__container--visual_thumbnails-carousel__images--content" />
                                 </div>
@@ -114,32 +139,36 @@ function Details() {
                             category from API product
                         </p>
                         <strong className="details__container--information_price">
-                            price from API product
+                            {totalPrice} ₼
                         </strong>
                         <div className="details__container--information_count">
                             {textDataBaseSTATE.text[0]}:
-                            <input type="number" className="details__container--information_count-input" min="1" max="999" defaultValue="1" />
+                            <input type="number" className="details__container--information_count-input" min="1" max="999" defaultValue="1" onChange={
+                                (e) => {
+                                    setTotalPrice(e.target.value * tempPrice)
+                                }
+                            } />
                         </div>
                         <p className="details__container--information_description">
                             description from API product
                         </p>
                         <div className="details__container--information_buttons">
                             <button className="details__container--information_buttons-btn">
-                                <img src="#" className="details__container--information_buttons-btn__symbol" />
+                                <img src="/asset_library/symbols_svg/purchase-books-svgrepo-com.svg" className="details__container--information_buttons-btn__symbol" />
                                 {textDataBaseSTATE.text[1]}
                             </button>
                             <button className="details__container--information_buttons-btn">
-                                <img src="#" className="details__container--information_buttons-btn__symbol" />
+                                <img src="/asset_library/symbols_svg/favorite-svgrepo-com.svg" className="details__container--information_buttons-btn__symbol" />
                                 {textDataBaseSTATE.text[2]}
                             </button>
                             <button className="details__container--information_buttons-btn">
-                                <img src="#" className="details__container--information_buttons-btn__symbol" />
+                                <img src="/asset_library/symbols_svg/cart-svgrepo-com.svg" className="details__container--information_buttons-btn__symbol" />
                                 {textDataBaseSTATE.text[3]}
                             </button>
                         </div>
                         <div className="details__container--information_links">
-                            <Link className="details__container--information_links-item"> {textDataBaseSTATE.text[4]} </Link>
-                            <Link className="details__container--information_links-item"> {textDataBaseSTATE.text[5]} </Link>
+                            <Link to="/myfav" className="details__container--information_links-item"> {textDataBaseSTATE.text[4]} </Link>
+                            <Link to="/mycart" className="details__container--information_links-item"> {textDataBaseSTATE.text[5]} </Link>
                         </div>
                     </div>
 
@@ -147,25 +176,25 @@ function Details() {
                     <div className="details__container--related">    
                         <div className="details__container--related_cards">
                             <div className="details__container--related_cards-image">
-                                <img src="#" alt="product_01" className="details__container--related_cards-image__content" />
+                                <img src="/asset_library/products/product_1_1.png" alt="product_01" className="details__container--related_cards-image__content" />
                             </div>
                             <p className="details__container--related_cards-title"> from api </p>
-                            <strong className="details__container--related_cards-price"> from api </strong>
+                            <strong className="details__container--related_cards-price"> from api ₼ </strong>
                         </div>
 
                         <div className="details__container--related_cards">
                             <div className="details__container--related_cards-image">
-                                <img src="#" alt="product_01" className="details__container--related_cards-image__content" />
+                                <img src="/asset_library/products/product_1_1.png" alt="product_01" className="details__container--related_cards-image__content" />
                             </div>
                             <p className="details__container--related_cards-title"> from api </p>
-                            <strong className="details__container--related_cards-price"> from api </strong>
+                            <strong className="details__container--related_cards-price"> from api ₼ </strong>
                         </div>
                         <div className="details__container--related_cards">
                             <div className="details__container--related_cards-image">
-                                <img src="#" alt="product_01" className="details__container--related_cards-image__content" />
+                                <img src="/asset_library/products/product_1_1.png" alt="product_01" className="details__container--related_cards-image__content" />
                             </div>
                             <p className="details__container--related_cards-title"> from api </p>
-                            <strong className="details__container--related_cards-price"> from api </strong>
+                            <strong className="details__container--related_cards-price"> from api ₼ </strong>
                         </div>
                         <div className="details__container--related_buttons">
                             <button className="details__container--related_buttons-btn" id="det_rel_crl_prev"> ◄ </button>
