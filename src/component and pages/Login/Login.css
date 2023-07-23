@@ -32,11 +32,16 @@
   font-size: 24px;
   border: none;
   outline: none;
-  background-color: transparent;
+  background: transparent;
+  color: var(--default-text-color);
   font-weight: 600;
   text-transform: uppercase;
   padding: 5px 20px 5px 20px;
   transition: var(--quick-fx);
+}
+.auth__container--selections_buttons:first-of-type {
+  background: linear-gradient(to right, transparent, var(--retrogallery-custom-colorpick), var(--retrogallery-custom-colorpick), transparent);
+  color: var(--only-negative-color);
 }
 .auth__container--form {
   border: 1px solid var(--border-color);
@@ -65,12 +70,17 @@
   margin-left: 10px;
 }
 .auth__container--form_block-input__switch {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   position: relative;
   top: 50%;
-  right: 30px;
+  right: 35px;
+  filter: opacity(0.5);
   cursor: pointer;
+  transition: var(--quick-fx);
+}
+.auth__container--form_block-input__switch:hover {
+  filter: opacity(0.75);
 }
 .auth__container--form_block-group {
   font-size: 16px;
@@ -129,7 +139,6 @@
   accent-color: var(--retrogallery-custom-colorpick);
 }
 .auth__container--form_block-checkbox__link {
-  margin-left: 320px;
   font-size: 16px;
 }
 .auth__container--form_block-checkbox__link:hover {

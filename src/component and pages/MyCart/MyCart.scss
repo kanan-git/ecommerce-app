@@ -31,15 +31,27 @@
                         width: 30px;
                         height: 30px;
                         border: 1px solid var(--border-color);
+                        border: none;
                         background-color: var(--default-bg-color);
+                        background-color: transparent;
                         border-radius: 50%;
                         overflow: hidden;
+                        position: relative;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        transition: var(--quick-fx);
+                        &:hover {
+                            filter: invert(0.6) sepia(80) saturate(80) hue-rotate(50deg);
+                        }
                         &--symbol {
                             width: 100%;
                         }
                     }
                     &__thumbnail {
                         height: 50px;
+                        position: relative;
+                        left: 50%;
+                        transform: translateX(-50%);
                     }
                     &__input {
                         padding-left: 5px;

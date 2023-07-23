@@ -146,13 +146,12 @@ function Support() {
                                             <img src={textDataBase.symbols_path[index]} className="support__container--group_cards-symbol" />
                                             <h6 className="support__container--group_cards-header"> {textDataBaseSTATE.headers[index]} </h6>
                                             <p className="support__container--group_cards-description"> {textDataBaseSTATE.descriptions[index]} </p>
-                                            <Link className="support__container--group_cards-link" to="/"> {textDataBaseSTATE.other} </Link>
+                                            <Link className="support__container--group_cards-link" to="/support/topic"> {textDataBaseSTATE.other} </Link>
                                         </div>
                                     )
                                 }
                             )
                         }
-
                     </div>
                 </div>
             </section>

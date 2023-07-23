@@ -212,6 +212,8 @@ function Login() {
     const [textDataBaseSTATE, setTextDataBaseSTATE] = useState(textDataBase.AZ)
     const [daysSTATE, setDaysSTATE] = useState([])
     const [yearsSTATE, setYearsSTATE] = useState([])
+    const [VISION_1, setVISION_1] = useState("show") // show hide
+    const [VISION_2, setVISION_2] = useState("show") // show hide
     useEffect(
         () => {
             if(JSON.parse(localStorage.getItem("langChoice")) == null) {
@@ -251,6 +253,9 @@ function Login() {
                 yearsRegistered.push(y)
             }
             setYearsSTATE(yearsRegistered)
+
+            // document.getElementById("pass_inp_1").type = "password"
+            // document.getElementById("pass_inp_2").type = "password"
         }, []
     )
 
@@ -261,14 +266,22 @@ function Login() {
             <section className="auth">
                 <div className="auth__container">
                     <div className="auth__container--selections">
-                        <button className="auth__container--selections_buttons" onClick={
-                            () => {
+                        <button className="auth__container--selections_buttons" id="selection_signin" onClick={
+                            (e) => {
                                 setTempSign("login")
+                                e.target.style.background = `linear-gradient(to right, transparent, var(--retrogallery-custom-colorpick), var(--retrogallery-custom-colorpick), transparent)`
+                                e.target.style.color = `var(--only-negative-color)`
+                                document.getElementById("selection_signup").style.background = `transparent`
+                                document.getElementById("selection_signup").style.color = `var(--default-text-color)`
                             }
                         }> {textDataBaseSTATE.textcontent[0]} </button> {/* full width and height */}
-                        <button className="auth__container--selections_buttons" onClick={
-                            () => {
+                        <button className="auth__container--selections_buttons" id="selection_signup" onClick={
+                            (e) => {
                                 setTempSign("register")
+                                e.target.style.background = `linear-gradient(to right, transparent, var(--retrogallery-custom-colorpick), var(--retrogallery-custom-colorpick), transparent)`
+                                e.target.style.color = `var(--only-negative-color)`
+                                document.getElementById("selection_signin").style.background = `transparent`
+                                document.getElementById("selection_signin").style.color = `var(--default-text-color)`
                             }
                         }> {textDataBaseSTATE.textcontent[1]} </button> {/* full width and height */}
                     </div>
@@ -285,11 +298,17 @@ function Login() {
                             <div className="auth__container--form_block">
                                 {textDataBaseSTATE.textcontent[4]}:
                                 <input type="password" className="auth__container--form_block-input" 
-                                placeholder={textDataBaseSTATE.textcontent[5]} /> {/* type="password" | type="text" */}
-                                <img src={`"/asset_library/symbols_svg/eye-${passInputSwitch}-svgrepo-com.svg"`} 
+                                placeholder={textDataBaseSTATE.textcontent[5]} id="pass_inp_1" /> {/* type="password" | type="text" */}
+                                <img src={"/asset_library/symbols_svg/eye-"+`${VISION_1}`+"-svgrepo-com.svg"} 
                                 className="auth__container--form_block-input__switch" onClick={
                                     () => {
-                                        setPassInputSwitch("hide")
+                                        if(VISION_1 == "show") {
+                                            setVISION_1("hide")
+                                            document.getElementById("pass_inp_1").type = "text"
+                                        } else {
+                                            setVISION_1("show")
+                                            document.getElementById("pass_inp_1").type = "password"
+                                        }
                                     }
                                 } />
                                 {/* <p className="something_wrong">
@@ -301,7 +320,7 @@ function Login() {
                                     <input type="checkbox" className="auth__container--form_block-checkbox" />
                                     {textDataBaseSTATE.textcontent[6]}
                                 </span>
-                                <Link to="/" className="auth__container--form_block-link">
+                                <Link to="/recovery" className="auth__container--form_block-link">
                                     {textDataBaseSTATE.textcontent[7]} ?
                                 </Link>
                             </div>
@@ -342,11 +361,17 @@ function Login() {
                             <div className="auth__container--form_block">
                                 {textDataBaseSTATE.textcontent[18]}:
                                 <input type="password" className="auth__container--form_block-input" 
-                                placeholder={textDataBaseSTATE.textcontent[19]} /> {/* type="password" | type="text" */}
-                                <img src={`"/asset_library/symbols_svg/eye-${passInputSwitch}-svgrepo-com.svg"`} 
+                                placeholder={textDataBaseSTATE.textcontent[19]} id="pass_inp_2" /> {/* type="password" | type="text" */}
+                                <img src={"/asset_library/symbols_svg/eye-"+`${VISION_2}`+"-svgrepo-com.svg"} 
                                 className="auth__container--form_block-input__switch" onClick={
                                     () => {
-                                        setPassInputSwitch("hide")
+                                        if(VISION_2 == "show") {
+                                            setVISION_2("hide")
+                                            document.getElementById("pass_inp_2").type = "text"
+                                        } else {
+                                            setVISION_2("show")
+                                            document.getElementById("pass_inp_2").type = "password"
+                                        }
                                     }
                                 } />
                             </div>
@@ -414,7 +439,7 @@ function Login() {
                                 <span className="auth__container--form_block-group">
                                     <input type="checkbox" className="auth__container--form_block-checkbox" />
                                     {textDataBaseSTATE.textcontent[26]}
-                                    <Link to="/" className="auth__container--form_block-checkbox__link"> {textDataBaseSTATE.textcontent[27]} </Link>
+                                    <Link to="/terms" className="auth__container--form_block-checkbox__link"> {textDataBaseSTATE.textcontent[27]} </Link>
                                 </span>
                             </div>
                             <div className="auth__container--form_block">

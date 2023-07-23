@@ -155,8 +155,8 @@ function MyOrders() {
                     </table>
 
                     <div className="myorders__container--directions">
-                        <button className="myorders__container--directions_buttons"> ◄ {textDataBaseSTATE.buttons[0]} </button>
-                        <button className="myorders__container--directions_buttons"> {textDataBaseSTATE.buttons[1]} ► </button>
+                        <Link to="/myfav" className="myorders__container--directions_buttons"> ◄ {textDataBaseSTATE.buttons[0]} </Link>
+                        <Link to="/products" className="myorders__container--directions_buttons"> {textDataBaseSTATE.buttons[1]} ► </Link>
                     </div>
                 </div>
             </section>

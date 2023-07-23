@@ -171,8 +171,11 @@
   height: 30px;
   outline: none;
   padding: 0 10px;
+  position: relative;
   background-color: var(--default-bg-color);
   border: 1px solid var(--light-text-color);
+}
+.container__gender--input_options {
   background-color: var(--default-bg-color);
 }
 .container__dateofbirth {
@@ -215,7 +218,10 @@
 .container__blocks {
   font-size: 16px;
   font-weight: 600;
+  position: relative;
   text-transform: capitalize;
+  width: -moz-fit-content;
+  width: fit-content;
   margin-bottom: 20px;
 }
 .container__blocks--input {
@@ -268,4 +274,17 @@
   border: 1px solid var(--light-text-color);
   background-color: var(--default-bg-color);
   outline: none;
+}
+
+.show-password {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0%;
+  filter: opacity(0.5);
+  right: 10px;
+}
+.show-password:hover {
+  filter: opacity(0.75);
 }/*# sourceMappingURL=Settings.css.map */

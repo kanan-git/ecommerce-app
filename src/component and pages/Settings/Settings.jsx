@@ -293,6 +293,9 @@ function Settings() {
     const [textDataBaseSTATE, setTextDataBaseSTATE] = useState(textDataBase.AZ)
     const [daysSTATE, setDaysSTATE] = useState([])
     const [yearsSTATE, setYearsSTATE] = useState([])
+    const [VISION_1, setVISION_1] = useState("show") // show hide
+    const [VISION_2, setVISION_2] = useState("show") // show hide
+    const [VISION_3, setVISION_3] = useState("show") // show hide
     useEffect(
         () => {
             if(JSON.parse(localStorage.getItem("langChoice")) == null) {
@@ -488,14 +491,36 @@ function Settings() {
                                 <div className="container__blocks">
                                     {textDataBaseSTATE.password_btn[0]}:
                                     <input type="password" className="container__blocks--input" 
-                                    placeholder={textDataBaseSTATE.password_btn[1]} />
-                                    <img src="#" className="show-password" />
+                                    placeholder={textDataBaseSTATE.password_btn[1]} id="pass_inp_1" />
+                                    <img src={"/asset_library/symbols_svg/eye-"+`${VISION_1}`+"-svgrepo-com.svg"} 
+                                    className="show-password" onClick={
+                                        () => {
+                                            if(VISION_1 == "show") {
+                                                setVISION_1("hide")
+                                                document.getElementById("pass_inp_1").type = "text"
+                                            } else {
+                                                setVISION_1("show")
+                                                document.getElementById("pass_inp_1").type = "password"
+                                            }
+                                        }
+                                    } />
                                 </div>
                                 <div className="container__blocks">
                                     {textDataBaseSTATE.password_btn[2]}:
                                     <input type="password" className="container__blocks--input" 
-                                    placeholder={textDataBaseSTATE.password_btn[3]} />
-                                    <img src="#" className="show-password" />
+                                    placeholder={textDataBaseSTATE.password_btn[3]} id="pass_inp_2" />
+                                    <img src={"/asset_library/symbols_svg/eye-"+`${VISION_2}`+"-svgrepo-com.svg"} 
+                                    className="show-password" onClick={
+                                        () => {
+                                            if(VISION_2 == "show") {
+                                                setVISION_2("hide")
+                                                document.getElementById("pass_inp_2").type = "text"
+                                            } else {
+                                                setVISION_2("show")
+                                                document.getElementById("pass_inp_2").type = "password"
+                                            }
+                                        }
+                                    } />
                                 </div>
                                 <ul className="container__blocks">
                                     <li className="container__blocks--conditions">
@@ -517,8 +542,19 @@ function Settings() {
                                 <div className="container__blocks">
                                     {textDataBaseSTATE.password_btn[9]}:
                                     <input type="password" className="container__blocks--input" 
-                                    placeholder={textDataBaseSTATE.password_btn[10]} />
-                                    <img src="#" className="show-password" />
+                                    placeholder={textDataBaseSTATE.password_btn[10]} id="pass_inp_3" />
+                                    <img src={"/asset_library/symbols_svg/eye-"+`${VISION_3}`+"-svgrepo-com.svg"} 
+                                    className="show-password" onClick={
+                                        () => {
+                                            if(VISION_3 == "show") {
+                                                setVISION_3("hide")
+                                                document.getElementById("pass_inp_3").type = "text"
+                                            } else {
+                                                setVISION_3("show")
+                                                document.getElementById("pass_inp_3").type = "password"
+                                            }
+                                        }
+                                    } />
                                 </div>
                                 <button className="container__submit">
                                     <p className="changes_saved"> {textDataBaseSTATE.profile_btn[8]}. </p>

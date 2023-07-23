@@ -15,6 +15,8 @@ function BlogArticle() {
         RU: {}
     }
     const [textDataBaseSTATE, setTextDataBaseSTATE] = useState(textDataBase.AZ)
+    const [fakeArticleIDs, setFakeArticleIDs] = useState([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+    const [currentArticle, setCurrentArticle] = useState(0)
     useEffect(
         () => {
             if(JSON.parse(localStorage.getItem("langChoice")) == null) {
@@ -42,6 +44,23 @@ function BlogArticle() {
                 }
             }
             window.addEventListener("change", handleLanguage)
+
+            function handleArticleButtons() {
+                var restOfArticleBtnsArr = []
+                for(var i=0; i<fakeArticleIDs.length; i++) {
+                    restOfArticleBtnsArr.push(i)
+                    document.getElementById("articleBtn_" + i).style.backgroundColor = `var(--default-bg-color)`
+                    document.getElementById("articleBtn_" + i).style.transform = `translateX(0px)`
+                    document.getElementById("articleBtn_" + i).style.color = `var(--default-text-color)`
+                }
+
+                var currentButton = document.getElementById("articleBtn_" + currentArticle)
+                currentButton.style.backgroundColor = `var(--dark-color)`
+                currentButton.style.transform = `translateX(10px)`
+                currentButton.style.color = `var(--only-negative-color)`
+            }
+
+            handleArticleButtons()
         }, []
     )
     
@@ -67,18 +86,37 @@ function BlogArticle() {
                         Lorem, ipsum dolor sit amet consectetur adipisicing.
                     </article>
                     <aside className="blogarticle__container--menu">
-                        <button className="blogarticle__container--menu_articles"> aioniunopnduw </button>
-                        <button className="blogarticle__container--menu_articles"> madoinirgfjuwrt </button>
-                        <button className="blogarticle__container--menu_articles"> aioniunopnduwaioniunopnduw aioniunopnduw </button>
-                        <button className="blogarticle__container--menu_articles"> madoinirgfjuwrt </button>
-                        <button className="blogarticle__container--menu_articles"> aioniunopnduw </button>
-                        <button className="blogarticle__container--menu_articles"> madoinirgfjuwrt </button>
-                        <button className="blogarticle__container--menu_articles"> aioniunopnduwaioniunopnduw aioniunopnduw </button>
-                        <button className="blogarticle__container--menu_articles"> madoinirgfjuwrt </button>
-                        <button className="blogarticle__container--menu_articles"> aioniunopnduw </button>
-                        <button className="blogarticle__container--menu_articles"> madoinirgfjuwrt </button>
-                        <button className="blogarticle__container--menu_articles"> aioniunopnduwaioniunopnduw aioniunopnduw </button>
-                        <button className="blogarticle__container--menu_articles"> madoinirgfjuwrt </button>
+                        {
+                            fakeArticleIDs.map(
+                                (index) => {
+                                    return (
+                                        <button className="blogarticle__container--menu_articles" 
+                                        key={index} 
+                                        id={"articleBtn_" + index}
+                                        onClick={
+                                            () => {
+                                                setCurrentArticle(index)
+
+                                                var restOfArticleBtnsArr = []
+                                                for(var i=0; i<fakeArticleIDs.length; i++) {
+                                                    restOfArticleBtnsArr.push(i)
+                                                    document.getElementById("articleBtn_" + i).style.backgroundColor = `var(--default-bg-color)`
+                                                    document.getElementById("articleBtn_" + i).style.transform = `translateX(0px)`
+                                                    document.getElementById("articleBtn_" + i).style.color = `var(--default-text-color)`
+                                                }
+                                
+                                                var currentButton = document.getElementById("articleBtn_" + currentArticle)
+                                                currentButton.style.backgroundColor = `var(--dark-color)`
+                                                currentButton.style.transform = `translateX(10px)`
+                                                currentButton.style.color = `var(--only-negative-color)`
+                                            }
+                                        }>
+                                            aioniunopnduwaioniunopnduw madoinirgfjuwrt aioniunopnduw
+                                        </button>
+                                    )
+                                }
+                            )
+                        }
                     </aside>
                 </div>
             </section>

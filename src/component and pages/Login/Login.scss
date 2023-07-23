@@ -31,15 +31,16 @@
                 font-size: 24px;
                 border: none;
                 outline: none;
-                background-color: transparent;
+                background: transparent;
+                color: var(--default-text-color);
                 font-weight: 600;
                 text-transform: uppercase;
                 padding: 5px 20px 5px 20px;
                 transition: var(--quick-fx);
-                // &:hover {
-                //     background: linear-gradient(to right, transparent, var(--retrogallery-custom-colorpick), var(--retrogallery-custom-colorpick), transparent);
-                //     color: var(--only-negative-color);
-                // }
+                &:first-of-type {
+                    background: linear-gradient(to right, transparent, var(--retrogallery-custom-colorpick), var(--retrogallery-custom-colorpick), transparent);
+                    color: var(--only-negative-color);
+                }
             }
         }
         &--form {
@@ -66,12 +67,17 @@
                     height: 40px;
                     margin-left: 10px;
                     &__switch {
-                        width: 20px;
-                        height: 20px;
+                        width: 30px;
+                        height: 30px;
                         position: relative;
                         top: 50%;
-                        right: 30px;
+                        right: 35px;
+                        filter: opacity(0.5);
                         cursor: pointer;
+                        transition: var(--quick-fx);
+                        &:hover {
+                            filter: opacity(0.75);
+                        }
                     }
                 }
                 &-group {
@@ -133,7 +139,7 @@
                 &-checkbox {
                     accent-color: var(--retrogallery-custom-colorpick);
                     &__link {
-                        margin-left: 320px;
+                        // margin-left: 320px;
                         font-size: 16px;
                         &:hover {
                             color: var(--retrogallery-custom-colorpick);

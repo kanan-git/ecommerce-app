@@ -296,6 +296,21 @@ function SupportMore() {
                 }
             }
             window.addEventListener("change", handleLanguage)
+
+            function handleMenuButtons() {
+                var restOfButtonsArr = []
+                for(var i=0; i<6; i++) {
+                    if(i != currentSupMenu) {
+                        restOfButtonsArr.push(i)
+                        document.getElementById("supp_menu_" + currentSupMenu).style.backgroundColor = `var(--default-bg-color)`
+                        document.getElementById("supp_menu_" + currentSupMenu).style.color = `var(--default-text-color)`
+                    }
+                }
+                document.getElementById("supp_menu_" + currentSupMenu).style.backgroundColor = `var(--dark-color)`
+                document.getElementById("supp_menu_" + currentSupMenu).style.color = `var(--only-negative-color)`
+            }
+
+            handleMenuButtons()
         }, []
     )
 
@@ -324,9 +339,20 @@ function SupportMore() {
                                     return (
                                         <button className="supportmore__container--menus_btn" 
                                         key={index} id={"supp_menu_"+index} onClick={
-                                            () => {
+                                            (e) => {
                                                 setCurrentSupMenu(index)
                                                 setCurrentHeader(index)
+
+                                                var restOfButtonsArr = []
+                                                for(var i=0; i<6; i++) {
+                                                    if(i != currentSupMenu) {
+                                                        restOfButtonsArr.push(i)
+                                                        document.getElementById("supp_menu_" + currentSupMenu).style.backgroundColor = `var(--default-bg-color)`
+                                                        document.getElementById("supp_menu_" + currentSupMenu).style.color = `var(--default-text-color)`
+                                                    }
+                                                }
+                                                e.target.style.backgroundColor = `var(--dark-color)`
+                                                e.target.style.color = `var(--only-negative-color)`
                                             }
                                         }>
                                             {element}

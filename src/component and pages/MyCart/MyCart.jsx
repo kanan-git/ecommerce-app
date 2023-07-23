@@ -87,6 +87,10 @@ function MyCart() {
         }
     }
     const [textDataBaseSTATE, setTextDataBaseSTATE] = useState(textDataBase.AZ)
+    const [tempFakeData, setTempFakeData] = useState([0, 5, 11, 123])
+    const [tempFakeAmount, setTempFakeAmount] = useState(1500)
+    const [leftBalance, setLeftBalance] = useState(0)
+    const [totalSumSTATE, setTotalSumSTATE] = useState(0)
     useEffect(
         () => {
             if(JSON.parse(localStorage.getItem("langChoice")) == null) {
@@ -114,6 +118,19 @@ function MyCart() {
                 }
             }
             window.addEventListener("change", handleLanguage)
+
+            function handleFinalPrice() {
+                var y = 0
+                var z = tempFakeAmount
+                for(var i=0; i<tempFakeData.length; i++) {
+                    var x = +document.getElementById("total_" + tempFakeData[i]).textContent
+                    y += x
+                }
+                setTotalSumSTATE(y)
+                setLeftBalance(z - y)
+                // console.log(totalSumSTATE)
+            }
+            handleFinalPrice()
         }, []
     )
 
@@ -137,56 +154,63 @@ function MyCart() {
                             <th className="mycart__container--table_rows-cells"> {textDataBaseSTATE.table[3]} (₼) </th>
                         </tr>
 
-                        <tr className="mycart__container--table_rows">
-                            <td className="mycart__container--table_rows-cells">
-                                <button className="mycart__container--table_rows-cells__xmark">
-                                    <img src="/asset_library/symbols_svg/#" className="mycart__container--table_rows-cells__xmark--symbol" />
-                                </button>
-                            </td>
-                            <td className="mycart__container--table_rows-cells">
-                                object-fit cover
-                                <img src="/asset_library/products/#" alt="product-thumbnail" className="mycart__container--table_rows-cells__thumbnail" />
-                            </td>
-                            <td className="mycart__container--table_rows-cells"> product full title here </td>
-                            <td className="mycart__container--table_rows-cells"> 20 </td>
-                            <td className="mycart__container--table_rows-cells">
-                                <input type="number" 
-                                className="mycart__container--table_rows-cells__input" 
-                                min="1" max="999" defaultValue="1" />
-                            </td>
-                            <td className="mycart__container--table_rows-cells"> 100 </td>
-                        </tr>
-                        <tr className="mycart__container--table_rows">
-                            <td className="mycart__container--table_rows-cells">
-                                <button className="mycart__container--table_rows-cells__xmark">
-                                    <img src="/asset_library/symbols_svg/#" className="mycart__container--table_rows-cells__xmark--symbol" />
-                                </button>
-                            </td>
-                            <td className="mycart__container--table_rows-cells">
-                                object-fit cover
-                                <img src="/asset_library/products/#" alt="product-thumbnail" className="mycart__container--table_rows-cells__thumbnail" />
-                            </td>
-                            <td className="mycart__container--table_rows-cells"> product full title here </td>
-                            <td className="mycart__container--table_rows-cells"> 20 </td>
-                            <td className="mycart__container--table_rows-cells">
-                                <input type="number" 
-                                className="mycart__container--table_rows-cells__input" 
-                                min="1" max="999" defaultValue="1" />
-                            </td>
-                            <td className="mycart__container--table_rows-cells"> 100 </td>
-                        </tr>
+                        {
+                            tempFakeData.map(
+                                (element, index) => {
+                                    return (
+                                        <tr className="mycart__container--table_rows" id={"cart_pr_id_" + element} key={index}>
+                                            <td className="mycart__container--table_rows-cells">
+                                                <button className="mycart__container--table_rows-cells__xmark">
+                                                    <img src="/asset_library/symbols_svg/xmark-circle-svgrepo-com.svg" 
+                                                    className="mycart__container--table_rows-cells__xmark--symbol" />
+                                                </button>
+                                            </td>
+                                            <td className="mycart__container--table_rows-cells">
+                                                <img src="/asset_library/products/product_1_1.png" alt="product-thumbnail" 
+                                                className="mycart__container--table_rows-cells__thumbnail" />
+                                            </td>
+                                            <td className="mycart__container--table_rows-cells"> product full title here </td>
+                                            <td className="mycart__container--table_rows-cells" id={"price_" + element}> 20 </td>
+                                            <td className="mycart__container--table_rows-cells">
+                                                <input type="number" 
+                                                className="mycart__container--table_rows-cells__input" 
+                                                min="1" max="999" defaultValue="1" onChange={
+                                                    (e) => {
+                                                        var currentRowPrice = document.getElementById("price_" + element)
+                                                        var currentRowTotal = document.getElementById("total_" + element)
+                                                        var tempValue = currentRowPrice.textContent
+                                                        currentRowTotal.textContent = tempValue * e.target.value
+
+                                                        var y = 0
+                                                        var z = tempFakeAmount
+                                                        for(var i=0; i<tempFakeData.length; i++) {
+                                                            var x = +document.getElementById("total_" + tempFakeData[i]).textContent
+                                                            y += x
+                                                        }
+                                                        setTotalSumSTATE(y)
+                                                        setLeftBalance(z - y)
+                                                        // console.log(totalSumSTATE)
+                                                    }
+                                                } />
+                                            </td>
+                                            <td className="mycart__container--table_rows-cells" id={"total_" + element}> 20 </td>
+                                        </tr>
+                                    )
+                                }
+                            )
+                        }
                     </table>
 
                     <div className="mycart__container--payment">
-                        <p className="mycart__container--payment__price"> {textDataBaseSTATE.headers[1]}: `1500` ₼ </p>
-                        <strong className="mycart__container--payment__price"> {textDataBaseSTATE.headers[2]}: -`1000` ₼ </strong>
-                        <p className="mycart__container--payment__price"> {textDataBaseSTATE.headers[3]}: `500` ₼ </p>
+                        <p className="mycart__container--payment__price"> {textDataBaseSTATE.headers[1]}: {tempFakeAmount} ₼ </p>
+                        <strong className="mycart__container--payment__price"> {textDataBaseSTATE.headers[2]}: -{totalSumSTATE} ₼ </strong>
+                        <p className="mycart__container--payment__price"> {textDataBaseSTATE.headers[3]}: {leftBalance} ₼ </p>
                         <button className="mycart__container--payment__button"> {textDataBaseSTATE.buttons[0]} </button>
                     </div>
 
                     <div className="mycart__container--directions">
-                        <button className="mycart__container--directions_buttons"> ◄ {textDataBaseSTATE.buttons[1]} </button>
-                        <button className="mycart__container--directions_buttons"> {textDataBaseSTATE.buttons[2]} ► </button>
+                        <Link to="/myfav" className="mycart__container--directions_buttons"> ◄ {textDataBaseSTATE.buttons[1]} </Link>
+                        <Link to="/products" className="mycart__container--directions_buttons"> {textDataBaseSTATE.buttons[2]} ► </Link>
                     </div>
                 </div>
             </section>

@@ -59,7 +59,7 @@
                 transition: var(--quick-fx);
                 &:hover {
                     background-color: var(--dark-color);
-                    filter: drop-shadow(-10px 1px 10px var(--default-text-color));
+                    // filter: drop-shadow(-10px 1px 10px var(--default-text-color));
                     transform: translateX(10px);
                     color: var(--only-negative-color);
                 }

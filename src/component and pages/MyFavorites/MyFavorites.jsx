@@ -140,8 +140,8 @@ function MyFavorites() {
                     </table>
 
                     <div className="myfavorites__container--directions">
-                        <button className="myfavorites__container--directions_buttons"> ◄ {textDataBaseSTATE.buttons[0]} </button>
-                        <button className="myfavorites__container--directions_buttons"> {textDataBaseSTATE.buttons[1]} ► </button>
+                        <Link to="/mycart" className="myfavorites__container--directions_buttons"> ◄ {textDataBaseSTATE.buttons[0]} </Link>
+                        <Link to="/products" className="myfavorites__container--directions_buttons"> {textDataBaseSTATE.buttons[1]} ► </Link>
                     </div>
                 </div>
             </section>

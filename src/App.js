@@ -22,7 +22,6 @@ import Policy from './component and pages/Policy/Policy.jsx'
 import PaymentPopup from './component and pages/PaymentPopup/PaymentPopup.jsx'
 import Recovery from './component and pages/Recovery/Recovery.jsx'
 import Service from './component and pages/Service/Service.jsx'
-import ServiceProfiles from './component and pages/ServiceProfiles/ServiceProfiles.jsx'
 import Settings from './component and pages/Settings/Settings.jsx'
 import SignUpVerify from './component and pages/SignUpVerify/SignUpVerify.jsx'
 import Support from './component and pages/Support/Support.jsx'
@@ -58,7 +57,6 @@ function App() {
         <Route path="/policy" element={<Policy />} />
         <Route path="/recovery" element={<Recovery />} />
         <Route path="/service" element={<Service />} />
-        <Route path="/service/profile" element={<ServiceProfiles />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="/login/verify" element={<SignUpVerify />} />
         <Route path="/support" element={<Support />} />
